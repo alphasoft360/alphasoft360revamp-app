@@ -1,0 +1,519 @@
+const awais = "/team/awais.jpeg";
+const saggar_farid = "/team/saggar_farid.png";
+const maroof_sultan = "/team/maroof_sultan.jpg";
+const muhammad_shahbaz = "/team/muhammad_shahbaz.jpg";
+const muazam_mughal = "/team/muazam_mughal.jpg";
+const arham_ali = "/team/arham_ali.jpg";
+const faizan_ali = "/team/faizan_ali.jpg";
+const ahmed_hassan = "/team/ahmed_hassan.jpg";
+const sameer_akhtar = "/team/sameer_akhtar.jpg";
+const ubaidullah = "/team/ubaidullah.jpg";
+const mohid_naeem = "/team/mohid_naeem.png";
+const bu_ali = "/team/bu-ali-Ahmed.png";
+
+const teamMembers = [
+  // Awais Ali,
+  {
+    id: "awais",
+    tier: "leadership",
+    image: awais,
+    name: "M Awais",
+    role: "Founder & Chief Executive Officer (CEO) - Alphasoft360",
+    bio: "Founder and CEO of Alphasoft360 with 7+ years of experience in full-stack engineering, enterprise solution delivery, and building high-performing agile teams.",
+    contact: {
+      email: "alphasoft360@gmail.com",
+      phone: "+92 370 6510421",
+    },
+    biography: [
+      "I am the Founder and Chief Executive Officer of Alphasoft360, with over 7+ years of professional experience in full-stack web development, IoT applications, and enterprise-grade software solutions. I focus on driving innovation, scalability, and long-term business growth through technology.",
+      "Throughout my career, I have led cross-functional engineering teams, defined technical strategy, and successfully delivered complex enterprise projects on time and within scope while maintaining high standards of quality and performance.",
+      "Backend Engineering (PHP, Laravel, OpenCart): I have deep expertise in PHP-based frameworks, particularly Laravel and OpenCart, delivering robust e-commerce platforms and custom backend solutions tailored to business needs.",
+      "Modern Backend & Real-Time Systems (Node.js, Nest.js): I leverage Node.js and Nest.js to design scalable server-side architectures, real-time data processing systems, and high-performance APIs for modern applications.",
+      "Frontend Technologies (Vue.js, Angular, React.js): I have strong hands-on experience with modern frontend frameworks, building responsive, intuitive, and user-centric interfaces that enhance user engagement and product usability.",
+      "Database Architecture (MySQL, MongoDB): I work extensively with both relational and NoSQL databases, ensuring optimized data models, performance tuning, and scalable storage solutions for growing platforms.",
+      "API Development & Integrations: I specialize in designing secure, scalable RESTful APIs and integrating third-party services, payment gateways, and IoT platforms to create seamless digital ecosystems.",
+      "E-commerce Platforms & Custom Dashboards: With a strong background in e-commerce, I lead the development of custom dashboards, admin panels, and analytics-driven systems that improve operational efficiency and business insights.",
+      "Leadership & Agile Delivery: As a CEO, I actively implement Agile methodologies, mentor engineering teams, and foster a culture of continuous improvement, innovation, and accountability.",
+    ],
+    skills: [
+      { name: "Technical & Business Leadership", percentage: 95 },
+      { name: "Laravel Development", percentage: 95 },
+      { name: "PHP", percentage: 94 },
+      { name: "Node.js & Nest.js", percentage: 88 },
+      { name: "Next.js", percentage: 90 },
+      { name: "Symfony", percentage: 85 },
+      { name: "JavaScript (ES6+)", percentage: 80 },
+      { name: "HTML5 & CSS3", percentage: 96 },
+      { name: "Bootstrap & Tailwind CSS", percentage: 94 },
+      { name: "Responsive Web Design", percentage: 93 },
+      { name: "CI/CD Pipelines", percentage: 70 },
+      { name: "Git & GitHub", percentage: 95 },
+    ],
+    socials: {
+      stackoverflow: "https://stackoverflow.com",
+      linkedin: "https://www.linkedin.com/",
+      github: "https://github.com/",
+    },
+  },
+  // Saggar Farid
+  {
+    id: "saggar-farid",
+    tier: "leadership",
+    image: saggar_farid,
+    name: "Saggar Farid",
+    role: "Chief Operations Officer(COO) - Alphasoft360",
+    bio: "Chief Operations Officer with extensive experience in software development, operational leadership, and enterprise solution delivery, leading teams and freelance projects across global platforms.",
+    contact: {
+      email: "Saggar.farid@gmail.com",
+      phone: "+92 304 7527264",
+    },
+    biography: [
+      "I am the Chief Operations Officer at Alphasoft360 with over 9+ years of professional experience in full-stack software development, operations management, and enterprise solution delivery. I specialize in aligning technical execution with business goals to deliver scalable and high-impact digital solutions.",
+      "Throughout my career, I have led cross-functional teams, optimized development workflows, and ensured high-quality delivery across in-house and freelance projects, maintaining a strong focus on performance, scalability, and maintainability.",
+      "Freelance Project – Maker’s Row: I contributed to the development and optimization of Maker’s Row, a leading online platform that connects brands with vetted manufacturers to streamline production and bring product ideas to life. My role involved backend enhancements, performance optimization, and ensuring reliable integrations across the platform.",
+      "Freelance Project – Round Here: I worked on Round Here, a platform designed to empower Michigan founders by aggregating essential resources, funding opportunities, networking events, and business tools. I helped deliver scalable features, improve system performance, and support a smooth user experience.",
+      "Technical Leadership (Laravel, Node.js): With strong expertise in Laravel and Node.js, I oversee backend architecture, RESTful API development, and system scalability, ensuring secure and efficient enterprise-grade applications.",
+      "Frontend Integration & DevOps: I have hands-on experience integrating modern frontend frameworks such as React and Vue.js with backend services, along with managing deployment workflows and database optimization using MySQL.",
+      "Team Collaboration & Agile Leadership: I follow Agile methodologies, mentor development teams, and collaborate closely with stakeholders to deliver high-quality solutions on time and within scope.",
+    ],
+    skills: [
+      { name: "Operational Leadership", percentage: 92 },
+      { name: "Laravel", percentage: 90 },
+      { name: "Node.js", percentage: 88 },
+      { name: "REST APIs", percentage: 85 },
+      { name: "JavaScript (ES6+)", percentage: 82 },
+      { name: "PHP", percentage: 87 },
+      { name: "MySQL", percentage: 80 },
+      { name: "Frontend Integration", percentage: 75 },
+      { name: "Git & GitHub", percentage: 90 },
+      { name: "Agile Development", percentage: 85 },
+      { name: "Docker & DevOps Basics", percentage: 70 },
+    ],
+    socials: {
+      linkedin: "https://www.linkedin.com/in/saggar-farid-6811b3111/",
+      github: "https://github.com/gaftaaus",
+      stackoverflow: "https://stackoverflow.com/users/8819538/saggar-farid",
+    },
+  },
+  // Maroof Sultan
+  {
+    id: "maroof-sultan",
+    tier: "team",
+    image: maroof_sultan,
+    name: "Maroof Sultan",
+    role: "Software Engineer",
+    bio: "Expert in agile methodologies with a track record of delivering enterprise projects on time and within scope.",
+    contact: {
+      email: "maroofsultan.dev@gmail.com",
+      phone: "+92 310 6510421",
+    },
+    biography: [
+      "Maroof Sultan is a full-stack developer skilled in Laravel, Next.js, Symfony, OpenCart, Python, and CI/CD pipelines. He specializes in designing responsive, high-performance web applications with clean, scalable architectures.",
+      "He combines his technical expertise with strong analytical and problem-solving skills, bringing efficient, data-driven solutions to complex projects.",
+      "Maroof has worked on multiple projects, including e-commerce platforms, enterprise software, and custom web solutions — focusing on optimization, modern technologies, and seamless user experiences.",
+      "He’s passionate about continuous learning, collaboration, and building innovative solutions that merge creativity with functionality.",
+    ],
+    skills: [
+      { name: "Laravel Development", percentage: 95 },
+      { name: "Next.js", percentage: 80 },
+      { name: "Vue.js", percentage: 85 },
+      { name: "TypeScript", percentage: 90 },
+      { name: "Symfony", percentage: 80 },
+      { name: "OpenCart", percentage: 93 },
+      { name: "CI/CD Pipelines", percentage: 70 },
+      { name: "PHP", percentage: 94 },
+      { name: "JavaScript (ES6+)", percentage: 80 },
+      { name: "HTML5 & CSS3", percentage: 96 },
+      { name: "Bootstrap & Tailwind CSS", percentage: 94 },
+      { name: "Responsive Web Design", percentage: 93 },
+      { name: "Git & GitHub", percentage: 95 },
+    ],
+    socials: {
+      stackoverflow: "https://stackoverflow.com",
+      linkedin: "https://www.linkedin.com/in/maroof-sultan-081b33220",
+      github: "https://github.com/MaroofSultan17",
+    },
+  },
+  // Shahbaz
+  {
+    id: "muhammad-shahbaz",
+    tier: "team",
+    image: muhammad_shahbaz,
+    name: "Muhammad Shahbaz",
+    role: "Software Engineer",
+    bio: "Skilled in modern web technologies with a proven ability to deliver robust, scalable, and efficient software solutions.",
+    contact: {
+      email: "shahbaz.dev012@gmail.com",
+      phone: "+92 323 2155122",
+    },
+    biography: [
+      "Muhammad Shahbaz is a Full Stack Developer experienced in Laravel, Next.js, Symfony, and OpenCart. He focuses on building responsive, high-performance web applications with clean and scalable architectures.",
+      "He combines deep technical knowledge with strong analytical thinking and problem-solving skills, delivering efficient, data-driven solutions for complex challenges.",
+      "Shahbaz has contributed to a range of projects, including enterprise platforms, e-commerce systems, and custom web solutions — always prioritizing performance, maintainability, and seamless user experiences.",
+      "He’s passionate about continuous learning, teamwork, and crafting innovative digital products that blend creativity with functionality.",
+    ],
+    skills: [
+      { name: "Laravel Development", percentage: 80 },
+      { name: "Next.js", percentage: 70 },
+      { name: "Symfony", percentage: 70 },
+      { name: "OpenCart", percentage: 90 },
+      { name: "PHP", percentage: 80 },
+      { name: "JavaScript (ES6+)", percentage: 80 },
+      { name: "HTML5 & CSS3", percentage: 90 },
+      { name: "Bootstrap & Tailwind CSS", percentage: 90 },
+      { name: "Responsive Web Design", percentage: 90 },
+      { name: "Git & GitHub", percentage: 95 },
+    ],
+    socials: {
+      linkedin: "https://www.linkedin.com/in/shahbazdev012/",
+      github: "https://github.com/shahbazdev012/",
+      stackoverflow:
+        "https://stackoverflow.com/users/24616554/muhammad-shahbaz",
+    },
+  },
+  //  Mozzam
+  {
+    id: "muazam-mughal",
+    tier: "team",
+    image: muazam_mughal,
+    name: "Muazam Mughal",
+    role: "Software Engineer",
+    bio: "Dynamic Full-stack Software Engineer with expertise in modern web technologies, generative AI, and cloud solutions, dedicated to crafting scalable and innovative applications.",
+    contact: {
+      email: "eng.muazam@gmail.com",
+      phone: "+92 303 4510773",
+    },
+    biography: [
+      "Muazam Mughal is a versatile Full Stack Software Engineer proficient in Next.js, React.js, TypeScript, Laravel, Vue.js, Python, FastAPI, and cutting-edge generative AI technologies. He excels in architecting robust, scalable web applications that prioritize performance, security, and exceptional user experiences.",
+      "With a keen analytical mind and strong problem-solving abilities, Muazam delivers efficient, data-driven solutions to intricate software challenges, ensuring seamless integration and optimal functionality across diverse projects.",
+      "His professional journey includes key roles in enterprise-level applications, multinational business platforms, and freelance initiatives, where he has honed skills in performance optimization, RESTful API development, and CI/CD pipelines. Notable GitHub contributions feature AuraCart-app, a sophisticated e-commerce solution leveraging Next.js, Clerk, Sanity, Stripe, and PostgreSQL; isStartup-app, an innovative platform for startup pitches; and Cloud-Native-Generative-AI, exploring advanced AI engineering with tools like LangChain and Pinecone.",
+    ],
+    skills: [
+      { name: "Next.js", percentage: 95 },
+      { name: "Laravel Development", percentage: 90 },
+      { name: "Vue.js", percentage: 85 },
+      { name: "TypeScript", percentage: 90 },
+      { name: "Python", percentage: 85 },
+      { name: "JavaScript (ES6+)", percentage: 95 },
+      { name: "PostgreSQL", percentage: 85 },
+      { name: "Generative AI (OpenAI, Gemini)", percentage: 85 },
+      { name: "CI/CD Pipelines", percentage: 85 },
+      { name: "Google Cloud & APIs", percentage: 90 },
+      { name: "Sanity CMS", percentage: 85 },
+      { name: "Stripe Payments", percentage: 85 },
+    ],
+    socials: {
+      stackoverflow: "https://stackoverflow.com/",
+      linkedin: "https://www.linkedin.com/in/muazam-mughal/",
+      github: "https://github.com/MuazamMughal",
+    },
+  },
+  // ubadullah
+  {
+  id: "ubaidullah",
+  tier: "team",
+  image: ubaidullah,
+  name: "Ubaidullah",
+  role: "Full Stack Web Developer",
+  bio: "Full Stack Web Developer focused on building responsive, scalable, and user-friendly web applications. Skilled in modern frontend technologies like HTML, CSS, JavaScript, React, and backend development using PHP to create complete and efficient web solutions.",
+
+  contact: {
+    email: "ubaidullah.web.dev@gmail.com",
+    phone: "+923287231804",
+  },
+
+  biography: [
+    "Ubaidullah is a passionate Full Stack Web Developer who enjoys building modern and responsive web applications using technologies such as HTML5, CSS3, JavaScript (ES6+), React, and PHP.",
+    "He specializes in transforming design concepts into functional and user-friendly interfaces while also developing reliable backend logic to support dynamic web applications.",
+    "Currently pursuing Intermediate at Aspire Group of Colleges (2025), he continues to improve his development skills by learning new frameworks, tools, and best practices in both frontend and backend development."
+  ],
+
+  skills: [
+    { name: "HTML5", percentage: 90 },
+    { name: "CSS3", percentage: 92 },
+    { name: "JavaScript (ES6+)", percentage: 80 },
+    { name: "React.js", percentage: 72 },
+    { name: "PHP", percentage: 80 },
+    { name: "Symfony", percentage: 70 },
+    { name: "Tailwind CSS", percentage: 90 },
+    { name: "Bootstrap", percentage: 88 },
+    { name: "Responsive Web Design", percentage: 90 },
+    { name: "Git & GitHub", percentage: 90 }
+  ],
+
+  socials: {
+    linkedin: "https://www.linkedin.com/in/ubaidullah-21792a383",
+    github: "https://github.com/Ubaidullah-Web-Dev",
+  },
+
+  education: {
+    degree: "Intermediate",
+    institution: "Aspire Group of Colleges",
+    year: "2025",
+  },
+},
+
+  // sameer
+  {
+    id: "sameer-akhtar",
+    tier: "intern",
+    image: sameer_akhtar,
+    name: "Sameer Akhtar",
+    role: "Front-End Web Developer",
+    bio: "A results-driven and creative Front-End Developer with a keen eye for design and a passion for crafting seamless, responsive, and engaging user experiences. Proficient in transforming ideas and UI concepts into high-performing, visually compelling websites using modern web technologies. Committed to clean, maintainable code and continuous learning to stay ahead in the ever-evolving world of web development.",
+    contact: {
+      email: "sameerxdev@gmail.com",
+      phone: "+92 321 6903462",
+    },
+    biography: [
+      "Sameer Akhtar is a dedicated Front-End Developer skilled in HTML5, CSS3, JavaScript (ES6+), and Bootstrap 5. He specializes in building clean, responsive, and modern interfaces that balance functionality with aesthetic appeal.",
+      "He has a strong understanding of responsive web design, cross-browser compatibility, and UI/UX principles, ensuring that every project delivers an excellent user experience across all devices.",
+      "Sameer enjoys converting design concepts into reality, optimizing performance, and continuously learning new technologies to refine his craft. His development process emphasizes precision, clarity, and collaboration.",
+      "He holds a Bachelor's degree in Computer Science from Government College University Faisalabad, Sahiwal Campus, where he developed both technical and analytical skills that contribute to his professional growth.",
+    ],
+    skills: [
+      { name: "HTML5", percentage: 90 },
+      { name: "CSS3", percentage: 92 },
+      { name: "Tailwind CSS", percentage: 92 },
+      { name: "React.js", percentage: 72 },
+      { name: "Vue.js", percentage: 90 },
+      { name: "JavaScript (ES6+)", percentage: 80 },
+      { name: "Bootstrap 5", percentage: 88 },
+      { name: "Responsive Design", percentage: 93 },
+      { name: "Git & GitHub", percentage: 88 },
+      { name: "Figma (UI Collaboration)", percentage: 82 },
+    ],
+    socials: {
+      linkedin: "https://www.linkedin.com/in/sameer-akhtar-601349381",
+      github: "https://github.com/Sameer-Builds",
+      stackoverflow: "https://stackoverflow.com/",
+    },
+    education: {
+      degree: "Bachelor’s in Computer Science",
+      institution: "Government College University Faisalabad, Sahiwal Campus",
+    },
+  },
+  
+  // fazain
+  {
+    id: "faizan-ali",
+    tier: "intern",
+    image: faizan_ali,
+    name: "Faizan Ali",
+    role: "Front-End Developer",
+    bio: "A professional Web Developer specializing in Front-End development with a strong foundation in responsive and user-focused web design. Skilled in building modern, dynamic, and visually appealing interfaces using clean and efficient code. Possesses working knowledge of Back-End concepts, ensuring seamless integration and performance across platforms. Passionate about continuous learning, optimizing user experience, and crafting high-quality digital products.",
+    contact: {
+      email: "faizandevx@gmail.com",
+      phone: "+92 347 3057550",
+    },
+    biography: [
+      "Faizan Ali is a dedicated Front-End Developer with expertise in creating responsive, high-performance, and visually appealing web interfaces using modern technologies like HTML5, CSS3, JavaScript (ES6+), and Bootstrap 5.",
+      "He focuses on crafting user-friendly and accessible designs that deliver seamless experiences across devices and browsers. His clean coding approach ensures maintainability and efficiency in all projects.",
+      "Faizan also has a solid understanding of back-end concepts, enabling smooth collaboration between front-end and back-end systems for optimized web solutions.",
+      "He utilizes tools such as Git, GitHub, VS Code, and Figma for version control, design prototyping, and efficient development workflows, while constantly exploring new techniques to enhance UI/UX performance.",
+    ],
+    skills: [
+      { name: "HTML5", percentage: 95 },
+      { name: "CSS3", percentage: 92 },
+      { name: "JavaScript (ES6+)", percentage: 90 },
+      { name: "Bootstrap 5", percentage: 88 },
+      { name: "Tailwind CSS", percentage: 86 },
+      { name: "Responsive Design", percentage: 94 },
+      { name: "Cross-Browser Compatibility", percentage: 89 },
+      { name: "UI/UX Principles", percentage: 87 },
+      { name: "Performance Optimization", percentage: 85 },
+      { name: "Git & GitHub", percentage: 90 },
+      { name: "Figma", percentage: 83 },
+    ],
+    socials: {
+      linkedin: "https://www.linkedin.com/in/faizan-ali-5aa430380/",
+      github: "https://github.com/faizandevx",
+      stackoverflow: "https://stackoverflow.com/",
+    },
+    education: {
+      degree: "BS Software Engineering",
+    },
+  },
+
+  // Arham Ali
+  {
+    id: "arham-ali",
+    tier: "intern",
+    image: arham_ali,
+    name: "Arham Ali",
+    role: "Frontend Software Engineer",
+    bio: "Frontend Developer at AlphaSoft360 specializing in clean, responsive, and modern web interfaces.",
+    contact: {
+      email: "arhamali.dev@gmail.com",
+      phone: "+92 321 1051323",
+    },
+    biography: [
+      "Arham Ali is a Front-End Developer specializing in React, Next.js, JavaScript, and Tailwind CSS. He builds fast, scalable, and pixel-perfect user interfaces with a strong focus on modern UI/UX standards.",
+      "Currently working at AlphaSoft360, Arham contributes to the company's official portfolio website by implementing responsive layouts, reusable components, and smooth user experiences.",
+      "His experience includes transforming Figma/PSD designs into clean, production-ready interfaces, API integration, component-based architecture, and performance optimization.",
+      "Arham is passionate about continuous learning, collaboration, and building innovative frontend solutions that merge functionality with creativity.",
+    ],
+    skills: [
+      { name: "React.js", percentage: 92 },
+      { name: "Next.js", percentage: 92 },
+      { name: "Vue.js", percentage: 88 },
+      { name: "Component-Based Architecture", percentage: 95 },
+      { name: "API Integration", percentage: 90 },
+      { name: "TypeScript", percentage: 85 },
+      { name: "Tailwind CSS & Bootstrap", percentage: 94 },
+      { name: "HTML5 & CSS3", percentage: 96 },
+      { name: "JavaScript (ES6+)", percentage: 91 },
+      { name: "Performance Optimization", percentage: 88 },
+      { name: "Responsive UI Frameworks", percentage: 93 },
+      { name: "Cross-Browser Compatibility", percentage: 89 },
+      { name: "UI/UX Principles", percentage: 87 },
+      { name: "Git & GitHub", percentage: 95 },
+    ],
+    socials: {
+      stackoverflow: "https://stackoverflow.com/users/31519431/arham-ali",
+      linkedin: "https://www.linkedin.com/in/arham-ali-973359289/",
+      github: "https://github.com/arham-ali1323",
+      portfolio: "https://personal-portfoilio-five.vercel.app/",
+    },
+    education: {
+      degree: "Bachelor of Science in Economics",
+      institution: "University of Sahiwal, Sahiwal (2020 - 2024)",
+    },
+    experience: [
+      {
+        company: "AlphaSoft360",
+        role: "Frontend Software Engineer",
+        duration: "September 2025 – Present",
+        details: [
+          "Developed and maintained the company's official portfolio website using React.js and Tailwind CSS.",
+          "Designed and implemented responsive, mobile-first layouts and reusable UI components.",
+          "Improved code quality and project scalability through better state management and modular component architecture.",
+          "Integrated REST APIs and collaborated with backend developers to deliver seamless user experiences.",
+          "Optimized website performance and ensured cross-browser compatibility.",
+        ],
+      },
+      {
+        company: "Optimization Oasis",
+        role: "Frontend Software Engineer",
+        duration: "October 2021 – October 2022",
+        details: [
+          "Built responsive websites using HTML, CSS, JavaScript, Bootstrap, Tailwind, and React.js.",
+          "Converted Figma/PSD designs into pixel-perfect modern interfaces.",
+          "Optimized page performance and ensured full cross-browser compatibility.",
+          "Worked directly with clients to gather requirements and deliver updates.",
+          "Improved front-end loading speed and wrote clean, maintainable code.",
+        ],
+      },
+    ],
+  },
+  
+  // Ahmed
+  {
+    id: "ahmed_hassan",
+    tier: "intern",
+    image: ahmed_hassan,
+    name: "Ahmad Hassan",
+    role: "Frontend Developer",
+    bio: "Passionate web developer creating modern, responsive websites with clean code and elegant design.",
+    contact: {
+      email: "ahassandevx@gmail.com",
+      phone: "+92 327 1888082",
+    },
+    biography: [
+      " Ahmad Hassan is a passionate Web Developer skilled in HTML, CSS, Bootstrap, and JavaScript, dedicated to creating modern, responsive, and user-friendly websites. He focuses on clean code and elegant design to deliver seamless digital experiences.",
+      "Currently pursuing a BS in Artificial Intelligence, Ahmad combines his technical skills with a strong foundation in problem-solving and analytical thinking.",
+      "He is committed to continuous learning and professional growth, actively exploring new technologies and best practices in web development.",
+      "Ahmad is eager to contribute his skills and enthusiasm to dynamic teams and projects, aiming to make a positive impact in the tech industry.",
+    ],
+    skills: [
+      { name: "JavaScript (ES6+)", percentage: 92 },
+      { name: "HTML5 & CSS3", percentage: 96 },
+      { name: "Bootstrap & Tailwind CSS", percentage: 94 },
+      { name: "Responsive Web Design", percentage: 93 },
+      { name: "UI/UX Implementation", percentage: 90 },
+      { name: "Web Performance Optimization", percentage: 88 },
+      { name: "Git & GitHub", percentage: 85 },
+    ],
+    socials: {
+      stackoverflow: "https://stackoverflow.com/",
+      linkedin: "https://www.linkedin.com/in/ahmad-hassan-41a28b26b/",
+      github: "https://github.com/ahassandev",
+    },
+    education: {
+      degree: "BS Information Technology",
+      status: "8th Semester",
+    },
+  },
+
+  {
+    id: "mohid-naeem",
+    tier: "intern",
+    image: mohid_naeem,
+    name: "Mohid Naeem",
+    role: "Web Developer",
+    bio: "A dedicated and analytical professional with a strong academic background in Mathematics and Data Science. Passionate about data-driven problem solving, modern web technologies, and building efficient, scalable digital solutions. Experienced in combining analytical thinking with practical development skills.",
+    contact: {
+      email: "mohidnaeem.dev@gmail.com",
+      phone: "+92 303 7692559",
+    },
+    biography: [
+      "Mohid Naeem holds a BS in Mathematics and is currently pursuing an MS in Data Science. His academic journey has equipped him with strong analytical, statistical, and problem-solving skills.",
+      "He has a keen interest in applying data science techniques to real-world problems, along with developing clean and functional web applications.",
+      "Mohid is comfortable working with modern development tools and values writing structured, maintainable, and efficient code.",
+      "With a strong foundation in mathematics and data analysis, he aims to build intelligent, data-driven systems that deliver meaningful insights and practical solutions.",
+    ],
+    skills: [
+      { name: "HTML5", percentage: 90 },
+      { name: "CSS3", percentage: 92 },
+      { name: "Tailwind CSS", percentage: 92 },
+      { name: "JavaScript (ES6+)", percentage: 70 },
+      { name: "Bootstrap 5", percentage: 88 },
+      { name: "Responsive Design", percentage: 93 },
+      { name: "Git & GitHub", percentage: 88 },
+      { name: "Figma (UI Collaboration)", percentage: 82 },
+    ],
+    socials: {
+      linkedin: "https://www.linkedin.com/in/mohid-naeem-9a48412b1",
+      github: "https://github.com/mohidnaeemdev",
+      stackoverflow: "https://stackoverflow.com/",
+    },
+    education: {
+      degree: "BS Mathematics",
+      currentStudy: "MS Data Science",
+    },
+  },
+  {
+    id: "bu-ali",
+    tier: "intern",
+    image: bu_ali,
+    name: "Bu Ali Ahmed",
+    role: "Front-End Web Developer",
+    bio: "A motivated and detail-oriented Front-End Developer currently pursuing . Passionate about building modern, responsive, and user-friendly web interfaces using HTML, CSS, JavaScript, and Bootstrap. Actively learning and improving skills to create clean, efficient code and deliver professional-quality digital experiences.",
+    contact: {
+      email: "buali.developer@gmail.com",
+      phone: "none",
+    },
+    biography: [
+      "Bu-Ali Ahmed is an aspiring Front-End Web Developer currently pursuing a BS in Artificial Intelligence. He enjoys creating visually appealing, responsive, and functional web interfaces using HTML, CSS, and Bootstrap 5.",
+      "His focus lies in building modern web designs that are user-friendly, optimized, and accessible across all devices. Ali is dedicated to writing clean and efficient code that ensures smooth performance and great user experiences.",
+      "He also leverages tools like Git, GitHub, VS Code, and Figma for version control, design collaboration, and efficient development workflows.",
+      "With a growing interest in AI and front-end technologies, Ali aims to merge creativity with technical expertise to craft innovative digital solutions.",
+    ],
+    skills: [
+      { name: "HTML5", percentage: 90 },
+      { name: "CSS3", percentage: 92 },
+      { name: "Tailwind CSS", percentage: 92 },
+      { name: "Bootstrap 5", percentage: 88 },
+      { name: "Responsive Design", percentage: 93 },
+      { name: "Git & GitHub", percentage: 88 },
+      { name: "Figma (UI Collaboration)", percentage: 82 },
+    ],
+    socials: {
+      linkedin: "https://www.linkedin.com/in/bu-ali-ahmad-815a5a391/",
+      github: "https://github.com/bualiahmed",
+      stackoverflow: "https://stackoverflow.com/",
+    },
+  },
+];
+
+export default teamMembers;
