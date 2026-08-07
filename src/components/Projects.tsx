@@ -22,7 +22,7 @@ export default function Projects() {
 
         <div className="mt-14 grid lg:grid-cols-3 gap-5">
           <motion.a
-            href="#"
+            href={`/projects/${featured.slug}`}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
@@ -55,7 +55,7 @@ export default function Projects() {
 
           {rest.map((project, i) => (
             <motion.a
-              href="#"
+              href={`/projects/${project.slug}`}
               key={project.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

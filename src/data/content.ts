@@ -204,7 +204,7 @@ export const servicesProcess = [
 
 export const projects = [
   {
-    slug: "shoeto",
+    slug: "shoe-store",
     name: "Shoeto",
     category: "E-Commerce",
     description: "A stylish, comfortable footwear shopping destination for every occasion.",
@@ -214,7 +214,7 @@ export const projects = [
     duration: "7 months",
   },
   {
-    slug: "aura-cart-store",
+    slug: "ecommerce-platform",
     name: "Aura Cart Store",
     category: "E-Commerce",
     description: "Premium multi-category storefront with fast shipping and easy returns.",
@@ -223,7 +223,7 @@ export const projects = [
     duration: "4 months",
   },
   {
-    slug: "shop-n-hop",
+    slug: "task-management-app",
     name: "Shop 'N Hop App",
     category: "Mobile App",
     description: "Discover deals and track purchases with a personalized shopping experience.",
@@ -232,7 +232,7 @@ export const projects = [
     duration: "3 months",
   },
   {
-    slug: "find-here",
+    slug: "home-accessories",
     name: "Find-Here App",
     category: "Web Application",
     description: "Fast, reliable location search for businesses, services, and places nearby.",
@@ -241,7 +241,7 @@ export const projects = [
     duration: "5 months",
   },
   {
-    slug: "skill-orbit",
+    slug: "learning-management-system",
     name: "Skill Orbit",
     category: "Education",
     description: "Personalized learning paths with expert-led courses and resources.",
@@ -250,7 +250,7 @@ export const projects = [
     duration: "6 months",
   },
   {
-    slug: "is-startup",
+    slug: "IsStartup-app",
     name: "Is Startup",
     category: "Startup Platform",
     description: "Discover, track, and connect with innovative startups and funding trends.",
@@ -259,7 +259,7 @@ export const projects = [
     duration: "4 months",
   },
   {
-    slug: "kidezz",
+    slug: "Kids-item-platform",
     name: "Kidezz",
     category: "E-Commerce",
     description: "A fun, safe platform for kids to learn, play, and grow.",
@@ -268,7 +268,7 @@ export const projects = [
     duration: "7 months",
   },
   {
-    slug: "dhahween",
+    slug: "Jewelry-store",
     name: "Dhahween",
     category: "Food Delivery",
     description: "An innovative platform connecting talents, creativity, and opportunity.",
