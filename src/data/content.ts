@@ -323,9 +323,7 @@ export const footerLinks = {
   company: [
     { label: "About", href: "/about" },
     { label: "Our Team", href: "/team" },
-    { label: "Careers", href: "#" },
-    { label: "Blog", href: "/#insights" },
-    { label: "News", href: "#" },
+    { label: "Careers", href: "/careers" },
     { label: "Contact", href: "/contact" },
   ],
   services: [
@@ -338,12 +336,12 @@ export const footerLinks = {
     { label: "Custom Software", href: "/services" },
   ],
   resources: [
-    { label: "Documentation", href: "#" },
+    { label: "Documentation", href: "/docs" },
     { label: "Case Studies", href: "/projects" },
-    { label: "FAQs", href: "#" },
-    { label: "Support", href: "/contact" },
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms & Conditions", href: "#" },
+    { label: "FAQs", href: "/faqs" },
+    { label: "Support", href: "/support" },
+    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Terms & Conditions", href: "/terms" },
   ],
 };
 
