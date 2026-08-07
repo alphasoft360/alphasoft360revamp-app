@@ -33,7 +33,7 @@ export default function TeamSection({
           <h2 className="mt-4 text-3xl sm:text-4xl font-semibold tracking-tight text-balance">{title}</h2>
         </div>
 
-        <div className={`mt-14 grid grid-cols-2 sm:grid-cols-3 ${cols} gap-5`}>
+        <div className={`mt-10 sm:mt-14 grid grid-cols-1 min-[440px]:grid-cols-2 ${cols} gap-4 sm:gap-6 items-stretch`}>
           {members.map((member, i) => (
             <motion.div
               key={member.id}
@@ -41,6 +41,7 @@ export default function TeamSection({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: (i % 4) * 0.08 }}
+              className="h-full"
             >
               <TeamMemberCard member={member} />
             </motion.div>

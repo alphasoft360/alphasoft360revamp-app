@@ -52,7 +52,7 @@ export default function ServicesHero() {
               transition={{ duration: 0.6, delay: 0.15 }}
               className="mt-6 max-w-2xl text-lg text-muted text-balance"
             >
-              From mobile apps to enterprise infrastructure — twelve specialized
+              From mobile apps to enterprise infrastructure twelve specialized
               service lines, one team accountable for the outcome.
             </motion.p>
           </div>
@@ -73,9 +73,8 @@ export default function ServicesHero() {
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
-                    className={`card-border card-hover rounded-2xl bg-surface p-5 flex flex-col items-start justify-between h-[140px] ${
-                      i % 2 === 0 ? "mt-6" : "-mt-6"
-                    }`}
+                    className={`card-border card-hover rounded-2xl bg-surface p-5 flex flex-col items-start justify-between h-[140px] ${i % 2 === 0 ? "mt-6" : "-mt-6"
+                      }`}
                   >
                     <span className="h-10 w-10 rounded-xl bg-gradient-to-br from-accent/20 to-accent-2/20 flex items-center justify-center">
                       <Icon className="h-5 w-5 text-accent-2" />

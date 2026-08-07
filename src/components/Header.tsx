@@ -20,11 +20,10 @@ export default function Header({ photoHero = false }: { photoHero?: boolean }) {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/80 backdrop-blur-lg border-b border-line" : "bg-transparent"
-      }`}
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled ? "bg-background/80 backdrop-blur-lg border-b border-line" : "bg-transparent"
+        }`}
     >
-      <div className="mx-auto max-w-7xl flex items-center justify-between h-18 py-4">
+      <div className="mx-auto max-w-7xl px-2 lg:px-4 flex items-center justify-between h-18 py-4">
         <a href="/" className="flex items-center gap-2.5 font-semibold text-lg tracking-tight">
           <Image
             src={overPhotoHero ? "/brand/logo.png" : "/brand/logo-alt.png"}
@@ -37,9 +36,8 @@ export default function Header({ photoHero = false }: { photoHero?: boolean }) {
         </a>
 
         <nav
-          className={`hidden lg:flex items-center gap-8 text-lg transition-colors duration-300 ${
-            overPhotoHero ? "text-white/90" : "text-muted"
-          }`}
+          className={`hidden lg:flex items-center gap-8 text-lg transition-colors duration-300 ${overPhotoHero ? "text-white/90" : "text-muted"
+            }`}
         >
           {nav.map((item) => (
             <a
@@ -63,7 +61,7 @@ export default function Header({ photoHero = false }: { photoHero?: boolean }) {
         </a>
 
         <button
-          className={`lg:hidden transition-colors ${overPhotoHero && !open ? "text-white" : "text-foreground"}`}
+          className={`lg:hidden transition-colors ${overPhotoHero ? "text-white" : "text-foreground"}`}
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >

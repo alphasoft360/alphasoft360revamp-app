@@ -50,7 +50,7 @@ export default function ProjectsHero() {
               className="mt-6 max-w-2xl text-lg text-muted text-balance"
             >
               Successful projects across e-commerce, education, mobile, and
-              startup platforms — built end to end, from first sketch to launch.
+              startup platforms built end to end, from first sketch to launch.
             </motion.p>
           </div>
 

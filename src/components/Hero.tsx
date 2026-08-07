@@ -37,7 +37,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 text-lg text-white/80 max-w-2xl text-balance"
           >
-            AlphaSoft360 is a technology partner for founders and enterprises —
+            AlphaSoft360 is a technology partner for founders and enterprises
             building web platforms, mobile apps, and AI-driven products with
             the discipline of a decade of shipped work.
           </motion.p>

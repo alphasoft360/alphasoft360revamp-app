@@ -22,7 +22,7 @@ export default function About() {
           <p className="mt-5 text-muted leading-relaxed">
             With extensive experience in IT services, we specialize in
             developing innovative software applications and mobile
-            solutions for clients worldwide — delivering excellence and
+            solutions for clients worldwide delivering excellence and
             driving digital transformation for over a decade.
           </p>
         </motion.div>
@@ -45,7 +45,7 @@ export default function About() {
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
             <div className="absolute bottom-6 left-6 right-6">
               <p className="text-sm text-foreground/90 leading-relaxed">
-                &ldquo;We measure success by the businesses we help build —
+                &ldquo;We measure success by the businesses we help build
                 not just the code we ship.&rdquo;
               </p>
             </div>
