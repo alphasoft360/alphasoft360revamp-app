@@ -305,7 +305,7 @@ export const articles = [
 export const testimonials = [
   { quote: "AlphaSoft's data analytics platform revolutionized our decision-making process. We now have real-time insights that drive our business forward.", name: "Latif Khan", role: "Data Scientist, InsightCorp" },
   { quote: "AlphaSoft delivered our e-commerce platform on time and exceeded expectations. Their expertise in modern web technologies transformed our business operations.", name: "Ahmed Rahman", role: "CTO, TechStart Solutions" },
-  { quote: "Working with AlphaSoft was a game-changer for our mobile app development. Their attention to detail resulted in a seamless user experience.", name: "Ali Raza", role: "Product Manager, InnovateCorp" },
+  { quote: "Working with AlphaSoft was a game changer for our mobile app development. Their attention to detail resulted in a seamless user experience.", name: "Ali Raza", role: "Product Manager, InnovateCorp" },
   { quote: "The custom software solution AlphaSoft built for us significantly improved workflow efficiency. Their support team is always responsive.", name: "Fatima Khan", role: "Operations Director, DataFlow Inc" },
   { quote: "AlphaSoft's expertise in cloud migration helped us scale seamlessly. Their strategic approach saved us time and resources.", name: "Aisha Ahmed", role: "IT Manager, GlobalTech" },
   { quote: "AlphaSoft's team provided exceptional UI/UX design and development services. Our client satisfaction increased dramatically.", name: "Zara Malik", role: "Marketing Director, BrandBoost" },
@@ -353,8 +353,8 @@ export const aboutStory = {
   eyebrow: "About Us",
   heading: "Empowering business growth through innovative technology",
   paragraphs: [
-    "With extensive, proven expertise in software development, our team excels in delivering high-performance web applications, IoT solutions, and seamless API integrations for clients across the globe. At our core, we prioritize innovation, scalability, and user-focused design — ensuring every digital product we create drives measurable results and long-term success for our partners.",
-    "We stand firmly against complacency and compromise, driven by the belief that true progress emerges from clarity, integrity, and purpose. In a world often distracted by short-term gains, we remain focused on creating lasting impact through dedication, innovation, and thoughtful execution. Our vision isn't built on convenience — it's built on commitment: a commitment to excellence, continuous growth, and doing what's right, even when it's not easy.",
+    "With extensive, proven expertise in software development, our team excels in delivering high-performance web applications, IoT solutions, and seamless API integrations for clients across the globe. At our core, we prioritize innovation, scalability, and user-focused design ensuring every digital product we create drives measurable results and long-term success for our partners.",
+    "We stand firmly against complacency and compromise, driven by the belief that true progress emerges from clarity, integrity, and purpose. In a world often distracted by short-term gains, we remain focused on creating lasting impact through dedication, innovation, and thoughtful execution. Our vision isn't built on convenience it's built on commitment: a commitment to excellence, continuous growth, and doing what's right, even when it's not easy.",
   ],
 };
 
@@ -365,7 +365,7 @@ export const values = [
   },
   {
     title: "Integrity",
-    description: "Clarity, honesty, and purpose guide every client relationship — even when the easy path would be simpler.",
+    description: "Clarity, honesty, and purpose guide every client relationship even when the easy path would be simpler.",
   },
   {
     title: "Excellence",

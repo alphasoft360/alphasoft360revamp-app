@@ -47,7 +47,7 @@ export default function ContactHero() {
               className="mt-6 max-w-2xl text-lg text-muted text-balance"
             >
               Send us a message and our team will get back to you within one
-              business day — or chat with us directly on WhatsApp.
+              business day or chat with us directly on WhatsApp.
             </motion.p>
           </div>
 

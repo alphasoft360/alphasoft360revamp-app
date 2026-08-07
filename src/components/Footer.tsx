@@ -81,7 +81,7 @@ export default function Footer() {
             </h2>
             <p className="mt-4 text-muted max-w-xl mx-auto text-balance">
               Tell us about your idea and our team will help you scope, design, and
-              ship it — from the first sketch to production.
+              ship it from the first sketch to production.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href={contact.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-primary">
