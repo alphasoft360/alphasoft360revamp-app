@@ -64,7 +64,7 @@ body {
 }
 
 .glow-blob {
-  filter: blur(70px);
+  filter: blur(90px);
 }
 
 @keyframes orb-float-1 {
