@@ -11,7 +11,7 @@ import type { IconType } from "react-icons";
 const icons: Record<string, { icon: IconType; label: string; color: string }> = {
   aws: { icon: FaAws, label: "AWS", color: "#FF9900" },
   react: { icon: SiReact, label: "React", color: "#61DAFB" },
-  nextdotjs: { icon: SiNextdotjs, label: "Next.js", color: "#FFFFFF" },
+  nextdotjs: { icon: SiNextdotjs, label: "Next.js", color: "#000000" },
   typescript: { icon: SiTypescript, label: "TypeScript", color: "#3178C6" },
   nodedotjs: { icon: SiNodedotjs, label: "Node.js", color: "#5FA04E" },
   tailwindcss: { icon: SiTailwindcss, label: "TailwindCSS", color: "#38BDF8" },
@@ -24,7 +24,7 @@ const icons: Record<string, { icon: IconType; label: string; color: string }> = 
   angular: { icon: SiAngular, label: "Angular", color: "#E23237" },
   vuedotjs: { icon: SiVuedotjs, label: "Vue.js", color: "#4FC08D" },
   laravel: { icon: SiLaravel, label: "Laravel", color: "#FF2D20" },
-  apachekafka: { icon: SiApachekafka, label: "Kafka", color: "#FFFFFF" },
+  apachekafka: { icon: SiApachekafka, label: "Kafka", color: "#000000" },
   googlecloud: { icon: SiGooglecloud, label: "Google Cloud", color: "#4285F4" },
   kubernetes: { icon: SiKubernetes, label: "Kubernetes", color: "#326CE5" },
 };
