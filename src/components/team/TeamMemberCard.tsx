@@ -20,7 +20,7 @@ type Member = {
   socials?: Partial<Record<string, string>>;
 };
 
-export default function TeamMemberCard({ member }: { member: Member }) {
+export default function TeamMemberCard({ member, loading = "lazy" }: { member: Member; loading?: "lazy" | "eager" }) {
   const socialEntries = Object.entries(member.socials ?? {}).filter(([, url]) => Boolean(url));
 
   return (
@@ -32,6 +32,7 @@ export default function TeamMemberCard({ member }: { member: Member }) {
             alt={member.name}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            loading={loading}
             className="object-cover grayscale-[10%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
           />
         </div>
