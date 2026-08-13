@@ -61,57 +61,8 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://alphasoft360.com/#organization",
-        "name": "AlphaSoft360",
-        "url": "https://alphasoft360.com",
-        "logo": "https://alphasoft360.com/brand/logo.png",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+923704857471",
-          "contactType": "customer service",
-          "email": "alphasoft360@gmail.com",
-          "areaServed": "Worldwide"
-        },
-        "location": {
-          "@type": "Place",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Main Pakavenue Road",
-            "addressLocality": "Sahiwal",
-            "postalCode": "57000",
-            "addressCountry": "PK"
-          }
-        },
-        "sameAs": [
-          "https://www.linkedin.com/company/alphasoft360",
-          "https://github.com/alphasoft360",
-          "https://twitter.com/alphasoft360"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://alphasoft360.com/#website",
-        "url": "https://alphasoft360.com",
-        "name": "AlphaSoft360",
-        "description": "IT Consulting & Software Engineering Solutions",
-        "publisher": {
-          "@id": "https://alphasoft360.com/#organization"
-        }
-      }
-    ]
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
       <Header photoHero />
       <main className="flex-1">
         <Hero />
