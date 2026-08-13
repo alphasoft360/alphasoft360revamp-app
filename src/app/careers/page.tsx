@@ -8,6 +8,45 @@ export const metadata: Metadata = {
   title: "Careers — AlphaSoft360",
   description:
     "Join the team at AlphaSoft360. Explore career opportunities in software engineering, AI, cloud computing, and digital product design.",
+  alternates: {
+    canonical: "https://alphasoft360.com/careers",
+  },
+  keywords: [
+    "AlphaSoft360 Careers",
+    "Software Engineer Jobs Pakistan",
+    "AI Developer Vacancies",
+    "DevOps Remote Careers",
+    "UI/UX Design Jobs Sahiwal",
+    "Web Developer Internships"
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "Careers — AlphaSoft360",
+    description:
+      "Join the team at AlphaSoft360. Explore career opportunities in software engineering, AI, cloud computing, and digital product design.",
+    url: "https://alphasoft360.com/careers",
+    siteName: "AlphaSoft360",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "https://alphasoft360.com/brand/hero-2.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Careers at AlphaSoft360",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Careers — AlphaSoft360",
+    description:
+      "Join the team at AlphaSoft360. Explore career opportunities in software engineering, AI, cloud computing, and digital product design.",
+    images: ["https://alphasoft360.com/brand/hero-2.jpeg"],
+  },
 };
 
 const jobOpenings = [
@@ -77,8 +116,39 @@ const perks = [
 ];
 
 export default function CareersPage() {
+  const jsonLd = jobOpenings.map((job) => ({
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    "title": job.title,
+    "description": job.description,
+    "datePosted": "2026-02-15",
+    "validThrough": "2027-02-15",
+    "employmentType": job.type === "Full-Time" ? "FULL_TIME" : "PART_TIME",
+    "hiringOrganization": {
+      "@type": "Organization",
+      "name": "AlphaSoft360",
+      "sameAs": "https://alphasoft360.com",
+      "logo": "https://alphasoft360.com/brand/logo.png"
+    },
+    "jobLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Main Pakavenue Road",
+        "addressLocality": "Sahiwal",
+        "postalCode": "57000",
+        "addressCountry": "PK"
+      }
+    },
+    "jobLocationType": job.location.toLowerCase().includes("remote") ? "TELECOMMUTE" : undefined
+  }));
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <main className="flex-1">
         <section className="relative overflow-hidden pt-40 pb-20 lg:pt-48 lg:pb-24">

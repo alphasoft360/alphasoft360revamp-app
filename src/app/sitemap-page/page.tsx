@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ArrowUpRight, FolderTree } from "lucide-react";
@@ -9,6 +10,44 @@ export const metadata: Metadata = {
   title: "Sitemap — AlphaSoft360",
   description:
     "Complete sitemap directory of all pages, services, portfolio case studies, and resources available on AlphaSoft360.",
+  alternates: {
+    canonical: "https://alphasoft360.com/sitemap-page",
+  },
+  keywords: [
+    "AlphaSoft360 Sitemap",
+    "Website Directory",
+    "IT Services Index",
+    "Case Studies Directory",
+    "Resource Navigation"
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "Sitemap — AlphaSoft360",
+    description:
+      "Complete sitemap directory of all pages, services, portfolio case studies, and resources available on AlphaSoft360.",
+    url: "https://alphasoft360.com/sitemap-page",
+    siteName: "AlphaSoft360",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "https://alphasoft360.com/brand/hero-2.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "AlphaSoft360 Website Sitemap",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sitemap — AlphaSoft360",
+    description:
+      "Complete sitemap directory of all pages, services, portfolio case studies, and resources available on AlphaSoft360.",
+    images: ["https://alphasoft360.com/brand/hero-2.jpeg"],
+  },
 };
 
 const sitemapSections = [
@@ -75,13 +114,13 @@ export default function SitemapPage() {
                   <ul className="mt-4 space-y-2.5 text-sm">
                     {section.links.map((link) => (
                       <li key={link.label}>
-                        <a
+                        <Link
                           href={link.href}
                           className="text-muted hover:text-accent transition-colors flex items-center gap-1.5"
                         >
                           <ArrowUpRight className="h-3.5 w-3.5 text-accent-2 shrink-0" />
                           {link.label}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -99,13 +138,13 @@ export default function SitemapPage() {
                 <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
                   {servicesFull.map((srv) => (
                     <li key={srv.slug}>
-                      <a
+                      <Link
                         href={`/services#${srv.slug}`}
                         className="text-muted hover:text-accent-2 transition-colors flex items-center gap-1.5"
                       >
                         <ArrowUpRight className="h-3.5 w-3.5 text-accent shrink-0" />
                         {srv.title}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -119,13 +158,13 @@ export default function SitemapPage() {
                 <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
                   {projectsData.map((proj) => (
                     <li key={proj.slug}>
-                      <a
+                      <Link
                         href={`/projects/${proj.slug}`}
                         className="text-muted hover:text-accent-2 transition-colors flex items-center gap-1.5"
                       >
                         <ArrowUpRight className="h-3.5 w-3.5 text-accent shrink-0" />
                         {proj.title}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

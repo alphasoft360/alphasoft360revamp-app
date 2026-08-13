@@ -8,6 +8,7 @@ import {
 import type { LucideIcon } from "lucide-react";
 import { servicesFull } from "@/data/content";
 import SpotlightCard from "@/components/SpotlightCard";
+import Link from "next/link";
 
 const icons: Record<string, LucideIcon> = {
   smartphone: Smartphone,
@@ -49,13 +50,13 @@ export default function ServicesGrid() {
                   </div>
                   <h3 className={`mt-6 font-medium ${isFeatured ? 'text-2xl' : 'text-lg'}`}>{service.title}</h3>
                   <p className={`mt-3 text-muted leading-relaxed flex-1 ${isFeatured ? 'text-base' : 'text-sm'}`}>{service.description}</p>
-                  <a
+                  <Link
                     href="/contact"
                     className={`mt-6 inline-flex items-center gap-1.5 font-medium text-foreground ${isFeatured ? 'text-base' : 'text-sm'}`}
                   >
                     Learn more
                     <ArrowUpRight className={`group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform ${isFeatured ? 'h-4 w-4' : 'h-3.5 w-3.5'}`} />
-                  </a>
+                  </Link>
                 </SpotlightCard>
               </motion.div>
             );

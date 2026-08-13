@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Book, Code2, Terminal, Cpu, FileText, ArrowRight, Shield } from "lucide-react";
@@ -7,6 +8,45 @@ export const metadata: Metadata = {
   title: "Documentation & Developer Hub — AlphaSoft360",
   description:
     "Explore developer documentation, API guides, integration patterns, and architecture specs for AlphaSoft360 products and services.",
+  alternates: {
+    canonical: "https://alphasoft360.com/docs",
+  },
+  keywords: [
+    "AlphaSoft360 Documentation",
+    "Developer Hub",
+    "API References",
+    "Software Integration Guides",
+    "Cloud Deploy Scripts",
+    "AI SDK Setup"
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "Documentation & Developer Hub — AlphaSoft360",
+    description:
+      "Explore developer documentation, API guides, integration patterns, and architecture specs for AlphaSoft360 products and services.",
+    url: "https://alphasoft360.com/docs",
+    siteName: "AlphaSoft360",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "https://alphasoft360.com/brand/hero-2.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "AlphaSoft360 Developer Hub",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Documentation & Developer Hub — AlphaSoft360",
+    description:
+      "Explore developer documentation, API guides, integration patterns, and architecture specs for AlphaSoft360 products and services.",
+    images: ["https://alphasoft360.com/brand/hero-2.jpeg"],
+  },
 };
 
 const docCategories = [
@@ -66,9 +106,9 @@ export default function DocsPage() {
                       <h2 className="text-xl font-semibold text-foreground">{cat.title}</h2>
                       <p className="mt-3 text-sm text-muted leading-relaxed">{cat.description}</p>
                     </div>
-                    <a href="/contact" className="mt-8 text-sm font-medium text-accent-2 flex items-center gap-1.5 hover:underline">
+                    <Link href="/contact" className="mt-8 text-sm font-medium text-accent-2 flex items-center gap-1.5 hover:underline">
                       View Guides &amp; References <ArrowRight className="h-4 w-4" />
-                    </a>
+                    </Link>
                   </div>
                 );
               })}
@@ -79,9 +119,9 @@ export default function DocsPage() {
                 <h3 className="text-xl font-semibold text-foreground">Need dedicated API support?</h3>
                 <p className="mt-1 text-sm text-muted">Our engineering support engineers are available 24/7 to assist with integrations.</p>
               </div>
-              <a href="/contact" className="btn-primary shrink-0 text-xs">
+              <Link href="/contact" className="btn-primary shrink-0 text-xs">
                 Contact Developer Support
-              </a>
+              </Link>
             </div>
           </div>
         </section>

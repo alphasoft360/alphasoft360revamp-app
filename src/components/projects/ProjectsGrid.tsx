@@ -2,9 +2,12 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import projectsData from "@/data/projectsData";
 import SpotlightCard from "@/components/SpotlightCard";
+
+const MotionLink = motion(Link);
 
 export default function ProjectsGrid() {
   return (
@@ -16,7 +19,7 @@ export default function ProjectsGrid() {
             const colSpan = isFeatured ? "md:col-span-2 lg:col-span-2" : "";
             
             return (
-              <motion.a
+              <MotionLink
                 href={`/projects/${project.slug}`}
                 key={project.slug}
                 initial={{ opacity: 0, y: 20 }}
@@ -56,7 +59,7 @@ export default function ProjectsGrid() {
                     </div>
                   </div>
                 </SpotlightCard>
-              </motion.a>
+              </MotionLink>
             );
           })}
         </div>

@@ -6,6 +6,34 @@ export const metadata: Metadata = {
   title: "Cookies Policy — AlphaSoft360",
   description:
     "Information regarding the cookies and tracking technologies used by AlphaSoft360.",
+  alternates: {
+    canonical: "https://alphasoft360.com/cookies",
+  },
+  keywords: [
+    "AlphaSoft360 Cookies Policy",
+    "Cookie Consent Information",
+    "Website Tracking Technologies",
+    "Privacy and Cookies Info"
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "Cookies Policy — AlphaSoft360",
+    description:
+      "Information regarding the cookies and tracking technologies used by AlphaSoft360.",
+    url: "https://alphasoft360.com/cookies",
+    siteName: "AlphaSoft360",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Cookies Policy — AlphaSoft360",
+    description:
+      "Information regarding the cookies and tracking technologies used by AlphaSoft360.",
+  },
 };
 
 export default function CookiesPage() {

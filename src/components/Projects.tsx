@@ -2,9 +2,12 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { projects } from "@/data/content";
 import SpotlightCard from "./SpotlightCard";
+
+const MotionLink = motion(Link);
 
 export default function Projects() {
   const featured = projects.find((p) => p.featured) ?? projects[0];
@@ -21,7 +24,7 @@ export default function Projects() {
         </div>
 
         <div className="mt-14 grid lg:grid-cols-3 gap-5">
-          <motion.a
+          <MotionLink
             href={`/projects/${featured.slug}`}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -51,10 +54,10 @@ export default function Projects() {
                 </div>
               </div>
             </SpotlightCard>
-          </motion.a>
+          </MotionLink>
 
           {rest.map((project, i) => (
-            <motion.a
+            <MotionLink
               href={`/projects/${project.slug}`}
               key={project.name}
               initial={{ opacity: 0, y: 20 }}
@@ -84,7 +87,7 @@ export default function Projects() {
                   </p>
                 </div>
               </SpotlightCard>
-            </motion.a>
+            </MotionLink>
           ))}
         </div>
       </div>

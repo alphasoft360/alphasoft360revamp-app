@@ -23,9 +23,8 @@ export default function Blog() {
           {articles.map((article, i) => {
             const Icon = icons[i % icons.length];
             return (
-              <motion.a
+              <motion.div
                 key={article.title}
-                href="#"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
@@ -49,7 +48,7 @@ export default function Blog() {
                     </span>
                   </div>
                 </SpotlightCard>
-              </motion.a>
+              </motion.div>
             );
           })}
         </div>

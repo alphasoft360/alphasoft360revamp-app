@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Mail, Phone, GraduationCap, Briefcase, ChevronRight } from "lucide-react";
 import { FaLinkedinIn, FaGithub, FaStackOverflow } from "react-icons/fa6";
 import { Globe } from "lucide-react";
@@ -26,6 +27,33 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   return {
     title: `${member.name} — AlphaSoft360`,
     description: member.bio,
+    alternates: {
+      canonical: `https://alphasoft360.com/team/${id}`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+    openGraph: {
+      title: `${member.name} — AlphaSoft360`,
+      description: member.bio,
+      url: `https://alphasoft360.com/team/${id}`,
+      siteName: "AlphaSoft360",
+      locale: "en_US",
+      type: "profile",
+      images: [
+        {
+          url: `https://alphasoft360.com${member.image}`,
+          alt: member.name,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${member.name} — AlphaSoft360`,
+      description: member.bio,
+      images: [`https://alphasoft360.com${member.image}`],
+    },
   };
 }
 
@@ -37,17 +65,37 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ id:
 
   const socialEntries = Object.entries(member.socials ?? {}).filter(([, url]) => Boolean(url));
 
+  const socialUrls = Object.values(member.socials ?? {}).filter(Boolean);
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": member.name,
+    "jobTitle": member.role,
+    "description": member.bio,
+    "image": `https://alphasoft360.com${member.image}`,
+    "worksFor": {
+      "@type": "Organization",
+      "name": "AlphaSoft360",
+      "url": "https://alphasoft360.com"
+    },
+    "sameAs": socialUrls
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <main className="flex-1">
         <section className="relative overflow-hidden pt-40 pb-20 lg:pt-48 lg:pb-24">
 
           <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
             <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm text-muted">
-              <a href="/" className="hover:text-foreground transition-colors">Home</a>
+              <Link href="/" className="hover:text-foreground transition-colors">Home</Link>
               <ChevronRight className="h-3.5 w-3.5" />
-              <a href="/team" className="hover:text-foreground transition-colors">Team</a>
+              <Link href="/team" className="hover:text-foreground transition-colors">Team</Link>
               <ChevronRight className="h-3.5 w-3.5" />
               <span className="text-foreground">{member.name}</span>
             </nav>
@@ -208,9 +256,9 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ id:
 
         <section className="relative py-20 border-t border-line">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <a href="/team" className="btn-secondary inline-flex">
+            <Link href="/team" className="btn-secondary inline-flex">
               ← Back to all team members
-            </a>
+            </Link>
           </div>
         </section>
       </main>

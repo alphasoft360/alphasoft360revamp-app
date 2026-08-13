@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowUpRight, Mail, Phone, MapPin, Clock } from "lucide-react";
 import {
   SiReact, SiNextdotjs, SiNodedotjs, SiLaravel, SiPython, SiDocker, SiKubernetes,
@@ -50,12 +51,12 @@ function FooterColumn({ title, links }: { title: string; links: { label: string;
       <ul className="mt-5 space-y-3">
         {links.map((link) => (
           <li key={link.label}>
-            <a
+            <Link
               href={link.href}
               className="text-sm text-muted hover:text-foreground transition-colors"
             >
               {link.label}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
@@ -88,9 +89,9 @@ export default function Footer() {
                 Get Started
                 <ArrowUpRight className="h-4 w-4" />
               </a>
-              <a href="/contact" className="btn-secondary">
+              <Link href="/contact" className="btn-secondary">
                 Contact Us
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -106,7 +107,7 @@ export default function Footer() {
             className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-12"
           >
             <div className="col-span-2 sm:col-span-3 lg:col-span-2">
-              <a href="/" className="inline-flex">
+              <Link href="/" className="inline-flex">
                 <Image
                   src="/brand/logo-alt.png"
                   alt="AlphaSoft360"
@@ -114,7 +115,7 @@ export default function Footer() {
                   height={73}
                   className="h-16 w-auto"
                 />
-              </a>
+              </Link>
               <p className="mt-5 text-sm text-muted leading-relaxed max-w-xs">
                 AlphaSoft360 is a technology partner for founders and enterprises —
                 building software, cloud, and AI-driven products for over a decade.
@@ -197,10 +198,10 @@ export default function Footer() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted">
             <p>© {new Date().getFullYear()} AlphaSoft360. All rights reserved.</p>
             <nav aria-label="Legal" className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
-              <a href="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</a>
-              <a href="/terms" className="hover:text-foreground transition-colors">Terms of Service</a>
-              <a href="/cookies" className="hover:text-foreground transition-colors">Cookies Policy</a>
-              <a href="/sitemap-page" className="hover:text-foreground transition-colors">Sitemap</a>
+              <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
+              <Link href="/terms" className="hover:text-foreground transition-colors">Terms of Service</Link>
+              <Link href="/cookies" className="hover:text-foreground transition-colors">Cookies Policy</Link>
+              <Link href="/sitemap-page" className="hover:text-foreground transition-colors">Sitemap</Link>
             </nav>
             {/* <p>Built with ❤️ using modern web technologies.</p> */}
           </div>

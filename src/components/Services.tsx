@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import { services } from "@/data/content";
 import SpotlightCard from "./SpotlightCard";
+import Link from "next/link";
 
 const icons = [Code2, Globe, BarChart3, Cloud, PenTool, Server];
 
@@ -20,13 +21,13 @@ export default function Services() {
               All the IT solutions your business needs, in one place
             </h2>
           </div>
-          <a
+          <Link
             href="/services"
             className="group inline-flex items-center gap-1.5 text-sm font-medium text-foreground shrink-0"
           >
             View all services
             <ArrowUpRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </a>
+          </Link>
         </div>
 
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -53,13 +54,13 @@ export default function Services() {
                   </div>
                   <h3 className={`relative mt-6 font-medium ${isFeatured ? 'text-2xl' : 'text-lg'}`}>{service.title}</h3>
                   <p className={`relative mt-3 text-muted leading-relaxed ${isFeatured ? 'text-base' : 'text-sm'}`}>{service.description}</p>
-                  <a
+                  <Link
                     href="/services"
                     className={`relative mt-5 inline-flex items-center gap-1.5 font-medium text-foreground ${isFeatured ? 'text-base' : 'text-sm'}`}
                   >
                     Learn more
                     <ArrowUpRight className={`group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform ${isFeatured ? 'h-4 w-4' : 'h-3.5 w-3.5'}`} />
-                  </a>
+                  </Link>
                 </SpotlightCard>
               </motion.div>
             );

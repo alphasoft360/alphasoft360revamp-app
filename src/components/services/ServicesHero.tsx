@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { ChevronRight, Smartphone, Globe, Cloud, Bot, Layers } from "lucide-react";
 
 const icons = [
@@ -23,7 +24,7 @@ export default function ServicesHero() {
               aria-label="Breadcrumb"
               className="flex items-center gap-1.5 text-sm text-muted"
             >
-              <a href="/" className="hover:text-foreground transition-colors">Home</a>
+              <Link href="/" className="hover:text-foreground transition-colors">Home</Link>
               <ChevronRight className="h-3.5 w-3.5" />
               <span className="text-foreground">Services</span>
             </motion.nav>

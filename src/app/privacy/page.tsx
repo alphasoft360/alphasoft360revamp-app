@@ -6,6 +6,34 @@ export const metadata: Metadata = {
   title: "Privacy Policy — AlphaSoft360",
   description:
     "Privacy Policy for AlphaSoft360. Learn how we collect, process, and safeguard your personal and business data.",
+  alternates: {
+    canonical: "https://alphasoft360.com/privacy",
+  },
+  keywords: [
+    "AlphaSoft360 Privacy Policy",
+    "Data Protection",
+    "Client Data Safeguards",
+    "Privacy Compliance Sahiwal"
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "Privacy Policy — AlphaSoft360",
+    description:
+      "Privacy Policy for AlphaSoft360. Learn how we collect, process, and safeguard your personal and business data.",
+    url: "https://alphasoft360.com/privacy",
+    siteName: "AlphaSoft360",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Privacy Policy — AlphaSoft360",
+    description:
+      "Privacy Policy for AlphaSoft360. Learn how we collect, process, and safeguard your personal and business data.",
+  },
 };
 
 export default function PrivacyPage() {

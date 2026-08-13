@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import projectsData from "@/data/projectsData";
@@ -22,6 +23,33 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${project.title} — AlphaSoft360`,
     description: project.description,
+    alternates: {
+      canonical: `https://alphasoft360.com/projects/${slug}`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+    openGraph: {
+      title: `${project.title} — AlphaSoft360`,
+      description: project.description,
+      url: `https://alphasoft360.com/projects/${slug}`,
+      siteName: "AlphaSoft360",
+      locale: "en_US",
+      type: "article",
+      images: [
+        {
+          url: `https://alphasoft360.com${project.image}`,
+          alt: project.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} — AlphaSoft360`,
+      description: project.description,
+      images: [`https://alphasoft360.com${project.image}`],
+    },
   };
 }
 
@@ -33,8 +61,25 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     notFound();
   }
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": project.title,
+    "description": project.description,
+    "image": `https://alphasoft360.com${project.image}`,
+    "author": {
+      "@type": "Organization",
+      "name": "AlphaSoft360",
+      "url": "https://alphasoft360.com"
+    }
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
@@ -42,7 +87,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
           <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
             <nav className="flex items-center gap-1.5 text-sm text-muted mb-8">
-              <a href="/projects" className="hover:text-foreground transition-colors">Projects</a>
+              <Link href="/projects" className="hover:text-foreground transition-colors">Projects</Link>
               <span className="text-muted">/</span>
               <span className="text-foreground">{project.title}</span>
             </nav>
@@ -165,7 +210,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             <p className="text-lg text-muted max-w-2xl mx-auto mb-8">
               Let's discuss your project and bring your ideas to life with our expertise.
             </p>
-            <a
+            <Link
               href="/#contact"
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent to-accent-2 px-8 py-4 text-sm font-medium text-white hover:opacity-90 transition-opacity"
             >
@@ -173,7 +218,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </a>
+            </Link>
           </div>
         </section>
       </main>

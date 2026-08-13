@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { LifeBuoy, Mail, Phone, MessageSquare, Clock, ShieldCheck, ArrowUpRight } from "lucide-react";
@@ -8,6 +9,45 @@ export const metadata: Metadata = {
   title: "Support Center — AlphaSoft360",
   description:
     "Get technical support, system assistance, and SLA maintenance for AlphaSoft360 products and custom software solutions.",
+  alternates: {
+    canonical: "https://alphasoft360.com/support",
+  },
+  keywords: [
+    "AlphaSoft360 Support",
+    "Technical Support Center",
+    "SLA Software Maintenance",
+    "IT Support Pakistan",
+    "24/7 Incident Response",
+    "Server Monitoring SLA"
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "Support Center — AlphaSoft360",
+    description:
+      "Get technical support, system assistance, and SLA maintenance for AlphaSoft360 products and custom software solutions.",
+    url: "https://alphasoft360.com/support",
+    siteName: "AlphaSoft360",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "https://alphasoft360.com/brand/hero-2.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "AlphaSoft360 Support Center",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Support Center — AlphaSoft360",
+    description:
+      "Get technical support, system assistance, and SLA maintenance for AlphaSoft360 products and custom software solutions.",
+    images: ["https://alphasoft360.com/brand/hero-2.jpeg"],
+  },
 };
 
 const supportChannels = [
@@ -92,9 +132,9 @@ export default function SupportPage() {
                 </p>
               </div>
               <div className="md:col-span-4 flex justify-start md:justify-end">
-                <a href="/contact" className="btn-primary text-xs">
+                <Link href="/contact" className="btn-primary text-xs">
                   Request SLA Terms
-                </a>
+                </Link>
               </div>
             </div>
           </div>

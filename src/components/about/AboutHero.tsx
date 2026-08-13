@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { ChevronRight, Users, Award } from "lucide-react";
 
 export default function AboutHero() {
@@ -17,7 +18,7 @@ export default function AboutHero() {
               aria-label="Breadcrumb"
               className="flex items-center gap-1.5 text-sm text-muted"
             >
-              <a href="/" className="hover:text-foreground transition-colors">Home</a>
+              <Link href="/" className="hover:text-foreground transition-colors">Home</Link>
               <ChevronRight className="h-3.5 w-3.5" />
               <span className="text-foreground">About</span>
             </motion.nav>
@@ -54,7 +55,7 @@ export default function AboutHero() {
                 <div className="relative aspect-[4/3]">
                   <Image
                     src="/brand/hero-2.jpeg"
-                    alt="AlphaSoft360 team at work"
+                    alt="AlphaSoft360 software engineering team working on global client solutions"
                     fill
                     sizes="280px"
                     className="object-cover"

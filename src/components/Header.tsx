@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { nav, contact } from "@/data/content";
 
@@ -24,29 +25,29 @@ export default function Header({ photoHero = false }: { photoHero?: boolean }) {
         }`}
     >
       <div className="mx-auto max-w-7xl px-2 lg:px-4 flex items-center justify-between h-18 py-4">
-        <a href="/" className="flex items-center gap-2.5 font-semibold text-lg tracking-tight">
+        <Link href="/" className="flex items-center gap-2.5 font-semibold text-lg tracking-tight">
           <Image
             src={overPhotoHero ? "/brand/logo.png" : "/brand/logo-alt.png"}
-            alt="AlphaSoft360"
+            alt="AlphaSoft360 Logo"
             width={168}
             height={73}
             className="h-11 lg:h-15 w-auto"
-            preload
+            priority
           />
-        </a>
+        </Link>
 
         <nav
           className={`hidden lg:flex items-center gap-8 text-lg transition-colors duration-300 ${overPhotoHero ? "text-white/90" : "text-muted"
             }`}
         >
           {nav.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               className={`transition-colors ${overPhotoHero ? "hover:text-white" : "hover:text-foreground"}`}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -72,14 +73,14 @@ export default function Header({ photoHero = false }: { photoHero?: boolean }) {
       {open && (
         <div className="lg:hidden border-t border-line bg-background/95 backdrop-blur-lg px-6 py-6 flex flex-col gap-5">
           {nav.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               onClick={() => setOpen(false)}
               className="text-base text-muted hover:text-foreground transition-colors"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
           <a
             href={contact.whatsapp}

@@ -31,8 +31,8 @@ export default function Story() {
             className="lg:col-span-2 relative rounded-3xl overflow-hidden card-border card-hover min-h-[320px]"
           >
             <Image
-              src="/brand/hero-2.jpeg"
-              alt="AlphaSoft360 team at work"
+              src="/brand/hero-3.jpeg"
+              alt="AlphaSoft360 modern workspace collaboration and agile software development planning"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
               className="object-cover"

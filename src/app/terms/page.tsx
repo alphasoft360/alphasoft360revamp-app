@@ -6,6 +6,34 @@ export const metadata: Metadata = {
   title: "Terms & Conditions — AlphaSoft360",
   description:
     "Terms & Conditions governing the use of AlphaSoft360 website, engineering services, and digital products.",
+  alternates: {
+    canonical: "https://alphasoft360.com/terms",
+  },
+  keywords: [
+    "AlphaSoft360 Terms and Conditions",
+    "Terms of Service",
+    "Client Service Agreement",
+    "User Agreement Pakistan"
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "Terms & Conditions — AlphaSoft360",
+    description:
+      "Terms & Conditions governing the use of AlphaSoft360 website, engineering services, and digital products.",
+    url: "https://alphasoft360.com/terms",
+    siteName: "AlphaSoft360",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Terms & Conditions — AlphaSoft360",
+    description:
+      "Terms & Conditions governing the use of AlphaSoft360 website, engineering services, and digital products.",
+  },
 };
 
 export default function TermsPage() {

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import { FaLinkedinIn, FaGithub, FaStackOverflow } from "react-icons/fa6";
 import { Globe, ArrowUpRight } from "lucide-react";
@@ -25,7 +26,7 @@ export default function TeamMemberCard({ member, loading = "lazy" }: { member: M
 
   return (
     <div className="group card-border card-hover rounded-2xl bg-surface overflow-hidden flex flex-col h-full">
-      <a href={`/team/${member.id}`} className="block flex-1">
+      <Link href={`/team/${member.id}`} className="block flex-1">
         <div className="relative aspect-square overflow-hidden">
           <Image
             src={member.image}
@@ -47,7 +48,7 @@ export default function TeamMemberCard({ member, loading = "lazy" }: { member: M
             {member.bio}
           </p>
         </div>
-      </a>
+      </Link>
 
       <div className="p-4 sm:p-5 pt-3 sm:pt-4 mt-auto border-t border-line/50 flex flex-wrap items-center justify-between gap-y-2 gap-x-2">
         {socialEntries.length > 0 ? (
@@ -72,13 +73,13 @@ export default function TeamMemberCard({ member, loading = "lazy" }: { member: M
         ) : (
           <span />
         )}
-        <a
+        <Link
           href={`/team/${member.id}`}
           className="text-xs font-medium text-foreground hover:text-accent-2 transition-colors whitespace-nowrap shrink-0 flex items-center gap-1 ml-auto"
         >
           View Profile
           <ArrowUpRight className="h-3 w-3 text-accent-2 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-        </a>
+        </Link>
       </div>
     </div>
   );

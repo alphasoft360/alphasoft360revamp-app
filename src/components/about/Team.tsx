@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { team } from "@/data/content";
 
 export default function Team() {
@@ -15,13 +16,13 @@ export default function Team() {
               The people building AlphaSoft360
             </h2>
           </div>
-          <a
+          <Link
             href="/team"
             className="group inline-flex items-center gap-1.5 text-sm font-medium text-foreground shrink-0"
           >
             Meet the whole team
             <span className="group-hover:translate-x-0.5 transition-transform">→</span>
-          </a>
+          </Link>
         </div>
 
         <div className="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-5">

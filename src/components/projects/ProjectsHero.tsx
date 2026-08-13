@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { ChevronRight, Sparkles } from "lucide-react";
 import projectsData from "@/data/projectsData";
 
@@ -20,7 +21,7 @@ export default function ProjectsHero() {
               aria-label="Breadcrumb"
               className="flex items-center gap-1.5 text-sm text-muted"
             >
-              <a href="/" className="hover:text-foreground transition-colors">Home</a>
+              <Link href="/" className="hover:text-foreground transition-colors">Home</Link>
               <ChevronRight className="h-3.5 w-3.5" />
               <span className="text-foreground">Projects</span>
             </motion.nav>
