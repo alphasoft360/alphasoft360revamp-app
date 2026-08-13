@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Meet the leadership, engineers, and interns building AlphaSoft360 — the people behind our software, cloud, and AI products.",
   alternates: {
-    canonical: "https://alphasoft360.com/team",
+    canonical: "https://alphasoft360.org/team",
   },
   keywords: [
     "AlphaSoft360 Team",
@@ -28,13 +28,13 @@ export const metadata: Metadata = {
     title: "Our Team — AlphaSoft360",
     description:
       "Meet the leadership, engineers, and interns building AlphaSoft360 — the people behind our software, cloud, and AI products.",
-    url: "https://alphasoft360.com/team",
+    url: "https://alphasoft360.org/team",
     siteName: "AlphaSoft360",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://alphasoft360.com/brand/hero-2.jpeg",
+        url: "https://alphasoft360.org/brand/hero-2.jpeg",
         width: 1200,
         height: 630,
         alt: "AlphaSoft360 Engineering Team",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "Our Team — AlphaSoft360",
     description:
       "Meet the leadership, engineers, and interns building AlphaSoft360 — the people behind our software, cloud, and AI products.",
-    images: ["https://alphasoft360.com/brand/hero-2.jpeg"],
+    images: ["https://alphasoft360.org/brand/hero-2.jpeg"],
   },
 };
 

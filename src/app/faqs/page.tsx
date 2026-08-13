@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Everything you need to know about working with AlphaSoft360, our engineering workflow, project delivery, and SLAs.",
   alternates: {
-    canonical: "https://alphasoft360.com/faqs",
+    canonical: "https://alphasoft360.org/faqs",
   },
   keywords: [
     "AlphaSoft360 FAQs",
@@ -27,13 +27,13 @@ export const metadata: Metadata = {
     title: "Frequently Asked Questions — AlphaSoft360",
     description:
       "Everything you need to know about working with AlphaSoft360, our engineering workflow, project delivery, and SLAs.",
-    url: "https://alphasoft360.com/faqs",
+    url: "https://alphasoft360.org/faqs",
     siteName: "AlphaSoft360",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://alphasoft360.com/brand/hero-2.jpeg",
+        url: "https://alphasoft360.org/brand/hero-2.jpeg",
         width: 1200,
         height: 630,
         alt: "Frequently Asked Questions — AlphaSoft360",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: "Frequently Asked Questions — AlphaSoft360",
     description:
       "Everything you need to know about working with AlphaSoft360, our engineering workflow, project delivery, and SLAs.",
-    images: ["https://alphasoft360.com/brand/hero-2.jpeg"],
+    images: ["https://alphasoft360.org/brand/hero-2.jpeg"],
   },
 };
 

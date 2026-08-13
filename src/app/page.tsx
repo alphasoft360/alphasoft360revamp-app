@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description:
     "AlphaSoft360 builds high-performance software, web applications, mobile apps, cloud DevOps, and AI automation solutions for businesses worldwide. Over a decade of engineering excellence.",
   alternates: {
-    canonical: "https://alphasoft360.com",
+    canonical: "https://alphasoft360.org",
   },
   keywords: [
     "AlphaSoft360",
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
     title: "AlphaSoft360 — IT Consulting & Software Engineering",
     description:
       "AlphaSoft360 builds high-performance software, web applications, mobile apps, cloud DevOps, and AI automation solutions for businesses worldwide.",
-    url: "https://alphasoft360.com",
+    url: "https://alphasoft360.org",
     siteName: "AlphaSoft360",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://alphasoft360.com/brand/hero-2.jpeg",
+        url: "https://alphasoft360.org/brand/hero-2.jpeg",
         width: 1200,
         height: 630,
         alt: "AlphaSoft360 Software Engineering Services",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     title: "AlphaSoft360 — IT Consulting & Software Engineering",
     description:
       "AlphaSoft360 builds high-performance software, web applications, mobile apps, cloud DevOps, and AI automation solutions for businesses worldwide.",
-    images: ["https://alphasoft360.com/brand/hero-2.jpeg"],
+    images: ["https://alphasoft360.org/brand/hero-2.jpeg"],
   },
 };
 

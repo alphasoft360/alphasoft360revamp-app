@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Information regarding the cookies and tracking technologies used by AlphaSoft360.",
   alternates: {
-    canonical: "https://alphasoft360.com/cookies",
+    canonical: "https://alphasoft360.org/cookies",
   },
   keywords: [
     "AlphaSoft360 Cookies Policy",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: "Cookies Policy — AlphaSoft360",
     description:
       "Information regarding the cookies and tracking technologies used by AlphaSoft360.",
-    url: "https://alphasoft360.com/cookies",
+    url: "https://alphasoft360.org/cookies",
     siteName: "AlphaSoft360",
     locale: "en_US",
     type: "website",

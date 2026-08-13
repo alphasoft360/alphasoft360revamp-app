@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://alphasoft360.com"),
+  metadataBase: new URL("https://alphasoft360.org"),
   title: "AlphaSoft360 — IT Consulting & Software Engineering",
   description:
     "AlphaSoft360 builds software, web, mobile, cloud, and AI solutions for businesses worldwide. A decade of proven engineering expertise.",
@@ -39,16 +39,16 @@ export default function RootLayout({
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://alphasoft360.com/#organization",
+        "@id": "https://alphasoft360.org/#organization",
         "name": "AlphaSoft360",
-        "url": "https://alphasoft360.com",
+        "url": "https://alphasoft360.org",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://alphasoft360.com/brand/logo.png",
+          "url": "https://alphasoft360.org/brand/logo.png",
           "width": "168",
           "height": "73"
         },
-        "image": "https://alphasoft360.com/brand/hero-2.jpeg",
+        "image": "https://alphasoft360.org/brand/hero-2.jpeg",
         "description": "AlphaSoft360 is a technology partner for founders and enterprises — building software, cloud, and AI-driven products for over a decade.",
         "foundingDate": "2022",
         "address": {
@@ -86,7 +86,7 @@ export default function RootLayout({
                   "description": "Comprehensive mobile application development services creating native, hybrid, and cross-platform apps for iOS and Android with modern technologies.",
                   "serviceType": "Software Development",
                   "areaServed": "Worldwide",
-                  "provider": { "@id": "https://alphasoft360.com/#organization" }
+                  "provider": { "@id": "https://alphasoft360.org/#organization" }
                 },
                 {
                   "@type": "Service",
@@ -94,7 +94,7 @@ export default function RootLayout({
                   "description": "Custom web application development using modern frameworks and technologies to create responsive, user-friendly websites and web platforms.",
                   "serviceType": "Software Development",
                   "areaServed": "Worldwide",
-                  "provider": { "@id": "https://alphasoft360.com/#organization" }
+                  "provider": { "@id": "https://alphasoft360.org/#organization" }
                 },
                 {
                   "@type": "Service",
@@ -102,7 +102,7 @@ export default function RootLayout({
                   "description": "Complete e-commerce platform development with secure payment gateways, inventory management, and user-friendly shopping experiences.",
                   "serviceType": "E-Commerce Services",
                   "areaServed": "Worldwide",
-                  "provider": { "@id": "https://alphasoft360.com/#organization" }
+                  "provider": { "@id": "https://alphasoft360.org/#organization" }
                 },
                 {
                   "@type": "Service",
@@ -110,7 +110,7 @@ export default function RootLayout({
                   "description": "Comprehensive cloud migration, infrastructure automation, and DevOps practices to accelerate development cycles and improve deployment reliability.",
                   "serviceType": "IT Infrastructure Services",
                   "areaServed": "Worldwide",
-                  "provider": { "@id": "https://alphasoft360.com/#organization" }
+                  "provider": { "@id": "https://alphasoft360.org/#organization" }
                 },
                 {
                   "@type": "Service",
@@ -118,7 +118,7 @@ export default function RootLayout({
                   "description": "Comprehensive property management solutions to streamline real estate operations and enhance tenant experiences.",
                   "serviceType": "Enterprise Software",
                   "areaServed": "Worldwide",
-                  "provider": { "@id": "https://alphasoft360.com/#organization" }
+                  "provider": { "@id": "https://alphasoft360.org/#organization" }
                 },
                 {
                   "@type": "Service",
@@ -126,7 +126,7 @@ export default function RootLayout({
                   "description": "Comprehensive learning management systems and educational technology solutions for modern education.",
                   "serviceType": "Enterprise Software",
                   "areaServed": "Worldwide",
-                  "provider": { "@id": "https://alphasoft360.com/#organization" }
+                  "provider": { "@id": "https://alphasoft360.org/#organization" }
                 },
                 {
                   "@type": "Service",
@@ -134,7 +134,7 @@ export default function RootLayout({
                   "description": "Integrated healthcare solutions to improve patient care and streamline medical practice operations.",
                   "serviceType": "Enterprise Software",
                   "areaServed": "Worldwide",
-                  "provider": { "@id": "https://alphasoft360.com/#organization" }
+                  "provider": { "@id": "https://alphasoft360.org/#organization" }
                 },
                 {
                   "@type": "Service",
@@ -142,7 +142,7 @@ export default function RootLayout({
                   "description": "Leverage artificial intelligence to automate processes, enhance decision-making, and drive business growth.",
                   "serviceType": "Artificial Intelligence",
                   "areaServed": "Worldwide",
-                  "provider": { "@id": "https://alphasoft360.com/#organization" }
+                  "provider": { "@id": "https://alphasoft360.org/#organization" }
                 },
                 {
                   "@type": "Service",
@@ -150,7 +150,7 @@ export default function RootLayout({
                   "description": "Innovative Internet of Things solutions to connect devices, collect data, and enable smart automation.",
                   "serviceType": "Software Development",
                   "areaServed": "Worldwide",
-                  "provider": { "@id": "https://alphasoft360.com/#organization" }
+                  "provider": { "@id": "https://alphasoft360.org/#organization" }
                 },
                 {
                   "@type": "Service",
@@ -158,7 +158,7 @@ export default function RootLayout({
                   "description": "Comprehensive product design services including UI/UX design, user research, prototyping, and brand identity.",
                   "serviceType": "Design Services",
                   "areaServed": "Worldwide",
-                  "provider": { "@id": "https://alphasoft360.com/#organization" }
+                  "provider": { "@id": "https://alphasoft360.org/#organization" }
                 },
                 {
                   "@type": "Service",
@@ -166,7 +166,7 @@ export default function RootLayout({
                   "description": "Enterprise-grade data center solutions providing secure hosting, colocation, disaster recovery, and 24/7 monitoring.",
                   "serviceType": "IT Infrastructure Services",
                   "areaServed": "Worldwide",
-                  "provider": { "@id": "https://alphasoft360.com/#organization" }
+                  "provider": { "@id": "https://alphasoft360.org/#organization" }
                 },
                 {
                   "@type": "Service",
@@ -174,7 +174,7 @@ export default function RootLayout({
                   "description": "Comprehensive ERP and CRM solutions to streamline business operations, enhance customer relationships, and improve decision-making.",
                   "serviceType": "Enterprise Software",
                   "areaServed": "Worldwide",
-                  "provider": { "@id": "https://alphasoft360.com/#organization" }
+                  "provider": { "@id": "https://alphasoft360.org/#organization" }
                 }
               ]
             }
@@ -183,12 +183,12 @@ export default function RootLayout({
       },
       {
         "@type": "WebSite",
-        "@id": "https://alphasoft360.com/#website",
-        "url": "https://alphasoft360.com",
+        "@id": "https://alphasoft360.org/#website",
+        "url": "https://alphasoft360.org",
         "name": "AlphaSoft360",
         "description": "IT Consulting & Software Engineering Solutions",
         "publisher": {
-          "@id": "https://alphasoft360.com/#organization"
+          "@id": "https://alphasoft360.org/#organization"
         }
       }
     ]

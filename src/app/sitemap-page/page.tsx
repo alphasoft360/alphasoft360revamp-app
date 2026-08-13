@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "Complete sitemap directory of all pages, services, portfolio case studies, and resources available on AlphaSoft360.",
   alternates: {
-    canonical: "https://alphasoft360.com/sitemap-page",
+    canonical: "https://alphasoft360.org/sitemap-page",
   },
   keywords: [
     "AlphaSoft360 Sitemap",
@@ -28,13 +28,13 @@ export const metadata: Metadata = {
     title: "Sitemap — AlphaSoft360",
     description:
       "Complete sitemap directory of all pages, services, portfolio case studies, and resources available on AlphaSoft360.",
-    url: "https://alphasoft360.com/sitemap-page",
+    url: "https://alphasoft360.org/sitemap-page",
     siteName: "AlphaSoft360",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://alphasoft360.com/brand/hero-2.jpeg",
+        url: "https://alphasoft360.org/brand/hero-2.jpeg",
         width: 1200,
         height: 630,
         alt: "AlphaSoft360 Website Sitemap",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "Sitemap — AlphaSoft360",
     description:
       "Complete sitemap directory of all pages, services, portfolio case studies, and resources available on AlphaSoft360.",
-    images: ["https://alphasoft360.com/brand/hero-2.jpeg"],
+    images: ["https://alphasoft360.org/brand/hero-2.jpeg"],
   },
 };
 

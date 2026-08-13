@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Get in touch with AlphaSoft360 — send us a message, call, email, or chat with us on WhatsApp. We reply within one business day.",
   alternates: {
-    canonical: "https://alphasoft360.com/contact",
+    canonical: "https://alphasoft360.org/contact",
   },
   keywords: [
     "Contact AlphaSoft360",
@@ -26,13 +26,13 @@ export const metadata: Metadata = {
     title: "Contact Us — AlphaSoft360",
     description:
       "Get in touch with AlphaSoft360 — send us a message, call, email, or chat with us on WhatsApp. We reply within one business day.",
-    url: "https://alphasoft360.com/contact",
+    url: "https://alphasoft360.org/contact",
     siteName: "AlphaSoft360",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://alphasoft360.com/brand/hero-2.jpeg",
+        url: "https://alphasoft360.org/brand/hero-2.jpeg",
         width: 1200,
         height: 630,
         alt: "Contact AlphaSoft360",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: "Contact Us — AlphaSoft360",
     description:
       "Get in touch with AlphaSoft360 — send us a message, call, email, or chat with us on WhatsApp. We reply within one business day.",
-    images: ["https://alphasoft360.com/brand/hero-2.jpeg"],
+    images: ["https://alphasoft360.org/brand/hero-2.jpeg"],
   },
 };
 
@@ -55,12 +55,12 @@ export default function ContactPage() {
     "name": "Contact Us — AlphaSoft360",
     "description":
       "Get in touch with AlphaSoft360 — send us a message, call, email, or chat with us on WhatsApp. We reply within one business day.",
-    "url": "https://alphasoft360.com/contact",
+    "url": "https://alphasoft360.org/contact",
     "mainEntity": {
       "@type": "Organization",
       "name": "AlphaSoft360",
-      "url": "https://alphasoft360.com",
-      "logo": "https://alphasoft360.com/brand/logo.png",
+      "url": "https://alphasoft360.org",
+      "logo": "https://alphasoft360.org/brand/logo.png",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+923704857471",

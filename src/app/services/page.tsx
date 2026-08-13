@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "App development, web development, e-commerce, cloud & DevOps, AI automation, and more — twelve specialized IT service lines from AlphaSoft360.",
   alternates: {
-    canonical: "https://alphasoft360.com/services",
+    canonical: "https://alphasoft360.org/services",
   },
   keywords: [
     "AlphaSoft360 Services",
@@ -31,13 +31,13 @@ export const metadata: Metadata = {
     title: "Services — AlphaSoft360",
     description:
       "App development, web development, e-commerce, cloud & DevOps, AI automation, and more — twelve specialized IT service lines from AlphaSoft360.",
-    url: "https://alphasoft360.com/services",
+    url: "https://alphasoft360.org/services",
     siteName: "AlphaSoft360",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://alphasoft360.com/brand/hero-2.jpeg",
+        url: "https://alphasoft360.org/brand/hero-2.jpeg",
         width: 1200,
         height: 630,
         alt: "AlphaSoft360 IT Services Portfolio",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: "Services — AlphaSoft360",
     description:
       "App development, web development, e-commerce, cloud & DevOps, AI automation, and more — twelve specialized IT service lines from AlphaSoft360.",
-    images: ["https://alphasoft360.com/brand/hero-2.jpeg"],
+    images: ["https://alphasoft360.org/brand/hero-2.jpeg"],
   },
 };
 
@@ -62,8 +62,8 @@ export default function ServicesPage() {
     "provider": {
       "@type": "Organization",
       "name": "AlphaSoft360",
-      "url": "https://alphasoft360.com",
-      "logo": "https://alphasoft360.com/brand/logo.png"
+      "url": "https://alphasoft360.org",
+      "logo": "https://alphasoft360.org/brand/logo.png"
     },
     "areaServed": "Worldwide"
   }));

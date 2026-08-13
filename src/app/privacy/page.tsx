@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Privacy Policy for AlphaSoft360. Learn how we collect, process, and safeguard your personal and business data.",
   alternates: {
-    canonical: "https://alphasoft360.com/privacy",
+    canonical: "https://alphasoft360.org/privacy",
   },
   keywords: [
     "AlphaSoft360 Privacy Policy",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: "Privacy Policy — AlphaSoft360",
     description:
       "Privacy Policy for AlphaSoft360. Learn how we collect, process, and safeguard your personal and business data.",
-    url: "https://alphasoft360.com/privacy",
+    url: "https://alphasoft360.org/privacy",
     siteName: "AlphaSoft360",
     locale: "en_US",
     type: "website",

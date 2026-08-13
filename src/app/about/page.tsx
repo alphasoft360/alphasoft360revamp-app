@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "AlphaSoft360 is a technology partner delivering high-performance web applications, IoT solutions, and API integrations for clients worldwide. Meet the team behind the work.",
   alternates: {
-    canonical: "https://alphasoft360.com/about",
+    canonical: "https://alphasoft360.org/about",
   },
   keywords: [
     "AlphaSoft360",
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
     title: "About Us — AlphaSoft360",
     description:
       "AlphaSoft360 is a technology partner delivering high-performance web applications, IoT solutions, and API integrations for clients worldwide. Meet the team behind the work.",
-    url: "https://alphasoft360.com/about",
+    url: "https://alphasoft360.org/about",
     siteName: "AlphaSoft360",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://alphasoft360.com/brand/hero-2.jpeg",
+        url: "https://alphasoft360.org/brand/hero-2.jpeg",
         width: 1200,
         height: 630,
         alt: "AlphaSoft360 team at work",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: "About Us — AlphaSoft360",
     description:
       "AlphaSoft360 is a technology partner delivering high-performance web applications, IoT solutions, and API integrations for clients worldwide.",
-    images: ["https://alphasoft360.com/brand/hero-2.jpeg"],
+    images: ["https://alphasoft360.org/brand/hero-2.jpeg"],
   },
 };
 
@@ -61,12 +61,12 @@ export default function AboutPage() {
     "name": "About Us — AlphaSoft360",
     "description":
       "AlphaSoft360 is a technology partner delivering high-performance web applications, IoT solutions, and API integrations for clients worldwide.",
-    "url": "https://alphasoft360.com/about",
+    "url": "https://alphasoft360.org/about",
     "publisher": {
       "@type": "Organization",
       "name": "AlphaSoft360",
-      "url": "https://alphasoft360.com",
-      "logo": "https://alphasoft360.com/brand/logo.png",
+      "url": "https://alphasoft360.org",
+      "logo": "https://alphasoft360.org/brand/logo.png",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+923704857471",

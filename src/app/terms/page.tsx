@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Terms & Conditions governing the use of AlphaSoft360 website, engineering services, and digital products.",
   alternates: {
-    canonical: "https://alphasoft360.com/terms",
+    canonical: "https://alphasoft360.org/terms",
   },
   keywords: [
     "AlphaSoft360 Terms and Conditions",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: "Terms & Conditions — AlphaSoft360",
     description:
       "Terms & Conditions governing the use of AlphaSoft360 website, engineering services, and digital products.",
-    url: "https://alphasoft360.com/terms",
+    url: "https://alphasoft360.org/terms",
     siteName: "AlphaSoft360",
     locale: "en_US",
     type: "website",

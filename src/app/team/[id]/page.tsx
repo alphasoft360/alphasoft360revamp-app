@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     title: `${member.name} — AlphaSoft360`,
     description: member.bio,
     alternates: {
-      canonical: `https://alphasoft360.com/team/${id}`,
+      canonical: `https://alphasoft360.org/team/${id}`,
     },
     robots: {
       index: true,
@@ -37,13 +37,13 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     openGraph: {
       title: `${member.name} — AlphaSoft360`,
       description: member.bio,
-      url: `https://alphasoft360.com/team/${id}`,
+      url: `https://alphasoft360.org/team/${id}`,
       siteName: "AlphaSoft360",
       locale: "en_US",
       type: "profile",
       images: [
         {
-          url: `https://alphasoft360.com${member.image}`,
+          url: `https://alphasoft360.org${member.image}`,
           alt: member.name,
         },
       ],
@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       card: "summary_large_image",
       title: `${member.name} — AlphaSoft360`,
       description: member.bio,
-      images: [`https://alphasoft360.com${member.image}`],
+      images: [`https://alphasoft360.org${member.image}`],
     },
   };
 }
@@ -72,11 +72,11 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ id:
     "name": member.name,
     "jobTitle": member.role,
     "description": member.bio,
-    "image": `https://alphasoft360.com${member.image}`,
+    "image": `https://alphasoft360.org${member.image}`,
     "worksFor": {
       "@type": "Organization",
       "name": "AlphaSoft360",
-      "url": "https://alphasoft360.com"
+      "url": "https://alphasoft360.org"
     },
     "sameAs": socialUrls
   };

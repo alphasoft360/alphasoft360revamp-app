@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Explore AlphaSoft360's portfolio of successful projects across e-commerce, education, mobile apps, and startup platforms. See our innovative solutions in action.",
   alternates: {
-    canonical: "https://alphasoft360.com/projects",
+    canonical: "https://alphasoft360.org/projects",
   },
   keywords: [
     "AlphaSoft360 Projects",
@@ -26,13 +26,13 @@ export const metadata: Metadata = {
     title: "Our Projects — AlphaSoft360",
     description:
       "Explore AlphaSoft360's portfolio of successful projects across e-commerce, education, mobile apps, and startup platforms. See our innovative solutions in action.",
-    url: "https://alphasoft360.com/projects",
+    url: "https://alphasoft360.org/projects",
     siteName: "AlphaSoft360",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://alphasoft360.com/brand/hero-2.jpeg",
+        url: "https://alphasoft360.org/brand/hero-2.jpeg",
         width: 1200,
         height: 630,
         alt: "AlphaSoft360 Project Case Studies",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: "Our Projects — AlphaSoft360",
     description:
       "Explore AlphaSoft360's portfolio of successful projects across e-commerce, education, mobile apps, and startup platforms. See our innovative solutions in action.",
-    images: ["https://alphasoft360.com/brand/hero-2.jpeg"],
+    images: ["https://alphasoft360.org/brand/hero-2.jpeg"],
   },
 };
 

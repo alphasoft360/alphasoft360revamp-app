@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${project.title} — AlphaSoft360`,
     description: project.description,
     alternates: {
-      canonical: `https://alphasoft360.com/projects/${slug}`,
+      canonical: `https://alphasoft360.org/projects/${slug}`,
     },
     robots: {
       index: true,
@@ -33,13 +33,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title: `${project.title} — AlphaSoft360`,
       description: project.description,
-      url: `https://alphasoft360.com/projects/${slug}`,
+      url: `https://alphasoft360.org/projects/${slug}`,
       siteName: "AlphaSoft360",
       locale: "en_US",
       type: "article",
       images: [
         {
-          url: `https://alphasoft360.com${project.image}`,
+          url: `https://alphasoft360.org${project.image}`,
           alt: project.title,
         },
       ],
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       card: "summary_large_image",
       title: `${project.title} — AlphaSoft360`,
       description: project.description,
-      images: [`https://alphasoft360.com${project.image}`],
+      images: [`https://alphasoft360.org${project.image}`],
     },
   };
 }
@@ -66,11 +66,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     "@type": "CreativeWork",
     "name": project.title,
     "description": project.description,
-    "image": `https://alphasoft360.com${project.image}`,
+    "image": `https://alphasoft360.org${project.image}`,
     "author": {
       "@type": "Organization",
       "name": "AlphaSoft360",
-      "url": "https://alphasoft360.com"
+      "url": "https://alphasoft360.org"
     }
   };
 

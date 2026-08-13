@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Join the team at AlphaSoft360. Explore career opportunities in software engineering, AI, cloud computing, and digital product design.",
   alternates: {
-    canonical: "https://alphasoft360.com/careers",
+    canonical: "https://alphasoft360.org/careers",
   },
   keywords: [
     "AlphaSoft360 Careers",
@@ -27,13 +27,13 @@ export const metadata: Metadata = {
     title: "Careers — AlphaSoft360",
     description:
       "Join the team at AlphaSoft360. Explore career opportunities in software engineering, AI, cloud computing, and digital product design.",
-    url: "https://alphasoft360.com/careers",
+    url: "https://alphasoft360.org/careers",
     siteName: "AlphaSoft360",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://alphasoft360.com/brand/hero-2.jpeg",
+        url: "https://alphasoft360.org/brand/hero-2.jpeg",
         width: 1200,
         height: 630,
         alt: "Careers at AlphaSoft360",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: "Careers — AlphaSoft360",
     description:
       "Join the team at AlphaSoft360. Explore career opportunities in software engineering, AI, cloud computing, and digital product design.",
-    images: ["https://alphasoft360.com/brand/hero-2.jpeg"],
+    images: ["https://alphasoft360.org/brand/hero-2.jpeg"],
   },
 };
 
@@ -127,8 +127,8 @@ export default function CareersPage() {
     "hiringOrganization": {
       "@type": "Organization",
       "name": "AlphaSoft360",
-      "sameAs": "https://alphasoft360.com",
-      "logo": "https://alphasoft360.com/brand/logo.png"
+      "sameAs": "https://alphasoft360.org",
+      "logo": "https://alphasoft360.org/brand/logo.png"
     },
     "jobLocation": {
       "@type": "Place",
