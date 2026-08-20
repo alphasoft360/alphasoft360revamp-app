@@ -309,7 +309,7 @@ const projectsData = [
   slug: "rams-2-0-cmms",
   title: "RAMS 2.0 – CMMS",
   description: "RAMS 2.0 is a specialized Computerized Maintenance Management System (CMMS) designed for industrial asset monitoring, maintenance management, and predictive maintenance. The platform combines asset hierarchy management, IoT sensor monitoring, work order automation, inventory management, and intelligent health analysis to help organizations improve equipment reliability and operational efficiency.",
-  image: "/projects/pop.png",
+  image: "/projects/rams2.png",
   techStack: [
     "Angular",
     "RxJS",
@@ -383,7 +383,7 @@ const projectsData = [
   slug: "bulk-tshirts-ecommerce",
   title: "BulkTshirtsSite.com",
   description: "BulkTshirtsSite.com is a wholesale e-commerce platform designed for bulk apparel distribution, offering products such as t-shirts, hoodies, caps, and workwear. The platform provides SKU-driven inventory management, wholesale pricing, category-based browsing, and streamlined cart and checkout workflows for high-volume apparel buyers.",
-  image: "/projects/pop.png",
+  image: "/projects/bulktshirt.png",
   techStack: [
     "PHP",
     "MySQL",
@@ -455,7 +455,7 @@ const projectsData = [
   "slug": "covid-19-virtual-check-in",
   "title": "COVID-19 Virtual Check-In",
   "description": "COVID-19 Virtual Check-In is a full-stack healthcare workflow management platform designed to streamline COVID-19 testing from patient registration and appointment scheduling to sample processing, result management, and secure result delivery. The system provides patients with a simple public-facing check-in experience while giving staff and administrators a centralized dashboard for managing registrations, testing locations, screening workflows, and results.",
-  "image": "/projects/pop.png",
+  "image": "/projects/covid.png",
   "techStack": [
     "Angular 12",
     "Node.js",
@@ -535,7 +535,7 @@ const projectsData = [
   "slug": "direct-wholesale-apparel",
   "title": "DirectWholesaleApparel.com",
   "description": "DirectWholesaleApparel.com is a wholesale e-commerce platform focused on apparel distribution, offering products such as t-shirts, sweatshirts, caps, workwear, and branded clothing. The platform is built around a traditional PHP-based CMS architecture and is optimized for bulk ordering, SKU-driven catalog management, brand-based product discovery, and quantity-based wholesale pricing.",
-  "image": "/projects/pop.png",
+  "image": "/projects/appearel.png",
   "techStack": [
     "PHP 7.x",
     "MySQL",
@@ -607,7 +607,7 @@ const projectsData = [
   "slug": "institutional-student-management-portal",
   "title": "Institutional & Student Management Portal",
   "description": "Institutional & Student Management Portal is a centralized Laravel-based management platform built for educational consultancies to manage the complete student application lifecycle, from registration and document collection to institutional selection and placement. The platform brings students, branch administrators, managers, staff, accountants, institutions, and external vendors into a secure, role-based ecosystem. It provides centralized student management, multi-branch administration, institutional and vendor management, secure document storage, financial tracking, real-time communication, notifications, dashboards, reporting, and operational monitoring.",
-  "image": "/projects/pop.png",
+  "image": "/projects/ismp.png",
   "techStack": [
     "Laravel 11.9",
     "PHP 8.2+",
@@ -703,7 +703,7 @@ const projectsData = [
   "slug": "rams-telarus-enterprise-platform",
   "title": "RAMS (Telarus) Enterprise Platform",
   "description": "RAMS (Remote Asset Monitoring & Survey System) is a full-stack enterprise platform designed to combine structured field assessments, real-time asset monitoring, automated safety alerts, and operational reporting within a centralized digital ecosystem. The platform enables administrators to configure dynamic surveys, manage users and permissions, monitor sensor-driven environmental conditions, capture field data, preserve historical submission snapshots, and automatically generate reports and notifications. It is designed for high-stakes operational environments where data accuracy, traceability, automation, and real-time visibility are critical.",
-  "image": "/projects/pop.png",
+  "image": "/projects/rams1.png",
   "techStack": [
     "Angular 12+",
     "Node.js 20",
