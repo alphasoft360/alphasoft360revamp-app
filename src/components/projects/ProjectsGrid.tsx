@@ -15,7 +15,7 @@ export default function ProjectsGrid() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projectsData.map((project, i) => {
-            const isFeatured = i === 0 || i === 3;
+            const isFeatured = i === 0 || i === 3 || i === 4 || i === 9 || i === 12 || i === 13;
             const colSpan = isFeatured ? "md:col-span-2 lg:col-span-2" : "";
             
             return (
