@@ -92,8 +92,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               <span className="text-foreground">{project.title}</span>
             </nav>
 
-            <div className="grid lg:grid-cols-2 gap-12 items-start">
-              <div>
+            <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              <div className="lg:col-span-5">
                 <span className="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-wide text-accent-2 bg-accent-2/10 rounded-full border border-accent-2/20 mb-4">
                   {project.category}
                 </span>
@@ -111,12 +111,13 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 </div>
               </div>
 
-              <div className="relative aspect-video rounded-3xl overflow-hidden card-border">
+              <div className="lg:col-span-7 relative aspect-video rounded-3xl overflow-hidden card-border w-full">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
                   className="object-cover"
+                  priority
                 />
               </div>
             </div>
