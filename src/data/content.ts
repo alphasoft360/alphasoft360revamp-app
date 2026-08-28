@@ -303,12 +303,66 @@ export const articles = [
 ];
 
 export const testimonials = [
-  { quote: "AlphaSoft's data analytics platform revolutionized our decision-making process. We now have real-time insights that drive our business forward.", name: "Latif Khan", role: "Data Scientist, InsightCorp" },
-  { quote: "AlphaSoft delivered our e-commerce platform on time and exceeded expectations. Their expertise in modern web technologies transformed our business operations.", name: "Ahmed Rahman", role: "CTO, TechStart Solutions" },
-  { quote: "Working with AlphaSoft was a game changer for our mobile app development. Their attention to detail resulted in a seamless user experience.", name: "Ali Raza", role: "Product Manager, InnovateCorp" },
-  { quote: "The custom software solution AlphaSoft built for us significantly improved workflow efficiency. Their support team is always responsive.", name: "Fatima Khan", role: "Operations Director, DataFlow Inc" },
-  { quote: "AlphaSoft's expertise in cloud migration helped us scale seamlessly. Their strategic approach saved us time and resources.", name: "Aisha Ahmed", role: "IT Manager, GlobalTech" },
-  { quote: "AlphaSoft's team provided exceptional UI/UX design and development services. Our client satisfaction increased dramatically.", name: "Zara Malik", role: "Marketing Director, BrandBoost" },
+  {
+    quote: "AlphaSoft delivered our enterprise SaaS platform 3 weeks ahead of schedule. Their mastery of microservices and real-time data pipelines turned a complex migration into a massive success.",
+    name: "Marcus Thorne",
+    role: "VP of Engineering, CloudScale Systems (Austin, TX)",
+  },
+  {
+    quote: "Working with AlphaSoft was a game changer for our mobile app. Their technical rigor, intuitive UI/UX design, and 24/7 responsiveness exceeded every expectation.",
+    name: "Elena Rostova",
+    role: "Chief Technology Officer, Veloce Digital (London, UK)",
+  },
+  {
+    quote: "AlphaSoft's data analytics & cloud migration expertise allowed us to scale to over 2 million active users seamlessly without a single millisecond of downtime.",
+    name: "David Miller",
+    role: "Director of Product, NexaSphere Technologies (San Francisco, CA)",
+  },
+  {
+    quote: "The custom e-commerce architecture AlphaSoft built tripled our checkout speed and boosted conversion rates by 38%. Their engineering standards are world-class.",
+    name: "Sophia Van Der Berg",
+    role: "Head of Innovation, Artisan Commerce (Amsterdam, Netherlands)",
+  },
+  {
+    quote: "From API integrations to automated CI/CD pipelines, AlphaSoft's senior developers operate with exceptional precision and transparency. A trusted global partner.",
+    name: "James Harrison",
+    role: "VP of Technology, FinEdge Solutions (Sydney, Australia)",
+  },
+  {
+    quote: "AlphaSoft's team transformed our legacy platform into a high-performance, modern web application. Client satisfaction and engagement soared overnight.",
+    name: "Claire Dubois",
+    role: "VP of Marketing & Brand, Omnia Group (Toronto, Canada)",
+  },
+  {
+    quote: "AlphaSoft's cybersecurity and enterprise cloud infrastructure setup passed our strict compliance audits with flying colors. Truly elite technical talent.",
+    name: "Liam O'Connor",
+    role: "Head of Infrastructure, Apex Global Financial (Dublin, Ireland)",
+  },
+  {
+    quote: "The IoT dashboard AlphaSoft built handles tens of thousands of telemetry data points per second with zero lag. Highly recommended for real-time engineering.",
+    name: "Kenji Takahashi",
+    role: "Lead Architect, Horizon Robotics (Tokyo, Japan)",
+  },
+  {
+    quote: "AlphaSoft transformed our patient management app into an intuitive, ultra-fast platform. Their UI/UX team is exceptionally creative.",
+    name: "Freja Lindqvist",
+    role: "Product Director, Nordic HealthTech (Stockholm, Sweden)",
+  },
+  {
+    quote: "We hired AlphaSoft for a full ERP & CRM modernization. Their team worked tirelessly to deliver an impeccably crafted platform on tight deadlines.",
+    name: "Tariq Al-Mansoor",
+    role: "Chief Information Officer, Falcon Ventures (Dubai, UAE)",
+  },
+  {
+    quote: "AlphaSoft's AI & Machine Learning models automated our document processing pipeline, reducing manual overhead by over 70%.",
+    name: "Chloe Zhang",
+    role: "Senior Engineering Manager, CloudMatrix (Singapore)",
+  },
+  {
+    quote: "From initial consultation to global deployment, AlphaSoft360 demonstrated incredible technical competence and total dedication to our vision.",
+    name: "Beat Niederhauser",
+    role: "Founder & CEO, Alpine Logistics (Zurich, Switzerland)",
+  },
 ];
 
 export const contact = {
