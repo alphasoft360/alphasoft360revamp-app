@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${project.title} — AlphaSoft360`,
     description: project.description,
     alternates: {
-      canonical: `https://alphasoft360.org/projects/${slug}`,
+      canonical: `https://alphasoft360.com/projects/${slug}`,
     },
     robots: {
       index: true,
@@ -33,13 +33,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title: `${project.title} — AlphaSoft360`,
       description: project.description,
-      url: `https://alphasoft360.org/projects/${slug}`,
+      url: `https://alphasoft360.com/projects/${slug}`,
       siteName: "AlphaSoft360",
       locale: "en_US",
       type: "article",
       images: [
         {
-          url: `https://alphasoft360.org${project.image}`,
+          url: `https://alphasoft360.com${project.image}`,
           alt: project.title,
         },
       ],
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       card: "summary_large_image",
       title: `${project.title} — AlphaSoft360`,
       description: project.description,
-      images: [`https://alphasoft360.org${project.image}`],
+      images: [`https://alphasoft360.com${project.image}`],
     },
   };
 }
@@ -66,11 +66,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     "@type": "CreativeWork",
     "name": project.title,
     "description": project.description,
-    "image": `https://alphasoft360.org${project.image}`,
+    "image": `https://alphasoft360.com${project.image}`,
     "author": {
       "@type": "Organization",
       "name": "AlphaSoft360",
-      "url": "https://alphasoft360.org"
+      "url": "https://alphasoft360.com"
     }
   };
 
@@ -92,8 +92,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               <span className="text-foreground">{project.title}</span>
             </nav>
 
-            <div className="grid lg:grid-cols-2 gap-12 items-start">
-              <div>
+            <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              <div className="lg:col-span-5">
                 <span className="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-wide text-accent-2 bg-accent-2/10 rounded-full border border-accent-2/20 mb-4">
                   {project.category}
                 </span>
@@ -111,12 +111,13 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 </div>
               </div>
 
-              <div className="relative aspect-video rounded-3xl overflow-hidden card-border">
+              <div className="lg:col-span-7 relative aspect-video rounded-3xl overflow-hidden card-border w-full">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
                   className="object-cover"
+                  priority
                 />
               </div>
             </div>
