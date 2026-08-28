@@ -9,6 +9,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TeamMemberCard from "@/components/team/TeamMemberCard";
 import IdCard3D from "@/components/team/IdCard3D";
+import BiographyNav, { BioTopic } from "@/components/team/BiographyNav";
 import teamMembers from "@/data/teamData";
 
 const socialIcons = {
@@ -68,6 +69,32 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ id:
   const socialEntries = Object.entries(member.socials ?? {}).filter(([, url]) => Boolean(url));
   const otherMembers = teamMembers.filter((m) => m.id !== member.id).slice(0, 3);
 
+  // Extract sub-topics from member.biography for biography scroll focus
+  const parsedBiography = (member.biography ?? []).map((para: string, idx: number) => {
+    const colonMatch = para.match(/^([^:]+):\s*(.+)$/);
+    if (colonMatch) {
+      return {
+        id: `bio-para-${idx}`,
+        title: colonMatch[1].trim(),
+        content: colonMatch[2].trim(),
+      };
+    }
+    const firstSentence = para.split(". ")[0].replace(/[^a-zA-Z0-9\s]/g, "");
+    const words = firstSentence.split(" ");
+    const shortTitle = words.length > 6 ? words.slice(0, 5).join(" ") + "..." : firstSentence;
+    return {
+      id: `bio-para-${idx}`,
+      title: idx === 0 ? "Overview & Role" : shortTitle || `Background Part ${idx + 1}`,
+      content: para,
+    };
+  });
+
+  const bioTopics: BioTopic[] = parsedBiography.map((b) => ({
+    id: b.id,
+    title: b.title,
+  }));
+
+
   const socialUrls = Object.values(member.socials ?? {}).filter(Boolean);
   const jsonLd = {
     "@context": "https://schema.org",
@@ -92,7 +119,8 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ id:
       />
       <Header />
       <main className="flex-1">
-        <section className="relative overflow-hidden pt-40 pb-20 lg:pt-48 lg:pb-24">
+        <section id="overview" className="relative overflow-hidden pt-40 pb-20 lg:pt-48 lg:pb-24 scroll-mt-28">
+
 
           <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
             <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm text-muted">
@@ -169,33 +197,53 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ id:
           </div>
         </section>
 
+        {/* About & Biography Section with Scoped Sticky Focus Navigator */}
         {member.biography?.length > 0 && (
-          <section className="relative py-20 border-t border-line">
+          <section id="about" className="relative py-20 border-t border-line scroll-mt-28">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
-              <h2 className="text-2xl font-semibold">About</h2>
-              <div className="mt-8 space-y-4 max-w-3xl">
-                {member.biography.map((paragraph: string, i: number) => (
-                  <p key={i} className="text-muted leading-relaxed">
-                    {paragraph}
-                  </p>
-                ))}
+              <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 relative">
+                {/* Left Column: Biography Paragraphs */}
+                <div className="lg:col-span-7 xl:col-span-8 space-y-8">
+                  <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground border-b border-line/60 pb-4">
+                    About & Biography
+                  </h2>
+                  <div className="space-y-8">
+                    {parsedBiography.map((item: { id: string; title: string; content: string }, i: number) => (
+                      <div key={i} id={item.id} className="scroll-mt-36 group">
+                        <h3 className="text-base sm:text-lg font-semibold text-foreground mb-2 group-hover:text-accent transition-colors flex items-center gap-2">
+                          <span className="h-2 w-2 rounded-full bg-accent shrink-0" />
+                          {item.title}
+                        </h3>
+                        <p className="text-muted leading-relaxed text-sm sm:text-base pl-4 border-l-2 border-line/50 group-hover:border-accent/40 transition-colors">
+                          {item.content}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Right Column: Sticky Biography Focus Navigator */}
+                <div className="lg:col-span-5 xl:col-span-4 relative h-full">
+                  <BiographyNav topics={bioTopics} />
+                </div>
               </div>
             </div>
           </section>
         )}
 
+        {/* Skills Section */}
         {member.skills?.length > 0 && (
-          <section className="relative py-20 border-t border-line">
+          <section id="skills" className="relative py-20 border-t border-line scroll-mt-28">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
-              <h2 className="text-2xl font-semibold">Skills</h2>
+              <h2 className="text-2xl font-semibold">Skills & Expertise</h2>
               <div className="mt-8 grid sm:grid-cols-2 gap-x-12 gap-y-6 max-w-4xl">
                 {member.skills.map((skill: { name: string; percentage: number }) => (
                   <div key={skill.name}>
                     <div className="flex justify-between text-sm mb-2">
                       <span className="text-foreground font-medium">{skill.name}</span>
-                      <span className="text-muted">{skill.percentage}%</span>
+                      <span className="text-muted font-mono">{skill.percentage}%</span>
                     </div>
-                    <div className="h-1.5 rounded-full bg-surface overflow-hidden">
+                    <div className="h-2 rounded-full bg-surface border border-line/60 overflow-hidden">
                       <div
                         className="h-full rounded-full bg-gradient-to-r from-accent to-accent-2"
                         style={{ width: `${skill.percentage}%` }}
@@ -208,26 +256,27 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ id:
           </section>
         )}
 
+        {/* Work Experience Section */}
         {member.experience && member.experience.length > 0 && (
-          <section className="relative py-20 border-t border-line">
+          <section id="experience" className="relative py-20 border-t border-line scroll-mt-28">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
-              <h2 className="text-2xl font-semibold">Experience</h2>
+              <h2 className="text-2xl font-semibold">Work Experience</h2>
               <div className="mt-8 space-y-5 max-w-3xl">
                 {member.experience.map((job: { company: string; role: string; duration: string; details: string[] }, i: number) => (
                   <div key={i} className="card-border rounded-2xl bg-surface p-7">
                     <div className="flex items-start gap-3">
-                      <span className="h-10 w-10 shrink-0 rounded-xl bg-accent/15 flex items-center justify-center">
+                      <span className="h-10 w-10 shrink-0 rounded-xl bg-accent/15 flex items-center justify-center border border-accent/20">
                         <Briefcase className="h-4 w-4 text-accent-2" />
                       </span>
                       <div>
-                        <h3 className="font-medium">{job.role}</h3>
-                        <p className="text-sm text-accent-2">{job.company}</p>
-                        <p className="text-xs text-muted mt-0.5">{job.duration}</p>
+                        <h3 className="font-semibold text-base sm:text-lg text-foreground">{job.role}</h3>
+                        <p className="text-sm text-accent-2 font-medium">{job.company}</p>
+                        <p className="text-xs text-muted mt-0.5 font-mono">{job.duration}</p>
                       </div>
                     </div>
                     <ul className="mt-4 space-y-2">
                       {job.details.map((detail, j) => (
-                        <li key={j} className="text-sm text-muted leading-relaxed pl-4 relative before:content-['—'] before:absolute before:left-0 before:text-line">
+                        <li key={j} className="text-sm text-muted leading-relaxed pl-4 relative before:content-['—'] before:absolute before:left-0 before:text-accent/60">
                           {detail}
                         </li>
                       ))}
@@ -239,12 +288,13 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ id:
           </section>
         )}
 
+        {/* Education Section */}
         {member.education && (
-          <section className="relative py-20 border-t border-line">
+          <section id="education" className="relative py-20 border-t border-line scroll-mt-28">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <h2 className="text-2xl font-semibold">Education</h2>
               <div className="mt-8 max-w-3xl card-border rounded-2xl bg-surface p-7 flex items-start gap-3">
-                <span className="h-10 w-10 shrink-0 rounded-xl bg-accent/15 flex items-center justify-center">
+                <span className="h-10 w-10 shrink-0 rounded-xl bg-accent/15 flex items-center justify-center border border-accent/20">
                   <GraduationCap className="h-4 w-4 text-accent-2" />
                 </span>
                 <div>
@@ -256,7 +306,7 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ id:
                     <p className="text-sm text-muted mt-1">{member.education.institution}</p>
                   )}
                   {(member.education.year || member.education.status) && (
-                    <p className="text-xs text-muted mt-1">{member.education.year ?? member.education.status}</p>
+                    <p className="text-xs text-muted mt-1 font-mono">{member.education.year ?? member.education.status}</p>
                   )}
                 </div>
               </div>
@@ -264,8 +314,11 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ id:
           </section>
         )}
 
+
+
         {otherMembers.length > 0 && (
-          <section className="relative py-20 border-t border-line">
+          <section id="other-members" className="relative py-20 border-t border-line scroll-mt-28">
+
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
                 <div>
