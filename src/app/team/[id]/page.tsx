@@ -7,6 +7,8 @@ import { FaLinkedinIn, FaGithub, FaStackOverflow } from "react-icons/fa6";
 import { Globe } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TeamMemberCard from "@/components/team/TeamMemberCard";
+import IdCard3D from "@/components/team/IdCard3D";
 import teamMembers from "@/data/teamData";
 
 const socialIcons = {
@@ -64,6 +66,7 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ id:
   if (!member) notFound();
 
   const socialEntries = Object.entries(member.socials ?? {}).filter(([, url]) => Boolean(url));
+  const otherMembers = teamMembers.filter((m) => m.id !== member.id).slice(0, 3);
 
   const socialUrls = Object.values(member.socials ?? {}).filter(Boolean);
   const jsonLd = {
@@ -100,34 +103,36 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ id:
               <span className="text-foreground">{member.name}</span>
             </nav>
 
-            <div className="mt-10 grid lg:grid-cols-5 gap-10 items-start">
-              <div className="lg:col-span-2 relative aspect-square rounded-3xl overflow-hidden card-border">
+            <div className="mt-10 grid xl:grid-cols-12 gap-8 items-center">
+              {/* Left Column: Image */}
+              <div className="xl:col-span-3 relative aspect-square rounded-3xl overflow-hidden card-border shadow-md">
                 <Image
                   src={member.image}
                   alt={member.name}
                   fill
-                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  sizes="(max-width: 1024px) 100vw, 25vw"
                   className="object-cover"
                   priority
                 />
               </div>
 
-              <div className="lg:col-span-3">
-                <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-gradient text-balance">
+              {/* Middle Column: Info */}
+              <div className="xl:col-span-4">
+                <p className="text-xs font-semibold tracking-widest text-accent-2 uppercase">{member.role}</p>
+                <h1 className="mt-2 text-3xl sm:text-4xl font-semibold tracking-tight text-gradient text-balance">
                   {member.name}
                 </h1>
-                <p className="mt-3 text-lg text-accent-2 font-medium">{member.role}</p>
-                <p className="mt-5 text-muted leading-relaxed text-balance max-w-xl">{member.bio}</p>
+                <p className="mt-4 text-sm text-muted leading-relaxed">{member.bio}</p>
 
-                <div className="mt-8 flex flex-wrap items-center gap-3">
+                <div className="mt-6 flex flex-wrap items-center gap-2.5">
                   {member.contact?.email && (
-                    <a href={`mailto:${member.contact.email}`} className="btn-secondary">
+                    <a href={`mailto:${member.contact.email}`} className="btn-secondary text-xs sm:text-sm">
                       <Mail className="h-3.5 w-3.5" />
                       {member.contact.email}
                     </a>
                   )}
                   {member.contact?.phone && member.contact.phone !== "none" && (
-                    <a href={`tel:${member.contact.phone.replace(/\s/g, "")}`} className="btn-secondary">
+                    <a href={`tel:${member.contact.phone.replace(/\s/g, "")}`} className="btn-secondary text-xs sm:text-sm">
                       <Phone className="h-3.5 w-3.5" />
                       {member.contact.phone}
                     </a>
@@ -135,7 +140,7 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ id:
                 </div>
 
                 {socialEntries.length > 0 && (
-                  <div className="mt-5 flex items-center gap-2.5">
+                  <div className="mt-4 flex items-center gap-2">
                     {socialEntries.map(([key, url]) => {
                       const Icon = socialIcons[key as keyof typeof socialIcons];
                       if (!Icon) return null;
@@ -146,7 +151,7 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ id:
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label={`${member.name} on ${key}`}
-                          className="h-10 w-10 rounded-full border border-line flex items-center justify-center text-muted hover:text-foreground hover:border-accent/50 transition-colors"
+                          className="h-9 w-9 rounded-full border border-line flex items-center justify-center text-muted hover:text-foreground hover:border-accent/50 transition-colors"
                         >
                           <Icon className="h-4 w-4" />
                         </a>
@@ -154,6 +159,11 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ id:
                     })}
                   </div>
                 )}
+              </div>
+
+              {/* Right Column: Interactive 3D ID Badge Card */}
+              <div className="xl:col-span-5 flex justify-center border-t xl:border-t-0 xl:border-l border-line/60 pt-8 xl:pt-0 xl:pl-6">
+                <IdCard3D member={member} />
               </div>
             </div>
           </div>
@@ -249,6 +259,31 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ id:
                     <p className="text-xs text-muted mt-1">{member.education.year ?? member.education.status}</p>
                   )}
                 </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {otherMembers.length > 0 && (
+          <section className="relative py-20 border-t border-line">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+                <div>
+                  <p className="text-xs font-semibold tracking-widest text-accent-2 uppercase">
+                    Explore More
+                  </p>
+                  <h2 className="mt-2 text-2xl sm:text-3xl font-semibold tracking-tight">
+                    Other Team Members
+                  </h2>
+                </div>
+                <Link href="/team" className="btn-secondary text-xs sm:text-sm shrink-0">
+                  View All Team Members →
+                </Link>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+                {otherMembers.map((otherMember) => (
+                  <TeamMemberCard key={otherMember.id} member={otherMember} />
+                ))}
               </div>
             </div>
           </section>
