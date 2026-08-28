@@ -236,7 +236,7 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ id:
           <section id="skills" className="relative py-20 border-t border-line scroll-mt-28">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <h2 className="text-2xl font-semibold">Skills & Expertise</h2>
-              <div className="mt-8 grid sm:grid-cols-2 gap-x-12 gap-y-6 max-w-4xl">
+              <div className="mt-8 grid sm:grid-cols-2 gap-x-12 gap-y-6 w-full">
                 {member.skills.map((skill: { name: string; percentage: number }) => (
                   <div key={skill.name}>
                     <div className="flex justify-between text-sm mb-2">
@@ -261,7 +261,7 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ id:
           <section id="experience" className="relative py-20 border-t border-line scroll-mt-28">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <h2 className="text-2xl font-semibold">Work Experience</h2>
-              <div className="mt-8 space-y-5 max-w-3xl">
+              <div className="mt-8 space-y-5 w-full">
                 {member.experience.map((job: { company: string; role: string; duration: string; details: string[] }, i: number) => (
                   <div key={i} className="card-border rounded-2xl bg-surface p-7">
                     <div className="flex items-start gap-3">
@@ -293,7 +293,7 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ id:
           <section id="education" className="relative py-20 border-t border-line scroll-mt-28">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <h2 className="text-2xl font-semibold">Education</h2>
-              <div className="mt-8 max-w-3xl card-border rounded-2xl bg-surface p-7 flex items-start gap-3">
+              <div className="mt-8 w-full card-border rounded-2xl bg-surface p-7 flex items-start gap-3">
                 <span className="h-10 w-10 shrink-0 rounded-xl bg-accent/15 flex items-center justify-center border border-accent/20">
                   <GraduationCap className="h-4 w-4 text-accent-2" />
                 </span>
