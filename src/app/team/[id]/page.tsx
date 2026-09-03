@@ -11,6 +11,7 @@ import TeamMemberCard from "@/components/team/TeamMemberCard";
 import IdCard3D from "@/components/team/IdCard3D";
 import BiographyNav, { BioTopic } from "@/components/team/BiographyNav";
 import teamMembers from "@/data/teamData";
+import { getWebPageSchema, getBreadcrumbSchema, ORGANIZATION_ID } from "@/lib/schema";
 
 const socialIcons = {
   linkedin: FaLinkedinIn,
@@ -96,19 +97,38 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ id:
 
 
   const socialUrls = Object.values(member.socials ?? {}).filter(Boolean);
+
+  const breadcrumbItems = [
+    { name: "Home", url: "https://alphasoft360.com" },
+    { name: "Team", url: "https://alphasoft360.com/team" },
+    { name: member.name, url: `https://alphasoft360.com/team/${id}` },
+  ];
+
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": member.name,
-    "jobTitle": member.role,
-    "description": member.bio,
-    "image": `https://alphasoft360.com${member.image}`,
-    "worksFor": {
-      "@type": "Organization",
-      "name": "AlphaSoft360",
-      "url": "https://alphasoft360.com"
-    },
-    "sameAs": socialUrls
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": `https://alphasoft360.com/team/${id}#person`,
+        "name": member.name,
+        "jobTitle": member.role,
+        "description": member.bio,
+        "image": `https://alphasoft360.com${member.image}`,
+        "url": `https://alphasoft360.com/team/${id}`,
+        "worksFor": {
+          "@id": ORGANIZATION_ID
+        },
+        "sameAs": socialUrls
+      },
+      getWebPageSchema({
+        type: "ProfilePage",
+        name: `${member.name} — AlphaSoft360`,
+        description: member.bio,
+        url: `https://alphasoft360.com/team/${id}`,
+        breadcrumbItems
+      }),
+      getBreadcrumbSchema(breadcrumbItems, `https://alphasoft360.com/team/${id}`)
+    ]
   };
 
   return (

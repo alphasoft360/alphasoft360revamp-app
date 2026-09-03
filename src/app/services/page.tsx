@@ -6,6 +6,7 @@ import ServicesGrid from "@/components/services/ServicesGrid";
 import ServicesProcess from "@/components/services/ServicesProcess";
 
 import { servicesFull } from "@/data/content";
+import { getWebPageSchema, getBreadcrumbSchema, ORGANIZATION_ID } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Services — AlphaSoft360",
@@ -54,19 +55,38 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesPage() {
-  const jsonLd = servicesFull.map((srv) => ({
-    "@context": "https://schema.org",
+  const breadcrumbItems = [
+    { name: "Home", url: "https://alphasoft360.com" },
+    { name: "Services", url: "https://alphasoft360.com/services" },
+  ];
+
+  const serviceGraph = servicesFull.map((srv) => ({
     "@type": "Service",
+    "@id": `https://alphasoft360.com/services#${srv.slug}`,
     "name": srv.title,
     "description": srv.description,
+    "url": `https://alphasoft360.com/services#${srv.slug}`,
     "provider": {
-      "@type": "Organization",
-      "name": "AlphaSoft360",
-      "url": "https://alphasoft360.com",
-      "logo": "https://alphasoft360.com/brand/logo.png"
+      "@id": ORGANIZATION_ID
     },
     "areaServed": "Worldwide"
   }));
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      getWebPageSchema({
+        type: "WebPage",
+        name: "Services — AlphaSoft360",
+        description:
+          "App development, web development, e-commerce, cloud & DevOps, AI automation, and more — twelve specialized IT service lines from AlphaSoft360.",
+        url: "https://alphasoft360.com/services",
+        breadcrumbItems
+      }),
+      getBreadcrumbSchema(breadcrumbItems, "https://alphasoft360.com/services"),
+      ...serviceGraph
+    ]
+  };
 
   return (
     <>

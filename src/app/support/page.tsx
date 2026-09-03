@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { LifeBuoy, Mail, Phone, MessageSquare, Clock, ShieldCheck, ArrowUpRight } from "lucide-react";
 import { contact } from "@/data/content";
+import { getWebPageSchema, getBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Support Center — AlphaSoft360",
@@ -67,16 +68,40 @@ const supportChannels = [
   },
   {
     icon: MessageSquare,
-    title: "Live Instant WhatsApp Chat",
-    description: "Instant chat support for ongoing active project development sprints.",
+    title: "WhatsApp Live Chat",
+    description: "Fast responses directly from our engineering managers during working hours.",
     action: contact.whatsapp,
-    label: "Start WhatsApp Chat",
+    label: "Chat on WhatsApp",
   },
 ];
 
 export default function SupportPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "https://alphasoft360.com" },
+    { name: "Support", url: "https://alphasoft360.com/support" },
+  ];
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      getWebPageSchema({
+        type: "WebPage",
+        name: "Support Center — AlphaSoft360",
+        description:
+          "Get technical support, system assistance, and SLA maintenance for AlphaSoft360 products and custom software solutions.",
+        url: "https://alphasoft360.com/support",
+        breadcrumbItems
+      }),
+      getBreadcrumbSchema(breadcrumbItems, "https://alphasoft360.com/support")
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <main className="flex-1">
         <section className="relative overflow-hidden pt-40 pb-20 lg:pt-48 lg:pb-24">

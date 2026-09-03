@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { getWebPageSchema, getBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions — AlphaSoft360",
@@ -37,8 +38,32 @@ export const metadata: Metadata = {
 };
 
 export default function TermsPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "https://alphasoft360.com" },
+    { name: "Terms & Conditions", url: "https://alphasoft360.com/terms" },
+  ];
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      getWebPageSchema({
+        type: "WebPage",
+        name: "Terms & Conditions — AlphaSoft360",
+        description:
+          "Terms & Conditions governing the use of AlphaSoft360 website, engineering services, and digital products.",
+        url: "https://alphasoft360.com/terms",
+        breadcrumbItems
+      }),
+      getBreadcrumbSchema(breadcrumbItems, "https://alphasoft360.com/terms")
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <main className="flex-1">
         <section className="relative overflow-hidden pt-40 pb-20 lg:pt-48 lg:pb-24">

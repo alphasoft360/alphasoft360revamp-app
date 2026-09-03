@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { ArrowUpRight, FolderTree } from "lucide-react";
 import { servicesFull } from "@/data/content";
 import projectsData from "@/data/projectsData";
+import { getWebPageSchema, getBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Sitemap — AlphaSoft360",
@@ -87,8 +88,32 @@ const sitemapSections = [
 ];
 
 export default function SitemapPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "https://alphasoft360.com" },
+    { name: "Sitemap", url: "https://alphasoft360.com/sitemap-page" },
+  ];
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      getWebPageSchema({
+        type: "WebPage",
+        name: "Sitemap — AlphaSoft360",
+        description:
+          "Complete sitemap directory of all pages, services, portfolio case studies, and resources available on AlphaSoft360.",
+        url: "https://alphasoft360.com/sitemap-page",
+        breadcrumbItems
+      }),
+      getBreadcrumbSchema(breadcrumbItems, "https://alphasoft360.com/sitemap-page")
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <main className="flex-1">
         <section className="relative overflow-hidden pt-40 pb-20 lg:pt-48 lg:pb-24">

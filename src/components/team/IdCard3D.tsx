@@ -105,7 +105,7 @@ export default function IdCard3D({ member }: { member: Member }) {
     };
   }, []);
 
-  const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://alphasoft360.org/team/${member.id}&color=0f172a&bgcolor=ffffff`;
+  const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://alphasoft360.com/team/${member.id}&color=0f172a&bgcolor=ffffff`;
 
   return (
     <div className="flex flex-col items-center select-none py-4">
@@ -215,7 +215,7 @@ export default function IdCard3D({ member }: { member: Member }) {
             {/* Card Footer */}
             <div className="bg-gradient-to-r from-accent/90 to-accent-2/90 py-2 text-center border-t border-accent/20">
               <span className="text-[11px] font-bold tracking-widest text-white uppercase">
-                WWW.ALPHASOFT360.ORG
+                WWW.ALPHASOFT360.COM
               </span>
             </div>
           </div>
@@ -278,7 +278,7 @@ export default function IdCard3D({ member }: { member: Member }) {
             {/* Card Footer */}
             <div className="bg-gradient-to-r from-accent-2/90 to-accent/90 py-2 text-center border-t border-accent/20">
               <span className="text-[11px] font-bold tracking-widest text-white uppercase">
-                WWW.ALPHASOFT360.ORG
+                WWW.ALPHASOFT360.COM
               </span>
             </div>
           </div>

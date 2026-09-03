@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProjectsHero from "@/components/projects/ProjectsHero";
 import ProjectsGrid from "@/components/projects/ProjectsGrid";
+import { getWebPageSchema, getBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Our Projects — AlphaSoft360",
@@ -49,8 +50,32 @@ export const metadata: Metadata = {
 };
 
 export default function ProjectsPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "https://alphasoft360.com" },
+    { name: "Projects", url: "https://alphasoft360.com/projects" },
+  ];
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      getWebPageSchema({
+        type: "CollectionPage",
+        name: "Our Projects — AlphaSoft360",
+        description:
+          "Explore AlphaSoft360's portfolio of successful projects across e-commerce, education, mobile apps, and startup platforms.",
+        url: "https://alphasoft360.com/projects",
+        breadcrumbItems
+      }),
+      getBreadcrumbSchema(breadcrumbItems, "https://alphasoft360.com/projects")
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <main className="flex-1">
         <ProjectsHero />

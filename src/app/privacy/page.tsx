@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { getWebPageSchema, getBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Privacy Policy — AlphaSoft360",
@@ -37,8 +38,32 @@ export const metadata: Metadata = {
 };
 
 export default function PrivacyPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "https://alphasoft360.com" },
+    { name: "Privacy Policy", url: "https://alphasoft360.com/privacy" },
+  ];
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      getWebPageSchema({
+        type: "WebPage",
+        name: "Privacy Policy — AlphaSoft360",
+        description:
+          "Privacy Policy for AlphaSoft360. Learn how we collect, process, and safeguard your personal and business data.",
+        url: "https://alphasoft360.com/privacy",
+        breadcrumbItems
+      }),
+      getBreadcrumbSchema(breadcrumbItems, "https://alphasoft360.com/privacy")
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <main className="flex-1">
         <section className="relative overflow-hidden pt-40 pb-20 lg:pt-48 lg:pb-24">

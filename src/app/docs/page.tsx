@@ -3,6 +3,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Book, Code2, Terminal, Cpu, FileText, ArrowRight, Shield } from "lucide-react";
+import { getWebPageSchema, getBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Documentation & Developer Hub — AlphaSoft360",
@@ -73,8 +74,32 @@ const docCategories = [
 ];
 
 export default function DocsPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "https://alphasoft360.com" },
+    { name: "Documentation", url: "https://alphasoft360.com/docs" },
+  ];
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      getWebPageSchema({
+        type: "WebPage",
+        name: "Documentation & Developer Hub — AlphaSoft360",
+        description:
+          "Explore developer documentation, API guides, integration patterns, and architecture specs for AlphaSoft360 products and services.",
+        url: "https://alphasoft360.com/docs",
+        breadcrumbItems
+      }),
+      getBreadcrumbSchema(breadcrumbItems, "https://alphasoft360.com/docs")
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <main className="flex-1">
         <section className="relative overflow-hidden pt-40 pb-20 lg:pt-48 lg:pb-24">

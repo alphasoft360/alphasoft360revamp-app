@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import TeamHero from "@/components/team/TeamHero";
 import TeamSection from "@/components/team/TeamSection";
 import teamMembers from "@/data/teamData";
+import { getWebPageSchema, getBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Our Team — AlphaSoft360",
@@ -48,15 +49,39 @@ export const metadata: Metadata = {
       "Meet the leadership, engineers, and interns building AlphaSoft360 — the people behind our software, cloud, and AI products.",
     images: ["https://alphasoft360.com/brand/hero-2.jpeg"],
   },
-};
+}
 
 export default function TeamPage() {
   const leadership = teamMembers.filter((m) => m.tier === "leadership");
   const core = teamMembers.filter((m) => m.tier === "team");
   const interns = teamMembers.filter((m) => m.tier === "intern");
 
+  const breadcrumbItems = [
+    { name: "Home", url: "https://alphasoft360.com" },
+    { name: "Team", url: "https://alphasoft360.com/team" },
+  ];
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      getWebPageSchema({
+        type: "CollectionPage",
+        name: "Our Team — AlphaSoft360",
+        description:
+          "Meet the leadership, engineers, and interns building AlphaSoft360 — the people behind our software, cloud, and AI products.",
+        url: "https://alphasoft360.com/team",
+        breadcrumbItems
+      }),
+      getBreadcrumbSchema(breadcrumbItems, "https://alphasoft360.com/team")
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <main className="flex-1">
         <TeamHero />

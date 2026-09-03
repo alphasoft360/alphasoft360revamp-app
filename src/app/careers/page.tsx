@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Briefcase, ArrowUpRight, CheckCircle2, HeartHandshake, Zap, Globe, Sparkles } from "lucide-react";
 import { contact } from "@/data/content";
+import { getWebPageSchema, getBreadcrumbSchema, ORGANIZATION_ID } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Careers — AlphaSoft360",
@@ -116,19 +117,21 @@ const perks = [
 ];
 
 export default function CareersPage() {
-  const jsonLd = jobOpenings.map((job) => ({
-    "@context": "https://schema.org",
+  const breadcrumbItems = [
+    { name: "Home", url: "https://alphasoft360.com" },
+    { name: "Careers", url: "https://alphasoft360.com/careers" },
+  ];
+
+  const jobPostingsGraph = jobOpenings.map((job) => ({
     "@type": "JobPosting",
+    "@id": `https://alphasoft360.com/careers#${job.id}`,
     "title": job.title,
     "description": job.description,
     "datePosted": "2026-02-15",
     "validThrough": "2027-02-15",
     "employmentType": job.type === "Full-Time" ? "FULL_TIME" : "PART_TIME",
     "hiringOrganization": {
-      "@type": "Organization",
-      "name": "AlphaSoft360",
-      "sameAs": "https://alphasoft360.com",
-      "logo": "https://alphasoft360.com/brand/logo.png"
+      "@id": ORGANIZATION_ID
     },
     "jobLocation": {
       "@type": "Place",
@@ -142,6 +145,22 @@ export default function CareersPage() {
     },
     "jobLocationType": job.location.toLowerCase().includes("remote") ? "TELECOMMUTE" : undefined
   }));
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      getWebPageSchema({
+        type: "WebPage",
+        name: "Careers — AlphaSoft360",
+        description:
+          "Join the team at AlphaSoft360. Explore career opportunities in software engineering, AI, cloud computing, and digital product design.",
+        url: "https://alphasoft360.com/careers",
+        breadcrumbItems
+      }),
+      getBreadcrumbSchema(breadcrumbItems, "https://alphasoft360.com/careers"),
+      ...jobPostingsGraph
+    ]
+  };
 
   return (
     <>

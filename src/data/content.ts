@@ -440,10 +440,7 @@ export const team = [
 ];
 
 export const socials = [
-  { label: "LinkedIn", href: "#", icon: "linkedin" },
-  { label: "GitHub", href: "#", icon: "github" },
-  { label: "X (Twitter)", href: "#", icon: "x" },
-  { label: "Facebook", href: "#", icon: "facebook" },
-  { label: "Instagram", href: "#", icon: "instagram" },
-  { label: "YouTube", href: "#", icon: "youtube" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/alphasoft360", icon: "linkedin" },
+  { label: "GitHub", href: "https://github.com/alphasoft360", icon: "github" },
+  { label: "X (Twitter)", href: "https://twitter.com/alphasoft360", icon: "x" },
 ];

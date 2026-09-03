@@ -5,6 +5,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import projectsData from "@/data/projectsData";
+import { getWebPageSchema, getBreadcrumbSchema, ORGANIZATION_ID } from "@/lib/schema";
 
 export async function generateStaticParams() {
   return projectsData.map((project) => ({
@@ -61,17 +62,38 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     notFound();
   }
 
+  const breadcrumbItems = [
+    { name: "Home", url: "https://alphasoft360.com" },
+    { name: "Projects", url: "https://alphasoft360.com/projects" },
+    { name: project.title, url: `https://alphasoft360.com/projects/${slug}` },
+  ];
+
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "CreativeWork",
-    "name": project.title,
-    "description": project.description,
-    "image": `https://alphasoft360.com${project.image}`,
-    "author": {
-      "@type": "Organization",
-      "name": "AlphaSoft360",
-      "url": "https://alphasoft360.com"
-    }
+    "@graph": [
+      {
+        "@type": "CreativeWork",
+        "@id": `https://alphasoft360.com/projects/${slug}#work`,
+        "name": project.title,
+        "description": project.description,
+        "image": `https://alphasoft360.com${project.image}`,
+        "url": `https://alphasoft360.com/projects/${slug}`,
+        "author": {
+          "@id": ORGANIZATION_ID
+        },
+        "publisher": {
+          "@id": ORGANIZATION_ID
+        }
+      },
+      getWebPageSchema({
+        type: "WebPage",
+        name: `${project.title} — AlphaSoft360`,
+        description: project.description,
+        url: `https://alphasoft360.com/projects/${slug}`,
+        breadcrumbItems
+      }),
+      getBreadcrumbSchema(breadcrumbItems, `https://alphasoft360.com/projects/${slug}`)
+    ]
   };
 
   return (

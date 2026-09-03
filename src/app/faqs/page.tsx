@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FaqsClient from "@/components/FaqsClient";
 import { faqs } from "@/data/faqsData";
+import { getWebPageSchema, getBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions — AlphaSoft360",
@@ -50,17 +51,36 @@ export const metadata: Metadata = {
 };
 
 export default function FaqsPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "https://alphasoft360.com" },
+    { name: "FAQs", url: "https://alphasoft360.com/faqs" },
+  ];
+
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map((faq) => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer,
+    "@graph": [
+      {
+        "@type": "FAQPage",
+        "@id": "https://alphasoft360.com/faqs#faq",
+        "mainEntity": faqs.map((faq) => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer,
+          },
+        })),
       },
-    })),
+      getWebPageSchema({
+        type: "WebPage",
+        name: "Frequently Asked Questions — AlphaSoft360",
+        description:
+          "Everything you need to know about working with AlphaSoft360, our engineering workflow, project delivery, and SLAs.",
+        url: "https://alphasoft360.com/faqs",
+        breadcrumbItems
+      }),
+      getBreadcrumbSchema(breadcrumbItems, "https://alphasoft360.com/faqs")
+    ]
   };
 
   return (

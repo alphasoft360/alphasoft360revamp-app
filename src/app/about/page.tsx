@@ -6,6 +6,7 @@ import Story from "@/components/about/Story";
 import AboutStats from "@/components/about/AboutStats";
 import Values from "@/components/about/Values";
 import Team from "@/components/about/Team";
+import { getWebPageSchema, getBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "About Us — AlphaSoft360",
@@ -55,41 +56,24 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "https://alphasoft360.com" },
+    { name: "About", url: "https://alphasoft360.com/about" },
+  ];
+
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "name": "About Us — AlphaSoft360",
-    "description":
-      "AlphaSoft360 is a technology partner delivering high-performance web applications, IoT solutions, and API integrations for clients worldwide.",
-    "url": "https://alphasoft360.com/about",
-    "publisher": {
-      "@type": "Organization",
-      "name": "AlphaSoft360",
-      "url": "https://alphasoft360.com",
-      "logo": "https://alphasoft360.com/brand/logo.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+923704857471",
-        "contactType": "customer service",
-        "email": "alphasoft360@gmail.com",
-        "areaServed": "Worldwide",
-      },
-      "location": {
-        "@type": "Place",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Main Pakavenue Road",
-          "addressLocality": "Sahiwal",
-          "postalCode": "57000",
-          "addressCountry": "PK",
-        },
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/alphasoft360",
-        "https://github.com/alphasoft360",
-        "https://twitter.com/alphasoft360",
-      ],
-    },
+    "@graph": [
+      getWebPageSchema({
+        type: "AboutPage",
+        name: "About Us — AlphaSoft360",
+        description:
+          "AlphaSoft360 is a technology partner delivering high-performance web applications, IoT solutions, and API integrations for clients worldwide.",
+        url: "https://alphasoft360.com/about",
+        breadcrumbItems
+      }),
+      getBreadcrumbSchema(breadcrumbItems, "https://alphasoft360.com/about")
+    ]
   };
 
   return (
