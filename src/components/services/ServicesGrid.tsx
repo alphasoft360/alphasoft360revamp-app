@@ -51,7 +51,7 @@ export default function ServicesGrid() {
                   <h3 className={`mt-6 font-medium ${isFeatured ? 'text-2xl' : 'text-lg'}`}>{service.title}</h3>
                   <p className={`mt-3 text-muted leading-relaxed flex-1 ${isFeatured ? 'text-base' : 'text-sm'}`}>{service.description}</p>
                   <Link
-                    href="/contact"
+                    href={service.href || "/contact"}
                     className={`mt-6 inline-flex items-center gap-1.5 font-medium text-foreground ${isFeatured ? 'text-base' : 'text-sm'}`}
                   >
                     Learn more

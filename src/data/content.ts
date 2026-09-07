@@ -91,6 +91,7 @@ export const process = [
 export const servicesFull = [
   {
     slug: "app-development",
+    href: "/mobile-app-development",
     icon: "smartphone",
     title: "App Development",
     description:
@@ -98,6 +99,7 @@ export const servicesFull = [
   },
   {
     slug: "web-development",
+    href: "/web-development",
     icon: "globe",
     title: "Web Development",
     description:
@@ -105,6 +107,7 @@ export const servicesFull = [
   },
   {
     slug: "ecommerce-solutions",
+    href: "/web-development/ecommerce-development",
     icon: "shopping-cart",
     title: "E-Commerce Solutions",
     description:
@@ -112,6 +115,7 @@ export const servicesFull = [
   },
   {
     slug: "cloud-devops",
+    href: "/cloud-devops",
     icon: "cloud",
     title: "Cloud & DevOps",
     description:
@@ -119,6 +123,7 @@ export const servicesFull = [
   },
   {
     slug: "real-estate",
+    href: "/software-development",
     icon: "building",
     title: "Real Estate Management Solutions",
     description:
@@ -126,6 +131,7 @@ export const servicesFull = [
   },
   {
     slug: "lms-education",
+    href: "/software-development",
     icon: "graduation-cap",
     title: "LMS & Education Solutions",
     description:
@@ -133,6 +139,7 @@ export const servicesFull = [
   },
   {
     slug: "healthcare",
+    href: "/software-development",
     icon: "heart-pulse",
     title: "Healthcare Management Systems",
     description:
@@ -140,6 +147,7 @@ export const servicesFull = [
   },
   {
     slug: "ai-automation",
+    href: "/ai-development",
     icon: "bot",
     title: "AI-Powered Automation",
     description:
@@ -147,6 +155,7 @@ export const servicesFull = [
   },
   {
     slug: "iot-apps",
+    href: "/software-development",
     icon: "cpu",
     title: "IOT Apps",
     description:
@@ -154,6 +163,7 @@ export const servicesFull = [
   },
   {
     slug: "product-design",
+    href: "/web-development",
     icon: "pen-tool",
     title: "Product & Design",
     description:
@@ -161,6 +171,7 @@ export const servicesFull = [
   },
   {
     slug: "data-center",
+    href: "/cloud-devops",
     icon: "server",
     title: "Data Center",
     description:
@@ -168,6 +179,7 @@ export const servicesFull = [
   },
   {
     slug: "erp-crm",
+    href: "/software-development",
     icon: "database",
     title: "ERP & CRM Solutions",
     description:
@@ -375,27 +387,31 @@ export const contact = {
 
 export const footerLinks = {
   company: [
-    { label: "About", href: "/about" },
+    { label: "About Us", href: "/about" },
     { label: "Our Team", href: "/team" },
     { label: "Careers", href: "/careers" },
-    { label: "Contact", href: "/contact" },
+    { label: "Contact Us", href: "/contact" },
   ],
   services: [
-    { label: "Web Development", href: "/services" },
-    { label: "Mobile Development", href: "/services" },
-    { label: "Cloud Solutions", href: "/services" },
-    { label: "AI & Machine Learning", href: "/services" },
-    { label: "UI/UX Design", href: "/services" },
-    { label: "DevOps", href: "/services" },
-    { label: "Custom Software", href: "/services" },
+    { label: "Web Development Hub", href: "/web-development" },
+    { label: "Custom Web Development", href: "/web-development/custom-web-development" },
+    { label: "Web Application Dev", href: "/web-development/web-application-development" },
+    { label: "React Development", href: "/web-development/react-development" },
+    { label: "Next.js Development", href: "/web-development/nextjs-development" },
+    { label: "SaaS Development", href: "/web-development/saas-development" },
+    { label: "E-Commerce Development", href: "/web-development/ecommerce-development" },
+    { label: "Software Development", href: "/software-development" },
+    { label: "Mobile App Development", href: "/mobile-app-development" },
+    { label: "AI Development", href: "/ai-development" },
+    { label: "Cloud & DevOps", href: "/cloud-devops" },
   ],
   resources: [
-    { label: "Documentation", href: "/docs" },
-    { label: "Case Studies", href: "/projects" },
-    { label: "FAQs", href: "/faqs" },
-    { label: "Support", href: "/support" },
+    { label: "Portfolio Case Studies", href: "/projects" },
+    { label: "Frequently Asked Questions", href: "/faqs" },
+    { label: "Website Sitemap", href: "/sitemap-page" },
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms & Conditions", href: "/terms" },
+    { label: "Cookie Policy", href: "/cookies" },
   ],
 };
 

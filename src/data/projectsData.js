@@ -152,8 +152,8 @@ const projectsData = [
   {
     id: "task-management-app",
     slug: "task-management-app",
-    title: "Shop 'N Hop App",
-    description: "Shop 'N Hop App: Discover amazing deals, track your purchases, and shop effortlessly on-the-go. Your personalized shopping experience, anytime, anywhere!",
+    title: "TaskFlow — Agile Task Management Platform",
+    description: "TaskFlow: An enterprise Kanban task management platform featuring drag-and-drop task boards, sprint planning, Gantt charts, team member assignments, and real-time project analytics.",
     image: "/projects/pop.png",
     techStack: ["Vue.js", "Express", "PostgreSQL", "Socket.io", "JWT", "Vuex"],
     features: [
@@ -190,8 +190,8 @@ const projectsData = [
   {
     id: "home-accessories",
     slug: "home-accessories",
-    title: "Find-Here App",
-    description: "Find-Here App is your ultimate tool for locating businesses, services, and places near you. Fast, reliable, and user-friendly location search to meet all your needs.",
+    title: "SocialPulse — Social Media Analytics Platform",
+    description: "SocialPulse: A unified social media analytics dashboard for multi-platform content scheduling, real-time engagement tracking, automated post publishing, and competitor performance benchmarking.",
     image: "/projects/findhere.png",
     techStack: ["React", "D3.js", "Node.js", "MySQL", "Chart.js", "Material-UI"],
     features: [
@@ -205,9 +205,9 @@ const projectsData = [
       "API integrations"
     ],
     overview: [
-      "Find-Here App consolidates data from various platforms into a unified dashboard, helping users to easily locate businesses and services near them.",
-      "With detailed analytics, content scheduling, and engagement tracking, users can enhance their social media presence effectively.",
-      "AI-driven insights and customizable reports allow businesses to make data-driven decisions, improving their overall strategy."
+      "SocialPulse consolidates engagement data from various social media networks into a unified analytics dashboard.",
+      "With detailed performance metrics, content scheduling, and audience insights, teams can optimize their social growth effectively.",
+      "AI-driven insights and customizable PDF reports allow marketing directors to make data-driven decisions."
     ],
     challenges: [
       "Integrating multiple social media APIs",
@@ -340,36 +340,36 @@ const projectsData = [
   {
     id: "IsStartup-app",
     slug: "IsStartup-app",
-    title: "Is Startup",
-    description: "Is Startup: Discover, track, and connect with innovative startups. Stay updated on trends, funding, and opportunities in the startup ecosystem!",
+    title: "Is Startup — Technology Ecosystem & VC Deal Flow",
+    description: "Is Startup: Discover, track, and connect with innovative tech startups. Real-time funding analytics, pitch deck showcases, investor matchmaking, and startup ecosystem insights.",
     image: "/projects/isstartup.png",
     techStack: ["React Native", "Firebase", "Node.js", "MongoDB", "Redux", "Expo"],
     features: [
-      "Workout planning",
-      "Nutrition tracking",
-      "Progress analytics",
-      "Social features",
-      "Wearable integration",
-      "Personalized recommendations",
-      "Video exercise library",
-      "Achievement system"
+      "Startup directory & advanced search",
+      "Investor matchmaking & deal flow pipeline",
+      "Funding round tracking & venture analytics",
+      "Cap table & valuation calculators",
+      "Founder networking & direct messaging",
+      "Industry sector benchmark insights",
+      "Pitch deck submission & review portal",
+      "Watchlist alerts & trend notifications"
     ],
     overview: [
-      "Is Startup is a comprehensive fitness tracking app that helps users achieve their health goals with personalized workout plans and nutrition guidance.",
-      "Integrated with wearable devices, the app tracks activity levels and provides detailed analytics to monitor progress.",
-      "Featuring social tools and gamification, the app ensures users stay motivated and engaged throughout their fitness journey."
+      "Is Startup is a platform built for founders, angel investors, and VCs to discover, track, and analyze early-stage technology companies.",
+      "Integrated with venture capital databases, the platform provides real-time funding analytics and market sector insights.",
+      "Featuring founder tools and investor deal-flow management, the platform accelerates early-stage venture building."
     ],
     challenges: [
-      "Integrating with various wearable devices",
-      "Creating accurate calorie calculation algorithms",
-      "Implementing offline functionality",
-      "Ensuring data privacy and security"
+      "Aggregating live funding data from multiple tech ecosystem sources",
+      "Ensuring investor and founder communications remain confidential",
+      "Implementing responsive offline capabilities for mobile pitch review",
+      "Designing an intuitive venture deal flow board"
     ],
     solutions: [
-      "Developed a universal device integration layer to support various wearable technologies",
-      "Collaborated with nutritionists to create accurate and reliable calorie calculation algorithms",
-      "Implemented local data storage with sync capabilities for offline functionality",
-      "Used end-to-end encryption to ensure data privacy and security for user information"
+      "Developed a modular data ingestion layer to sync startup market news",
+      "Built end-to-end encrypted messaging for founders and accredited investors",
+      "Implemented local offline caching with Firebase offline persistence",
+      "Created a streamlined Kanban deal flow dashboard for venture investors"
     ],
     duration: "4 months",
     category: "Startup Platform"
@@ -378,46 +378,46 @@ const projectsData = [
   {
     id: "Kids-Items-platform",
     slug: "Kids-item-platform",
-    title: "Kidezz",
-    description: "Kidezz: A fun, safe platform for kids to learn, play, and grow. Engaging activities, educational games, and interactive content for young minds!",
+    title: "Kidezz — Kids Learning & Activity Portal",
+    description: "Kidezz: A fun, safe, interactive digital learning platform for kids. Engaging educational activities, interactive games, progress badges, and parent monitoring tools.",
     image: "/projects/kidezz.png",
-    techStack: ["Next.js", "Prisma", "PostgreSQL", "Mapbox", "Stripe", "TypeScript"],
+    techStack: ["Next.js", "Prisma", "PostgreSQL", "TailwindCSS", "Stripe", "TypeScript"],
     features: [
-      "Property listings with advanced search",
-      "Virtual property tours",
-      "Mortgage calculator",
-      "Agent matching system",
-      "Document management",
-      "Appointment scheduling",
-      "Neighborhood insights",
-      "Market analytics"
+      "Age-tailored educational modules",
+      "Interactive learning games",
+      "Parent monitoring dashboard",
+      "Gamified reward badges",
+      "Safe child-first UI design",
+      "Curriculum progress tracking",
+      "Subscription plan management",
+      "Multi-child profile support"
     ],
     overview: [
-      "Kidezz is an all-in-one footwear shopping platform that seamlessly connects customers to a vast range of stylish, comfortable shoes.",
-      "With advanced features like virtual try-ons, personalized shoe recommendations, and detailed product insights, Kidezz offers an unparalleled shopping experience.",
-      "Built with modern web technologies for fast performance, a responsive interface, and a seamless experience across all devices."
+      "Kidezz is a dedicated digital learning ecosystem designed to help children develop foundational skills through guided interactive modules.",
+      "Parents gain real-time visibility into activity progression, learning milestones, and screen-time controls via a centralized dashboard.",
+      "Built with high-performance Next.js architecture to deliver fast, engaging experiences across mobile devices and tablets."
     ],
     challenges: [
-      "Creating a smooth virtual try-on experience",
-      "Handling high-resolution image and video product displays",
-      "Integrating payment processing securely",
-      "Building a scalable system to manage large product catalogs"
+      "Creating engaging, accessible interfaces appropriate for young learners",
+      "Ensuring COPPA and child data privacy compliance",
+      "Delivering low-latency media content across mobile connections",
+      "Building robust multi-child account management for families"
     ],
     solutions: [
-      "Implemented augmented reality (AR) for virtual try-ons",
-      "Optimized image delivery with a content delivery network (CDN) for faster load times",
-      "Integrated Stripe for secure payment processing",
-      "Designed a scalable database with Prisma and PostgreSQL to handle extensive product catalogs"
+      "Designed high-contrast, child-friendly component designs with clear audio cues",
+      "Enforced strict privacy policies with no third-party tracking cookies",
+      "Optimized assets through CDN edge caching and responsive image formats",
+      "Utilized Prisma and PostgreSQL to manage secure family subscription structures"
     ],
     duration: "7 months",
-    category: "E-Commerce"
+    category: "Education"
   },
   // project 7
   {
     id: "Jewelry-store",
     slug: "Jewelry-store",
-    title: "Dhahween",
-    description: "Dhahween: An innovative platform connecting talents and opportunities. Discover, learn, and engage with a community that values creativity and innovation!",
+    title: "Dhahween — Food Delivery & Dispatch System",
+    description: "Dhahween: A comprehensive food ordering and delivery system featuring multi-restaurant catalog support, real-time driver tracking, smart route optimization, and automated dispatch.",
     image: "/projects/dhahween.png",
     techStack: ["React", "Node.js", "MongoDB", "Socket.io", "Google Maps", "Stripe"],
     features: [
@@ -448,7 +448,7 @@ const projectsData = [
       "Developed a temperature tracking system to monitor food quality during transit"
     ],
     duration: "5 months",
-    category: "Food Delivery"
+    category: "Food Delivery & Logistics"
   },
   {
     id: "bulk-tshirts-ecommerce",
@@ -531,14 +531,14 @@ const projectsData = [
     image: "/projects/shoeto.png",
     techStack: ["Next.js", "Prisma", "PostgreSQL", "Mapbox", "Stripe", "TypeScript"],
     features: [
-      "Property listings with advanced search",
-      "Virtual property tours",
-      "Mortgage calculator",
-      "Agent matching system",
-      "Document management",
-      "Appointment scheduling",
-      "Neighborhood insights",
-      "Market analytics"
+      "Footwear catalog with size & width filtering",
+      "Interactive 3D product view & AR preview",
+      "Personalized shoe size recommendation engine",
+      "Shoe care & material maintenance guides",
+      "Multi-currency checkout via Stripe",
+      "Real-time inventory level synchronization",
+      "Customer reviews with photo uploads",
+      "Hassle-free returns & exchange portal"
     ],
     overview: [
       "Shoeto is an all-in-one footwear shopping platform that seamlessly connects customers to a vast range of stylish, comfortable shoes.",

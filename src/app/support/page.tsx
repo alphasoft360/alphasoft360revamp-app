@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "Get technical support, system assistance, and SLA maintenance for AlphaSoft360 products and custom software solutions.",
   alternates: {
-    canonical: "https://alphasoft360.com/support",
+    canonical: "https://www.alphasoft360.com/support",
   },
   keywords: [
     "AlphaSoft360 Support",
@@ -22,20 +22,20 @@ export const metadata: Metadata = {
     "Server Monitoring SLA"
   ],
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
   openGraph: {
     title: "Support Center — AlphaSoft360",
     description:
       "Get technical support, system assistance, and SLA maintenance for AlphaSoft360 products and custom software solutions.",
-    url: "https://alphasoft360.com/support",
+    url: "https://www.alphasoft360.com/support",
     siteName: "AlphaSoft360",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://alphasoft360.com/brand/hero-2.jpeg",
+        url: "https://www.alphasoft360.com/brand/hero-2.jpeg",
         width: 1200,
         height: 630,
         alt: "AlphaSoft360 Support Center",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: "Support Center — AlphaSoft360",
     description:
       "Get technical support, system assistance, and SLA maintenance for AlphaSoft360 products and custom software solutions.",
-    images: ["https://alphasoft360.com/brand/hero-2.jpeg"],
+    images: ["https://www.alphasoft360.com/brand/hero-2.jpeg"],
   },
 };
 

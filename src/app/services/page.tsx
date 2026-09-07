@@ -9,36 +9,35 @@ import { servicesFull } from "@/data/content";
 import { getWebPageSchema, getBreadcrumbSchema, ORGANIZATION_ID } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Services — AlphaSoft360",
+  title: "Software Development & IT Services Catalog | AlphaSoft360",
   description:
-    "App development, web development, e-commerce, cloud & DevOps, AI automation, and more — twelve specialized IT service lines from AlphaSoft360.",
+    "Explore AlphaSoft360's full-stack web development, custom software engineering, React/Next.js platforms, mobile apps, AI automation, and cloud DevOps services.",
   alternates: {
-    canonical: "https://alphasoft360.com/services",
+    canonical: "https://www.alphasoft360.com/services",
   },
   keywords: [
     "AlphaSoft360 Services",
-    "Web Application Development Sahiwal",
-    "Mobile App Development Pakistan",
-    "E-Commerce Web Developers",
+    "Web Application Development",
+    "Custom Software Engineering",
+    "Mobile App Development",
     "Cloud Migration Services",
-    "AI Automation Integrators",
-    "IT Consultant Pakistan"
+    "AI Automation Services"
   ],
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: "Services — AlphaSoft360",
+    title: "Software Development & IT Services Catalog | AlphaSoft360",
     description:
-      "App development, web development, e-commerce, cloud & DevOps, AI automation, and more — twelve specialized IT service lines from AlphaSoft360.",
-    url: "https://alphasoft360.com/services",
+      "Explore AlphaSoft360's full-stack web development, custom software engineering, React/Next.js platforms, mobile apps, AI automation, and cloud DevOps services.",
+    url: "https://www.alphasoft360.com/services",
     siteName: "AlphaSoft360",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://alphasoft360.com/brand/hero-2.jpeg",
+        url: "https://www.alphasoft360.com/brand/hero-2.jpeg",
         width: 1200,
         height: 630,
         alt: "AlphaSoft360 IT Services Portfolio",
@@ -47,25 +46,25 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Services — AlphaSoft360",
+    title: "Software Development & IT Services Catalog | AlphaSoft360",
     description:
-      "App development, web development, e-commerce, cloud & DevOps, AI automation, and more — twelve specialized IT service lines from AlphaSoft360.",
-    images: ["https://alphasoft360.com/brand/hero-2.jpeg"],
+      "Explore AlphaSoft360's full-stack web development, custom software engineering, React/Next.js platforms, mobile apps, AI automation, and cloud DevOps services.",
+    images: ["https://www.alphasoft360.com/brand/hero-2.jpeg"],
   },
 };
 
 export default function ServicesPage() {
   const breadcrumbItems = [
-    { name: "Home", url: "https://alphasoft360.com" },
-    { name: "Services", url: "https://alphasoft360.com/services" },
+    { name: "Home", url: "https://www.alphasoft360.com" },
+    { name: "Services", url: "https://www.alphasoft360.com/services" },
   ];
 
   const serviceGraph = servicesFull.map((srv) => ({
     "@type": "Service",
-    "@id": `https://alphasoft360.com/services#${srv.slug}`,
+    "@id": `https://www.alphasoft360.com/services#${srv.slug}`,
     "name": srv.title,
     "description": srv.description,
-    "url": `https://alphasoft360.com/services#${srv.slug}`,
+    "url": `https://www.alphasoft360.com/services#${srv.slug}`,
     "provider": {
       "@id": ORGANIZATION_ID
     },
@@ -77,13 +76,13 @@ export default function ServicesPage() {
     "@graph": [
       getWebPageSchema({
         type: "WebPage",
-        name: "Services — AlphaSoft360",
+        name: "Software Development & IT Services Catalog | AlphaSoft360",
         description:
-          "App development, web development, e-commerce, cloud & DevOps, AI automation, and more — twelve specialized IT service lines from AlphaSoft360.",
-        url: "https://alphasoft360.com/services",
+          "Explore AlphaSoft360's full-stack web development, custom software engineering, React/Next.js platforms, mobile apps, AI automation, and cloud DevOps services.",
+        url: "https://www.alphasoft360.com/services",
         breadcrumbItems
       }),
-      getBreadcrumbSchema(breadcrumbItems, "https://alphasoft360.com/services"),
+      getBreadcrumbSchema(breadcrumbItems, "https://www.alphasoft360.com/services"),
       ...serviceGraph
     ]
   };

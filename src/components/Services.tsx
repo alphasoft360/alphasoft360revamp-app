@@ -55,7 +55,12 @@ export default function Services() {
                   <h3 className={`relative mt-6 font-medium ${isFeatured ? 'text-2xl' : 'text-lg'}`}>{service.title}</h3>
                   <p className={`relative mt-3 text-muted leading-relaxed ${isFeatured ? 'text-base' : 'text-sm'}`}>{service.description}</p>
                   <Link
-                    href="/services"
+                    href={
+                      service.title === "Software Development" ? "/software-development" :
+                      service.title === "Web Development" ? "/web-development" :
+                      service.title === "Cloud & DevOps" ? "/cloud-devops" :
+                      "/services"
+                    }
                     className={`relative mt-5 inline-flex items-center gap-1.5 font-medium text-foreground ${isFeatured ? 'text-base' : 'text-sm'}`}
                   >
                     Learn more

@@ -14,13 +14,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://alphasoft360.com"),
+  metadataBase: new URL("https://www.alphasoft360.com"),
   title: {
-    default: "AlphaSoft360 — IT Consulting & Software Engineering",
+    default: "Custom Web Development & Software Engineering Company | AlphaSoft360",
     template: "%s — AlphaSoft360",
   },
   description:
-    "AlphaSoft360 builds software, web applications, mobile apps, cloud DevOps, and AI automation solutions for businesses worldwide. Over a decade of proven engineering expertise.",
+    "AlphaSoft360 builds enterprise web applications, custom software, mobile apps, React/Next.js platforms, cloud DevOps, and AI solutions for businesses worldwide.",
   icons: {
     icon: [
       { url: "/brand/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -33,28 +33,28 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "AlphaSoft360 — IT Consulting & Software Engineering",
+    title: "Custom Web Development & Software Engineering Company | AlphaSoft360",
     description:
-      "AlphaSoft360 builds software, web applications, mobile apps, cloud DevOps, and AI automation solutions for businesses worldwide.",
-    url: "https://alphasoft360.com",
+      "AlphaSoft360 builds enterprise web applications, custom software, mobile apps, React/Next.js platforms, cloud DevOps, and AI solutions for businesses worldwide.",
+    url: "https://www.alphasoft360.com",
     siteName: "AlphaSoft360",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://alphasoft360.com/brand/hero-2.jpeg",
+        url: "https://www.alphasoft360.com/brand/hero-2.jpeg",
         width: 1200,
         height: 630,
-        alt: "AlphaSoft360 IT Consulting & Software Engineering",
+        alt: "AlphaSoft360 Web Development & Software Engineering",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AlphaSoft360 — IT Consulting & Software Engineering",
+    title: "Custom Web Development & Software Engineering Company | AlphaSoft360",
     description:
-      "AlphaSoft360 builds software, web applications, mobile apps, cloud DevOps, and AI automation solutions for businesses worldwide.",
-    images: ["https://alphasoft360.com/brand/hero-2.jpeg"],
+      "AlphaSoft360 builds enterprise web applications, custom software, mobile apps, React/Next.js platforms, cloud DevOps, and AI solutions for businesses worldwide.",
+    images: ["https://www.alphasoft360.com/brand/hero-2.jpeg"],
   },
 };
 

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "Complete sitemap directory of all pages, services, portfolio case studies, and resources available on AlphaSoft360.",
   alternates: {
-    canonical: "https://alphasoft360.com/sitemap-page",
+    canonical: "https://www.alphasoft360.com/sitemap-page",
   },
   keywords: [
     "AlphaSoft360 Sitemap",
@@ -22,20 +22,20 @@ export const metadata: Metadata = {
     "Resource Navigation"
   ],
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
   openGraph: {
     title: "Sitemap — AlphaSoft360",
     description:
       "Complete sitemap directory of all pages, services, portfolio case studies, and resources available on AlphaSoft360.",
-    url: "https://alphasoft360.com/sitemap-page",
+    url: "https://www.alphasoft360.com/sitemap-page",
     siteName: "AlphaSoft360",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://alphasoft360.com/brand/hero-2.jpeg",
+        url: "https://www.alphasoft360.com/brand/hero-2.jpeg",
         width: 1200,
         height: 630,
         alt: "AlphaSoft360 Website Sitemap",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: "Sitemap — AlphaSoft360",
     description:
       "Complete sitemap directory of all pages, services, portfolio case studies, and resources available on AlphaSoft360.",
-    images: ["https://alphasoft360.com/brand/hero-2.jpeg"],
+    images: ["https://www.alphasoft360.com/brand/hero-2.jpeg"],
   },
 };
 
@@ -158,13 +158,26 @@ export default function SitemapPage() {
               {/* Services Index */}
               <div className="card-border rounded-2xl bg-surface p-6">
                 <h2 className="text-lg font-semibold text-foreground pb-3 border-b border-line">
-                  Services Index ({servicesFull.length})
+                  Services Index (12 Commercial Landing Pages)
                 </h2>
                 <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
-                  {servicesFull.map((srv) => (
-                    <li key={srv.slug}>
+                  {[
+                    { title: "Web Development Hub", href: "/web-development" },
+                    { title: "Custom Web Development", href: "/web-development/custom-web-development" },
+                    { title: "Web Application Dev", href: "/web-development/web-application-development" },
+                    { title: "React Development", href: "/web-development/react-development" },
+                    { title: "Next.js Development", href: "/web-development/nextjs-development" },
+                    { title: "Node.js Development", href: "/web-development/nodejs-development" },
+                    { title: "E-Commerce Development", href: "/web-development/ecommerce-development" },
+                    { title: "SaaS Development", href: "/web-development/saas-development" },
+                    { title: "Software Development", href: "/software-development" },
+                    { title: "Mobile App Development", href: "/mobile-app-development" },
+                    { title: "AI Development", href: "/ai-development" },
+                    { title: "Cloud & DevOps", href: "/cloud-devops" },
+                  ].map((srv) => (
+                    <li key={srv.href}>
                       <Link
-                        href={`/services#${srv.slug}`}
+                        href={srv.href}
                         className="text-muted hover:text-accent-2 transition-colors flex items-center gap-1.5"
                       >
                         <ArrowUpRight className="h-3.5 w-3.5 text-accent shrink-0" />

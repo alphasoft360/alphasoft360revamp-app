@@ -65,13 +65,15 @@ export default function Header({ photoHero = false }: { photoHero?: boolean }) {
           className={`lg:hidden transition-colors ${overPhotoHero ? "text-white" : "text-foreground"}`}
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
+          aria-expanded={open}
+          aria-controls="mobile-menu"
         >
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
 
       {open && (
-        <div className="lg:hidden border-t border-line bg-background/95 backdrop-blur-lg px-6 py-6 flex flex-col gap-5">
+        <div id="mobile-menu" className="lg:hidden border-t border-line bg-background/95 backdrop-blur-lg px-6 py-6 flex flex-col gap-5">
           {nav.map((item) => (
             <Link
               key={item.href}

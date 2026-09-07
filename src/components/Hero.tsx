@@ -28,7 +28,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-8 text-4xl sm:text-6xl lg:text-[5.25rem] leading-[1.05] font-semibold tracking-tight text-gradient-light text-balance"
           >
-            Software, cloud &amp; AI engineering that moves your business forward
+            Custom Web Development &amp; Software Engineering
           </motion.h1>
 
           <motion.p
@@ -37,9 +37,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 text-lg text-white/80 max-w-2xl text-balance"
           >
-            AlphaSoft360 is a technology partner for founders and enterprises
-            building web platforms, mobile apps, and AI-driven products with
-            the discipline of a decade of shipped work.
+            AlphaSoft360 builds enterprise web applications, React &amp; Next.js platforms, SaaS applications, custom software, and AI solutions with precision engineering.
           </motion.p>
 
           <motion.div

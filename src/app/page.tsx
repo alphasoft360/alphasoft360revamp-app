@@ -8,56 +8,55 @@ import TechStack from "@/components/TechStack";
 import Process from "@/components/Process";
 import Projects from "@/components/Projects";
 import Testimonials from "@/components/Testimonials";
-import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { getOrganizationSchema, getWebSiteSchema, getWebPageSchema } from "@/lib/schema";
 import { techStackRow1, techStackRow2 } from "@/data/content";
 
 export const metadata: Metadata = {
-  title: "AlphaSoft360 — IT Consulting & Software Engineering",
+  title: "Custom Web Development & Software Engineering Company | AlphaSoft360",
   description:
-    "AlphaSoft360 builds high-performance software, web applications, mobile apps, cloud DevOps, and AI automation solutions for businesses worldwide. Over a decade of engineering excellence.",
+    "AlphaSoft360 is a custom web development and software engineering company. We build web applications, React & Next.js platforms, SaaS, e-commerce, mobile apps, cloud DevOps, and AI solutions.",
   alternates: {
-    canonical: "https://alphasoft360.com",
+    canonical: "https://www.alphasoft360.com",
   },
   keywords: [
-    "AlphaSoft360",
-    "IT Consulting",
-    "Software Engineering Sahiwal",
-    "Web Development Pakistan",
-    "App Development Sahiwal",
-    "Cloud DevOps Solutions",
-    "AI Automation Company",
-    "Custom Software Developer"
+    "Custom Web Development",
+    "Web Application Development",
+    "Software Development Company",
+    "React Development Services",
+    "Next.js Development Agency",
+    "SaaS Development Services",
+    "E-commerce Web Development",
+    "AlphaSoft360"
   ],
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: "AlphaSoft360 — IT Consulting & Software Engineering",
+    title: "Custom Web Development & Software Engineering Company | AlphaSoft360",
     description:
-      "AlphaSoft360 builds high-performance software, web applications, mobile apps, cloud DevOps, and AI automation solutions for businesses worldwide.",
-    url: "https://alphasoft360.com",
+      "AlphaSoft360 is a custom web development and software engineering company. We build web applications, React & Next.js platforms, SaaS, e-commerce, mobile apps, cloud DevOps, and AI solutions.",
+    url: "https://www.alphasoft360.com",
     siteName: "AlphaSoft360",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://alphasoft360.com/brand/hero-2.jpeg",
+        url: "https://www.alphasoft360.com/brand/hero-2.jpeg",
         width: 1200,
         height: 630,
-        alt: "AlphaSoft360 Software Engineering Services",
+        alt: "AlphaSoft360 Custom Web Development & Software Engineering",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AlphaSoft360 — IT Consulting & Software Engineering",
+    title: "Custom Web Development & Software Engineering Company | AlphaSoft360",
     description:
-      "AlphaSoft360 builds high-performance software, web applications, mobile apps, cloud DevOps, and AI automation solutions for businesses worldwide.",
-    images: ["https://alphasoft360.com/brand/hero-2.jpeg"],
+      "AlphaSoft360 is a custom web development and software engineering company. We build web applications, React & Next.js platforms, SaaS, e-commerce, mobile apps, cloud DevOps, and AI solutions.",
+    images: ["https://www.alphasoft360.com/brand/hero-2.jpeg"],
   },
 };
 
@@ -68,10 +67,10 @@ export default function Home() {
       getOrganizationSchema(),
       getWebSiteSchema(),
       getWebPageSchema({
-        name: "AlphaSoft360 — IT Consulting & Software Engineering",
+        name: "Custom Web Development & Software Engineering Company | AlphaSoft360",
         description:
-          "AlphaSoft360 builds high-performance software, web applications, mobile apps, cloud DevOps, and AI automation solutions for businesses worldwide.",
-        url: "https://alphasoft360.com"
+          "AlphaSoft360 is a custom web development and software engineering company. We build web applications, React & Next.js platforms, SaaS, e-commerce, mobile apps, cloud DevOps, and AI solutions.",
+        url: "https://www.alphasoft360.com"
       })
     ]
   };
@@ -92,7 +91,6 @@ export default function Home() {
         <Process />
         <Projects />
         <Testimonials />
-        <Blog />
         <Contact />
       </main>
       <Footer />

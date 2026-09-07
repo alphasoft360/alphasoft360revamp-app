@@ -1,6 +1,6 @@
-export const ORGANIZATION_ID = "https://alphasoft360.com/#organization";
-export const WEBSITE_ID = "https://alphasoft360.com/#website";
-export const BASE_URL = "https://alphasoft360.com";
+export const ORGANIZATION_ID = "https://www.alphasoft360.com/#organization";
+export const WEBSITE_ID = "https://www.alphasoft360.com/#website";
+export const BASE_URL = "https://www.alphasoft360.com";
 
 export interface BreadcrumbItem {
   name: string;
@@ -108,4 +108,41 @@ export function getWebPageSchema({
   }
 
   return pageSchema;
+}
+
+export function getServiceSchema({
+  name,
+  description,
+  url,
+  serviceType
+}: {
+  name: string;
+  description: string;
+  url: string;
+  serviceType: string;
+}) {
+  return {
+    "@type": "Service",
+    "@id": `${url}#service`,
+    "name": name,
+    "description": description,
+    "serviceType": serviceType,
+    "provider": {
+      "@id": ORGANIZATION_ID
+    },
+    "areaServed": "Worldwide",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": name,
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": name
+          }
+        }
+      ]
+    }
+  };
 }

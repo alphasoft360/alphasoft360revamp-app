@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Explore developer documentation, API guides, integration patterns, and architecture specs for AlphaSoft360 products and services.",
   alternates: {
-    canonical: "https://alphasoft360.com/docs",
+    canonical: "https://www.alphasoft360.com/docs",
   },
   keywords: [
     "AlphaSoft360 Documentation",
@@ -21,20 +21,20 @@ export const metadata: Metadata = {
     "AI SDK Setup"
   ],
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
   openGraph: {
     title: "Documentation & Developer Hub — AlphaSoft360",
     description:
       "Explore developer documentation, API guides, integration patterns, and architecture specs for AlphaSoft360 products and services.",
-    url: "https://alphasoft360.com/docs",
+    url: "https://www.alphasoft360.com/docs",
     siteName: "AlphaSoft360",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://alphasoft360.com/brand/hero-2.jpeg",
+        url: "https://www.alphasoft360.com/brand/hero-2.jpeg",
         width: 1200,
         height: 630,
         alt: "AlphaSoft360 Developer Hub",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "Documentation & Developer Hub — AlphaSoft360",
     description:
       "Explore developer documentation, API guides, integration patterns, and architecture specs for AlphaSoft360 products and services.",
-    images: ["https://alphasoft360.com/brand/hero-2.jpeg"],
+    images: ["https://www.alphasoft360.com/brand/hero-2.jpeg"],
   },
 };
 
