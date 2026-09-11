@@ -1,36 +1,35 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Server, ArrowRight, CheckCircle2, ShieldCheck, Zap, Cloud, Container } from "lucide-react";
+import { Landmark, ArrowRight, ShieldCheck, CreditCard, LineChart } from "lucide-react";
 import { getWebPageSchema, getBreadcrumbSchema, getServiceSchema } from "@/lib/schema";
 import { contact } from "@/data/content";
 import ServiceHeroVisual from "@/components/services/ServiceHeroVisual";
 
 export const metadata: Metadata = {
-  title: "Cloud Engineering & DevOps Services | AWS & Vercel | AlphaSoft360",
+  title: "Fintech Software Development Services | AlphaSoft360",
   description:
-    "Cloud infrastructure automation and DevOps engineering services. We build automated CI/CD pipelines, Docker & Kubernetes container setups, AWS cloud deployment, and 24/7 monitoring.",
+    "Secure, compliant fintech platforms including digital banking, payment gateways, lending systems, and financial dashboards built with bank-grade security and scalability.",
   alternates: {
-    canonical: "https://www.alphasoft360.com/cloud-devops",
+    canonical: "https://www.alphasoft360.com/fintech",
   },
   keywords: [
-    "Cloud Engineering Services",
-    "DevOps Consulting",
-    "AWS Cloud Architecture",
-    "CI/CD Pipeline Automation",
-    "Docker Kubernetes Setup",
-    "Vercel Edge Deployment"
+    "Fintech Software Development",
+    "Digital Banking Platform",
+    "Payment Gateway Integration",
+    "Lending Software Development",
+    "Financial Software Solutions",
+    "Bank-Grade Security"
   ],
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: "Cloud Engineering & DevOps Services | AWS & Vercel | AlphaSoft360",
+    title: "Fintech Software Development Services | AlphaSoft360",
     description:
-      "Cloud infrastructure automation and DevOps engineering services. We build automated CI/CD pipelines, Docker container setups, and AWS cloud deployment.",
-    url: "https://www.alphasoft360.com/cloud-devops",
+      "Secure, compliant fintech platforms including digital banking, payments, and lending systems built with bank-grade security and scalability.",
+    url: "https://www.alphasoft360.com/fintech",
     siteName: "AlphaSoft360",
     locale: "en_US",
     type: "website",
@@ -39,41 +38,41 @@ export const metadata: Metadata = {
         url: "https://www.alphasoft360.com/brand/hero-2.jpeg",
         width: 1200,
         height: 630,
-        alt: "AlphaSoft360 Cloud & DevOps Services",
+        alt: "AlphaSoft360 Fintech Solutions",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cloud Engineering & DevOps Services | AWS & Vercel | AlphaSoft360",
+    title: "Fintech Software Development Services | AlphaSoft360",
     description:
-      "Cloud infrastructure automation and DevOps engineering services.",
+      "Secure, compliant fintech platforms built with bank-grade security and scalability.",
     images: ["https://www.alphasoft360.com/brand/hero-2.jpeg"],
   },
 };
 
-export default function CloudDevOpsPage() {
-  const pageUrl = "https://www.alphasoft360.com/cloud-devops";
+export default function FintechPage() {
+  const pageUrl = "https://www.alphasoft360.com/fintech";
   const breadcrumbItems = [
     { name: "Home", url: "https://www.alphasoft360.com" },
-    { name: "Cloud & DevOps", url: pageUrl }
+    { name: "Fintech Solutions", url: pageUrl }
   ];
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       getWebPageSchema({
-        name: "Cloud Engineering & DevOps Services | AlphaSoft360",
-        description: "Enterprise cloud migration, automated CI/CD deployment pipelines, container orchestration, and server monitoring.",
+        name: "Fintech Software Development Services | AlphaSoft360",
+        description: "Secure, compliant fintech platforms including digital banking, payments, and lending systems.",
         url: pageUrl,
         breadcrumbItems
       }),
       getBreadcrumbSchema(breadcrumbItems, pageUrl),
       getServiceSchema({
-        name: "Cloud & DevOps Services",
-        description: "Cloud infrastructure setup and DevOps pipeline automation for web platforms.",
+        name: "Fintech Solutions",
+        description: "Digital banking, payment gateway, and lending platform development with bank-grade security.",
         url: pageUrl,
-        serviceType: "Cloud & DevOps"
+        serviceType: "Fintech Software Development"
       })
     ]
   };
@@ -91,28 +90,28 @@ export default function CloudDevOpsPage() {
             <div className="grid lg:grid-cols-12 gap-10 items-center">
               <div className="lg:col-span-7">
                 <span className="text-xs font-semibold tracking-widest text-accent-2 uppercase">
-                  Infrastructure &amp; Automation
+                  Financial Technology
                 </span>
                 <h1 className="mt-4 text-4xl sm:text-6xl font-semibold tracking-tight text-gradient text-balance">
-                  Cloud Engineering &amp; DevOps
+                  Fintech Solutions
                 </h1>
                 <p className="mt-6 text-lg text-muted text-balance leading-relaxed">
-                  Build resilient, auto-scaling cloud infrastructure that ensures zero-downtime deployments. We manage AWS, Vercel, Docker containers, Terraform IaC, and automated CI/CD pipelines.
+                  Secure, compliant financial platforms built for scale. We engineer digital banking systems, payment gateways, lending platforms, and real-time financial dashboards with bank-grade security.
                 </p>
                 <div className="mt-8 flex items-center gap-4">
                   <a href={contact.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-primary text-xs">
-                    Automate Infrastructure <ArrowRight className="h-4 w-4" />
+                    Discuss Your Project <ArrowRight className="h-4 w-4" />
                   </a>
                 </div>
               </div>
               <div className="hidden lg:block lg:col-span-5">
                 <ServiceHeroVisual
-                  mainIcon={<Cloud className="h-4 w-4" />}
-                  title="Cloud & DevOps"
+                  mainIcon={<Landmark className="h-4 w-4" />}
+                  title="Fintech Solutions"
                   items={[
-                    { icon: <Server className="h-5 w-5" />, label: "AWS & Vercel Architecture" },
-                    { icon: <Zap className="h-5 w-5" />, label: "Automated CI/CD Pipelines" },
-                    { icon: <Container className="h-5 w-5" />, label: "Docker & Kubernetes" },
+                    { icon: <Landmark className="h-5 w-5" />, label: "Digital Banking Platforms" },
+                    { icon: <CreditCard className="h-5 w-5" />, label: "Payments & Lending" },
+                    { icon: <ShieldCheck className="h-5 w-5" />, label: "Security & Compliance" },
                   ]}
                 />
               </div>
@@ -125,24 +124,24 @@ export default function CloudDevOpsPage() {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="card-border rounded-2xl bg-surface p-8">
                 <div className="h-10 w-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-4">
-                  <Server className="h-5 w-5" />
+                  <Landmark className="h-5 w-5" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground">AWS &amp; Vercel Cloud Architecture</h3>
-                <p className="mt-2 text-sm text-muted">Architecting multi-region EC2, S3, RDS, ECS, Lambda, and CloudFront edge networks for maximum global reliability.</p>
+                <h3 className="text-lg font-semibold text-foreground">Digital Banking Platforms</h3>
+                <p className="mt-2 text-sm text-muted">Core banking systems, digital wallets, and neobank platforms with real-time account management and transaction processing.</p>
               </div>
               <div className="card-border rounded-2xl bg-surface p-8">
                 <div className="h-10 w-10 rounded-xl bg-accent-2/10 flex items-center justify-center text-accent-2 mb-4">
-                  <Zap className="h-5 w-5" />
+                  <CreditCard className="h-5 w-5" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground">Automated CI/CD Pipelines</h3>
-                <p className="mt-2 text-sm text-muted">GitHub Actions &amp; GitLab CI workflows for automated linting, unit testing, security scanning, and seamless deployments.</p>
+                <h3 className="text-lg font-semibold text-foreground">Payments &amp; Lending</h3>
+                <p className="mt-2 text-sm text-muted">Payment gateway integrations, P2P transfers, and automated lending platforms with credit scoring and risk assessment.</p>
               </div>
               <div className="card-border rounded-2xl bg-surface p-8">
                 <div className="h-10 w-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-4">
                   <ShieldCheck className="h-5 w-5" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground">Containerization &amp; IaC</h3>
-                <p className="mt-2 text-sm text-muted">Docker containerization, Kubernetes cluster management, and Infrastructure as Code (Terraform) reproducibility.</p>
+                <h3 className="text-lg font-semibold text-foreground">Security &amp; Compliance</h3>
+                <p className="mt-2 text-sm text-muted">PCI-DSS compliant architecture, end-to-end encryption, fraud detection, and KYC/AML workflows built in from day one.</p>
               </div>
             </div>
           </div>
@@ -150,11 +149,14 @@ export default function CloudDevOpsPage() {
 
         <section className="py-16 bg-surface-2/40 border-t border-line">
           <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-semibold text-foreground">Need Cloud &amp; DevOps Optimization?</h2>
-            <p className="mt-3 text-muted max-w-xl mx-auto text-sm">Let our DevOps engineers review your cloud infrastructure and CI/CD pipelines.</p>
+            <div className="mx-auto h-12 w-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-4">
+              <LineChart className="h-6 w-6" />
+            </div>
+            <h2 className="text-3xl font-semibold text-foreground">Ready to Build Your Fintech Product?</h2>
+            <p className="mt-3 text-muted max-w-xl mx-auto text-sm">Let our engineers help you launch a secure, compliant financial platform.</p>
             <div className="mt-8 flex justify-center">
               <a href={contact.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-primary text-xs">
-                Contact Cloud Team <ArrowRight className="h-4 w-4" />
+                Contact Our Team <ArrowRight className="h-4 w-4" />
               </a>
             </div>
           </div>

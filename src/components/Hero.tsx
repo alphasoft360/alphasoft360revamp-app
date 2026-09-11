@@ -28,16 +28,16 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-8 text-4xl sm:text-6xl lg:text-[5.25rem] leading-[1.05] font-semibold tracking-tight text-gradient-light text-balance"
           >
-            Custom Web Development &amp; Software Engineering
+            AI-Driven Software Solutions, Built to Scale
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-6 text-lg text-white/80 max-w-2xl text-balance"
+            className="mt-6 text-lg text-white/80 max-w-3xl text-balance"
           >
-            AlphaSoft360 builds enterprise web applications, React &amp; Next.js platforms, SaaS applications, custom software, and AI solutions with precision engineering.
+            AlphaSoft360 builds AI-powered enterprise web applications, React &amp; Next.js platforms, SaaS applications, fintech systems, and custom software with precision engineering.
           </motion.p>
 
           <motion.div

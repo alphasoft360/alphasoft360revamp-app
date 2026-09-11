@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Cpu, ArrowRight, CheckCircle2, Zap, Server } from "lucide-react";
+import { Cpu, ArrowRight, CheckCircle2, Zap, Server, Bot } from "lucide-react";
 import { getWebPageSchema, getBreadcrumbSchema, getServiceSchema } from "@/lib/schema";
 import { contact } from "@/data/content";
+import ServiceHeroVisual from "@/components/services/ServiceHeroVisual";
 
 export const metadata: Metadata = {
   title: "AI Development & Automation Services | AlphaSoft360",
@@ -87,20 +88,33 @@ export default function AiDevPage() {
       <main className="flex-1">
         <section className="relative overflow-hidden pt-40 pb-20 lg:pt-48 lg:pb-24 bg-surface-2/30">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <span className="text-xs font-semibold tracking-widest text-accent-2 uppercase">
-                Intelligent Automation Systems
-              </span>
-              <h1 className="mt-4 text-4xl sm:text-6xl font-semibold tracking-tight text-gradient text-balance">
-                AI Development &amp; Automation
-              </h1>
-              <p className="mt-6 text-lg text-muted text-balance leading-relaxed">
-                Supercharge your web platforms with modern artificial intelligence. We integrate Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), vector databases, and custom automation workflows.
-              </p>
-              <div className="mt-8 flex items-center gap-4">
-                <a href={contact.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-primary text-xs">
-                  Integrate AI in Your App <ArrowRight className="h-4 w-4" />
-                </a>
+            <div className="grid lg:grid-cols-12 gap-10 items-center">
+              <div className="lg:col-span-7">
+                <span className="text-xs font-semibold tracking-widest text-accent-2 uppercase">
+                  Intelligent Automation Systems
+                </span>
+                <h1 className="mt-4 text-4xl sm:text-6xl font-semibold tracking-tight text-gradient text-balance">
+                  AI Development &amp; Automation
+                </h1>
+                <p className="mt-6 text-lg text-muted text-balance leading-relaxed">
+                  Supercharge your web platforms with modern artificial intelligence. We integrate Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), vector databases, and custom automation workflows.
+                </p>
+                <div className="mt-8 flex items-center gap-4">
+                  <a href={contact.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-primary text-xs">
+                    Integrate AI in Your App <ArrowRight className="h-4 w-4" />
+                  </a>
+                </div>
+              </div>
+              <div className="hidden lg:block lg:col-span-5">
+                <ServiceHeroVisual
+                  mainIcon={<Bot className="h-4 w-4" />}
+                  title="AI & Automation"
+                  items={[
+                    { icon: <Cpu className="h-5 w-5" />, label: "LLM & RAG Architecture" },
+                    { icon: <Zap className="h-5 w-5" />, label: "Autonomous Workflow Agents" },
+                    { icon: <Server className="h-5 w-5" />, label: "Custom Model Deployment" },
+                  ]}
+                />
               </div>
             </div>
           </div>

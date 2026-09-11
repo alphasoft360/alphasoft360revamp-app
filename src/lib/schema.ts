@@ -24,7 +24,7 @@ export function getOrganizationSchema() {
       "caption": "AlphaSoft360 Software Engineering"
     },
     "description":
-      "AlphaSoft360 is a technology partner and software engineering consultancy building web applications, mobile apps, cloud DevOps, and AI automation solutions for global clients.",
+      "AlphaSoft360 is an AI-driven technology partner and software engineering consultancy building web applications, mobile apps, fintech systems, cloud DevOps, and AI automation solutions for global clients.",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+923704857471",
@@ -54,7 +54,7 @@ export function getWebSiteSchema() {
     "@id": WEBSITE_ID,
     "url": BASE_URL,
     "name": "AlphaSoft360",
-    "description": "IT Consulting & Software Engineering Solutions",
+    "description": "AI-Driven Software Solutions, Built to Scale",
     "publisher": {
       "@id": ORGANIZATION_ID
     }

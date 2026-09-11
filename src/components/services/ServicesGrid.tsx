@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import {
   Smartphone, Globe, ShoppingCart, Cloud, Building2, GraduationCap,
-  HeartPulse, Bot, Cpu, PenTool, Server, Database, ArrowUpRight,
+  HeartPulse, Bot, Cpu, PenTool, Server, Database, Landmark, Car, ArrowUpRight,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { servicesFull } from "@/data/content";
@@ -23,6 +23,8 @@ const icons: Record<string, LucideIcon> = {
   "pen-tool": PenTool,
   server: Server,
   database: Database,
+  landmark: Landmark,
+  car: Car,
 };
 
 export default function ServicesGrid() {

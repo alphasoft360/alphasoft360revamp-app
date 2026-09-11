@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { Smartphone, ArrowRight, CheckCircle2, Zap, Layers } from "lucide-react";
 import { getWebPageSchema, getBreadcrumbSchema, getServiceSchema } from "@/lib/schema";
 import { contact } from "@/data/content";
+import ServiceHeroVisual from "@/components/services/ServiceHeroVisual";
 
 export const metadata: Metadata = {
   title: "Mobile App Development Services | iOS & Android | AlphaSoft360",
@@ -87,20 +88,33 @@ export default function MobileAppDevPage() {
       <main className="flex-1">
         <section className="relative overflow-hidden pt-40 pb-20 lg:pt-48 lg:pb-24 bg-surface-2/30">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <span className="text-xs font-semibold tracking-widest text-accent-2 uppercase">
-                iOS &amp; Android Engineering
-              </span>
-              <h1 className="mt-4 text-4xl sm:text-6xl font-semibold tracking-tight text-gradient text-balance">
-                Mobile App Development Services
-              </h1>
-              <p className="mt-6 text-lg text-muted text-balance leading-relaxed">
-                Transform your digital strategy into intuitive, fast-performing mobile applications. We build cross-platform React Native and Expo apps that feel native on every screen size.
-              </p>
-              <div className="mt-8 flex items-center gap-4">
-                <a href={contact.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-primary text-xs">
-                  Build Mobile App <ArrowRight className="h-4 w-4" />
-                </a>
+            <div className="grid lg:grid-cols-12 gap-10 items-center">
+              <div className="lg:col-span-7">
+                <span className="text-xs font-semibold tracking-widest text-accent-2 uppercase">
+                  iOS &amp; Android Engineering
+                </span>
+                <h1 className="mt-4 text-4xl sm:text-6xl font-semibold tracking-tight text-gradient text-balance">
+                  Mobile App Development Services
+                </h1>
+                <p className="mt-6 text-lg text-muted text-balance leading-relaxed">
+                  Transform your digital strategy into intuitive, fast-performing mobile applications. We build cross-platform React Native and Expo apps that feel native on every screen size.
+                </p>
+                <div className="mt-8 flex items-center gap-4">
+                  <a href={contact.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-primary text-xs">
+                    Build Mobile App <ArrowRight className="h-4 w-4" />
+                  </a>
+                </div>
+              </div>
+              <div className="hidden lg:block lg:col-span-5">
+                <ServiceHeroVisual
+                  mainIcon={<Smartphone className="h-4 w-4" />}
+                  title="Mobile Apps"
+                  items={[
+                    { icon: <Smartphone className="h-5 w-5" />, label: "React Native & Expo" },
+                    { icon: <Zap className="h-5 w-5" />, label: "Offline Storage & Sync" },
+                    { icon: <Layers className="h-5 w-5" />, label: "Native Performance" },
+                  ]}
+                />
               </div>
             </div>
           </div>

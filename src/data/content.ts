@@ -114,6 +114,14 @@ export const servicesFull = [
       "Complete e-commerce platform development with secure payment gateways, inventory management, and user-friendly shopping experiences to drive online sales.",
   },
   {
+    slug: "fintech",
+    href: "/fintech",
+    icon: "landmark",
+    title: "Fintech Solutions",
+    description:
+      "Secure, compliant fintech platforms including digital banking, payments, and lending systems built with bank-grade security and scalability.",
+  },
+  {
     slug: "cloud-devops",
     href: "/cloud-devops",
     icon: "cloud",
@@ -184,6 +192,14 @@ export const servicesFull = [
     title: "ERP & CRM Solutions",
     description:
       "Comprehensive ERP and CRM solutions to streamline business operations, enhance customer relationships, and improve decision-making through integrated systems.",
+  },
+  {
+    slug: "valet-app-development",
+    href: "/mobile-app-development",
+    icon: "car",
+    title: "Valet App Development",
+    description:
+      "Custom valet parking apps with real-time vehicle tracking, digital ticketing, and seamless booking experiences for hotels, venues, and parking operators.",
   },
 ];
 

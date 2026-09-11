@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import { getWebPageSchema, getBreadcrumbSchema, getServiceSchema } from "@/lib/schema";
 import { contact } from "@/data/content";
+import ServiceHeroVisual from "@/components/services/ServiceHeroVisual";
 
 export const metadata: Metadata = {
   title: "Web Development Services | Custom Web Platforms | AlphaSoft360",
@@ -168,28 +169,41 @@ export default function WebDevelopmentPage() {
         {/* Hero Section */}
         <section className="relative overflow-hidden pt-40 pb-20 lg:pt-48 lg:pb-28 bg-surface-2/30">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/10 px-4 py-1.5 text-xs font-semibold text-accent mb-6">
-                <Globe className="h-3.5 w-3.5" /> Full-Stack Engineering Agency
+            <div className="grid lg:grid-cols-12 gap-10 items-center">
+              <div className="lg:col-span-7">
+                <div className="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/10 px-4 py-1.5 text-xs font-semibold text-accent mb-6">
+                  <Globe className="h-3.5 w-3.5" /> Full-Stack Engineering Agency
+                </div>
+                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold tracking-tight text-gradient text-balance">
+                  Full-Stack Web Development Services
+                </h1>
+                <p className="mt-6 text-lg text-muted text-balance leading-relaxed">
+                  We design and engineer high-performance web applications, custom software platforms, and scalable digital products engineered for speed, conversion, and global reach.
+                </p>
+                <div className="mt-10 flex flex-wrap items-center gap-4">
+                  <a
+                    href={contact.whatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary text-xs"
+                  >
+                    Start Your Web Project <ArrowRight className="h-4 w-4" />
+                  </a>
+                  <Link href="/projects" className="btn-secondary text-xs">
+                    View Web Portfolio
+                  </Link>
+                </div>
               </div>
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold tracking-tight text-gradient text-balance">
-                Full-Stack Web Development Services
-              </h1>
-              <p className="mt-6 text-lg text-muted text-balance leading-relaxed">
-                We design and engineer high-performance web applications, custom software platforms, and scalable digital products engineered for speed, conversion, and global reach.
-              </p>
-              <div className="mt-10 flex flex-wrap items-center gap-4">
-                <a
-                  href={contact.whatsapp}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary text-xs"
-                >
-                  Start Your Web Project <ArrowRight className="h-4 w-4" />
-                </a>
-                <Link href="/projects" className="btn-secondary text-xs">
-                  View Web Portfolio
-                </Link>
+              <div className="hidden lg:block lg:col-span-5">
+                <ServiceHeroVisual
+                  mainIcon={<Globe className="h-4 w-4" />}
+                  title="Web Development"
+                  items={[
+                    { icon: <Code2 className="h-5 w-5" />, label: "React & Next.js Engineering" },
+                    { icon: <Rocket className="h-5 w-5" />, label: "Speed & Conversion Focused" },
+                    { icon: <ShoppingBag className="h-5 w-5" />, label: "E-Commerce Platforms" },
+                  ]}
+                />
               </div>
             </div>
           </div>

@@ -4,12 +4,12 @@ const maroof_sultan = "/team/maroof_sultan.jpg";
 const muhammad_shahbaz = "/team/muhammad_shahbaz.jpg";
 const muazam_mughal = "/team/muazam_mughal.jpg";
 const arham_ali = "/team/arham_ali.jpg";
-const faizan_ali = "/team/faizan_ali.jpg";
+// const faizan_ali = "/team/faizan_ali.jpg";
 const ahmed_hassan = "/team/ahmed_hassan.jpg";
 const sameer_akhtar = "/team/sameer_akhtar.jpg";
 const ubaidullah = "/team/ubaidullah.jpg";
 const mohid_naeem = "/team/mohid_naeem.png";
-const bu_ali = "/team/bu-ali-Ahmed.png";
+// const bu_ali = "/team/bu-ali-Ahmed.png";
 
 const teamMembers = [
   // Awais Ali,
@@ -295,45 +295,45 @@ const teamMembers = [
   },
   
   // fazain
-  {
-    id: "faizan-ali",
-    tier: "intern",
-    image: faizan_ali,
-    name: "Faizan Ali",
-    role: "Front-End Developer",
-    bio: "A professional Web Developer specializing in Front-End development with a strong foundation in responsive and user-focused web design. Skilled in building modern, dynamic, and visually appealing interfaces using clean and efficient code. Possesses working knowledge of Back-End concepts, ensuring seamless integration and performance across platforms. Passionate about continuous learning, optimizing user experience, and crafting high-quality digital products.",
-    contact: {
-      email: "faizandevx@gmail.com",
-      phone: "+92 347 3057550",
-    },
-    biography: [
-      "Faizan Ali is a dedicated Front-End Developer with expertise in creating responsive, high-performance, and visually appealing web interfaces using modern technologies like HTML5, CSS3, JavaScript (ES6+), and Bootstrap 5.",
-      "He focuses on crafting user-friendly and accessible designs that deliver seamless experiences across devices and browsers. His clean coding approach ensures maintainability and efficiency in all projects.",
-      "Faizan also has a solid understanding of back-end concepts, enabling smooth collaboration between front-end and back-end systems for optimized web solutions.",
-      "He utilizes tools such as Git, GitHub, VS Code, and Figma for version control, design prototyping, and efficient development workflows, while constantly exploring new techniques to enhance UI/UX performance.",
-    ],
-    skills: [
-      { name: "HTML5", percentage: 95 },
-      { name: "CSS3", percentage: 92 },
-      { name: "JavaScript (ES6+)", percentage: 90 },
-      { name: "Bootstrap 5", percentage: 88 },
-      { name: "Tailwind CSS", percentage: 86 },
-      { name: "Responsive Design", percentage: 94 },
-      { name: "Cross-Browser Compatibility", percentage: 89 },
-      { name: "UI/UX Principles", percentage: 87 },
-      { name: "Performance Optimization", percentage: 85 },
-      { name: "Git & GitHub", percentage: 90 },
-      { name: "Figma", percentage: 83 },
-    ],
-    socials: {
-      linkedin: "https://www.linkedin.com/in/faizan-ali-5aa430380/",
-      github: "https://github.com/faizandevx",
-      stackoverflow: "https://stackoverflow.com/",
-    },
-    education: {
-      degree: "BS Software Engineering",
-    },
-  },
+  // {
+  //   id: "faizan-ali",
+  //   tier: "intern",
+  //   image: faizan_ali,
+  //   name: "Faizan Ali",
+  //   role: "Front-End Developer",
+  //   bio: "A professional Web Developer specializing in Front-End development with a strong foundation in responsive and user-focused web design. Skilled in building modern, dynamic, and visually appealing interfaces using clean and efficient code. Possesses working knowledge of Back-End concepts, ensuring seamless integration and performance across platforms. Passionate about continuous learning, optimizing user experience, and crafting high-quality digital products.",
+  //   contact: {
+  //     email: "faizandevx@gmail.com",
+  //     phone: "+92 347 3057550",
+  //   },
+  //   biography: [
+  //     "Faizan Ali is a dedicated Front-End Developer with expertise in creating responsive, high-performance, and visually appealing web interfaces using modern technologies like HTML5, CSS3, JavaScript (ES6+), and Bootstrap 5.",
+  //     "He focuses on crafting user-friendly and accessible designs that deliver seamless experiences across devices and browsers. His clean coding approach ensures maintainability and efficiency in all projects.",
+  //     "Faizan also has a solid understanding of back-end concepts, enabling smooth collaboration between front-end and back-end systems for optimized web solutions.",
+  //     "He utilizes tools such as Git, GitHub, VS Code, and Figma for version control, design prototyping, and efficient development workflows, while constantly exploring new techniques to enhance UI/UX performance.",
+  //   ],
+  //   skills: [
+  //     { name: "HTML5", percentage: 95 },
+  //     { name: "CSS3", percentage: 92 },
+  //     { name: "JavaScript (ES6+)", percentage: 90 },
+  //     { name: "Bootstrap 5", percentage: 88 },
+  //     { name: "Tailwind CSS", percentage: 86 },
+  //     { name: "Responsive Design", percentage: 94 },
+  //     { name: "Cross-Browser Compatibility", percentage: 89 },
+  //     { name: "UI/UX Principles", percentage: 87 },
+  //     { name: "Performance Optimization", percentage: 85 },
+  //     { name: "Git & GitHub", percentage: 90 },
+  //     { name: "Figma", percentage: 83 },
+  //   ],
+  //   socials: {
+  //     linkedin: "https://www.linkedin.com/in/faizan-ali-5aa430380/",
+  //     github: "https://github.com/faizandevx",
+  //     stackoverflow: "https://stackoverflow.com/",
+  //   },
+  //   education: {
+  //     degree: "BS Software Engineering",
+  //   },
+  // },
 
   // Arham Ali
   {
@@ -482,38 +482,38 @@ const teamMembers = [
       currentStudy: "MS Data Science",
     },
   },
-  {
-    id: "bu-ali",
-    tier: "intern",
-    image: bu_ali,
-    name: "Bu Ali Ahmed",
-    role: "Front-End Web Developer",
-    bio: "A motivated and detail-oriented Front-End Developer currently pursuing . Passionate about building modern, responsive, and user-friendly web interfaces using HTML, CSS, JavaScript, and Bootstrap. Actively learning and improving skills to create clean, efficient code and deliver professional-quality digital experiences.",
-    contact: {
-      email: "buali.developer@gmail.com",
-      phone: "none",
-    },
-    biography: [
-      "Bu-Ali Ahmed is an aspiring Front-End Web Developer currently pursuing a BS in Artificial Intelligence. He enjoys creating visually appealing, responsive, and functional web interfaces using HTML, CSS, and Bootstrap 5.",
-      "His focus lies in building modern web designs that are user-friendly, optimized, and accessible across all devices. Ali is dedicated to writing clean and efficient code that ensures smooth performance and great user experiences.",
-      "He also leverages tools like Git, GitHub, VS Code, and Figma for version control, design collaboration, and efficient development workflows.",
-      "With a growing interest in AI and front-end technologies, Ali aims to merge creativity with technical expertise to craft innovative digital solutions.",
-    ],
-    skills: [
-      { name: "HTML5", percentage: 90 },
-      { name: "CSS3", percentage: 92 },
-      { name: "Tailwind CSS", percentage: 92 },
-      { name: "Bootstrap 5", percentage: 88 },
-      { name: "Responsive Design", percentage: 93 },
-      { name: "Git & GitHub", percentage: 88 },
-      { name: "Figma (UI Collaboration)", percentage: 82 },
-    ],
-    socials: {
-      linkedin: "https://www.linkedin.com/in/bu-ali-ahmad-815a5a391/",
-      github: "https://github.com/bualiahmed",
-      stackoverflow: "https://stackoverflow.com/",
-    },
-  },
+  // {
+  //   id: "bu-ali",
+  //   tier: "intern",
+  //   image: bu_ali,
+  //   name: "Bu Ali Ahmed",
+  //   role: "Front-End Web Developer",
+  //   bio: "A motivated and detail-oriented Front-End Developer currently pursuing . Passionate about building modern, responsive, and user-friendly web interfaces using HTML, CSS, JavaScript, and Bootstrap. Actively learning and improving skills to create clean, efficient code and deliver professional-quality digital experiences.",
+  //   contact: {
+  //     email: "buali.developer@gmail.com",
+  //     phone: "none",
+  //   },
+  //   biography: [
+  //     "Bu-Ali Ahmed is an aspiring Front-End Web Developer currently pursuing a BS in Artificial Intelligence. He enjoys creating visually appealing, responsive, and functional web interfaces using HTML, CSS, and Bootstrap 5.",
+  //     "His focus lies in building modern web designs that are user-friendly, optimized, and accessible across all devices. Ali is dedicated to writing clean and efficient code that ensures smooth performance and great user experiences.",
+  //     "He also leverages tools like Git, GitHub, VS Code, and Figma for version control, design collaboration, and efficient development workflows.",
+  //     "With a growing interest in AI and front-end technologies, Ali aims to merge creativity with technical expertise to craft innovative digital solutions.",
+  //   ],
+  //   skills: [
+  //     { name: "HTML5", percentage: 90 },
+  //     { name: "CSS3", percentage: 92 },
+  //     { name: "Tailwind CSS", percentage: 92 },
+  //     { name: "Bootstrap 5", percentage: 88 },
+  //     { name: "Responsive Design", percentage: 93 },
+  //     { name: "Git & GitHub", percentage: 88 },
+  //     { name: "Figma (UI Collaboration)", percentage: 82 },
+  //   ],
+  //   socials: {
+  //     linkedin: "https://www.linkedin.com/in/bu-ali-ahmad-815a5a391/",
+  //     github: "https://github.com/bualiahmed",
+  //     stackoverflow: "https://stackoverflow.com/",
+  //   },
+  // },
 ];
 
 export default teamMembers;

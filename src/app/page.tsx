@@ -14,7 +14,7 @@ import { getOrganizationSchema, getWebSiteSchema, getWebPageSchema } from "@/lib
 import { techStackRow1, techStackRow2 } from "@/data/content";
 
 export const metadata: Metadata = {
-  title: "Custom Web Development & Software Engineering Company | AlphaSoft360",
+  title: "AI-Driven Software Solutions | AlphaSoft360",
   description:
     "AlphaSoft360 is a custom web development and software engineering company. We build web applications, React & Next.js platforms, SaaS, e-commerce, mobile apps, cloud DevOps, and AI solutions.",
   alternates: {
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Custom Web Development & Software Engineering Company | AlphaSoft360",
+    title: "AI-Driven Software Solutions | AlphaSoft360",
     description:
       "AlphaSoft360 is a custom web development and software engineering company. We build web applications, React & Next.js platforms, SaaS, e-commerce, mobile apps, cloud DevOps, and AI solutions.",
     url: "https://www.alphasoft360.com",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Web Development & Software Engineering Company | AlphaSoft360",
+    title: "AI-Driven Software Solutions | AlphaSoft360",
     description:
       "AlphaSoft360 is a custom web development and software engineering company. We build web applications, React & Next.js platforms, SaaS, e-commerce, mobile apps, cloud DevOps, and AI solutions.",
     images: ["https://www.alphasoft360.com/brand/hero-2.jpeg"],
@@ -67,9 +67,9 @@ export default function Home() {
       getOrganizationSchema(),
       getWebSiteSchema(),
       getWebPageSchema({
-        name: "Custom Web Development & Software Engineering Company | AlphaSoft360",
+        name: "AI-Driven Software Solutions | AlphaSoft360",
         description:
-          "AlphaSoft360 is a custom web development and software engineering company. We build web applications, React & Next.js platforms, SaaS, e-commerce, mobile apps, cloud DevOps, and AI solutions.",
+          "AlphaSoft360 builds AI-driven web applications, React & Next.js platforms, SaaS, e-commerce, mobile apps, fintech systems, cloud DevOps, and custom software solutions built to scale.",
         url: "https://www.alphasoft360.com"
       })
     ]

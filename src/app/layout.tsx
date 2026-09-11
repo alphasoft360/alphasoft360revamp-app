@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.alphasoft360.com"),
   title: {
-    default: "Custom Web Development & Software Engineering Company | AlphaSoft360",
+    default: "AI-Driven Software Solutions | AlphaSoft360",
     template: "%s — AlphaSoft360",
   },
   description:
