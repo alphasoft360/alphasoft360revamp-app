@@ -186,6 +186,43 @@ const projectsData = [
     duration: "3 months",
     category: "Mobile App"
   },
+  {
+    id: "payvault-fintech-platform",
+    slug: "payvault-fintech-platform",
+    title: "PayVault — Digital Banking & Payments Platform",
+    description: "PayVault is a secure fintech platform offering digital banking, instant payments, and lending services. The platform provides customers with real-time account management, P2P transfers, bill payments, and credit scoring-driven micro-lending, all built on a bank-grade security foundation.",
+    image: "/projects/payvalt.png",
+    techStack: ["Next.js", "Node.js", "PostgreSQL", "Stripe", "Plaid", "TypeScript", "Redis"],
+    features: [
+      "Digital wallet and multi-account management",
+      "Real-time P2P transfers and bill payments",
+      "Credit scoring-driven micro-lending",
+      "Bank account linking via Plaid",
+      "Card issuance and transaction controls",
+      "Automated KYC/AML verification workflow",
+      "Real-time fraud detection and alerts",
+      "Transaction history and spending analytics"
+    ],
+    overview: [
+      "PayVault consolidates everyday banking, payments, and lending into a single secure digital platform for individuals and small businesses.",
+      "Real-time ledger and transaction processing ensure balances and transfers reflect instantly across web and mobile clients.",
+      "Built with a security-first architecture, PayVault meets PCI-DSS requirements while delivering a fast, intuitive financial experience."
+    ],
+    challenges: [
+      "Processing financial transactions with strict consistency and zero data loss",
+      "Meeting PCI-DSS and KYC/AML compliance requirements",
+      "Detecting fraudulent activity in real time without blocking legitimate users",
+      "Integrating with multiple banking and payment providers reliably"
+    ],
+    solutions: [
+      "Implemented an event-sourced ledger with idempotent transaction processing for financial accuracy",
+      "Automated KYC/AML checks and document verification during onboarding",
+      "Built a real-time rules-based fraud detection engine with configurable risk thresholds",
+      "Integrated Plaid for bank linking and Stripe for card issuance and payment processing"
+    ],
+    duration: "6 months",
+    category: "Fintech"
+  },
   // project 3
   {
     id: "home-accessories",
