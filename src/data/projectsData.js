@@ -1,8 +1,52 @@
 const projectsData = [
   {
+    id: "orion-core-banking-ai-platform",
+    slug: "orion-core-banking-ai-platform",
+    title: "Orion — AI-Powered Core Banking Platform",
+    description: "Orion is an enterprise core banking system built on Oracle infrastructure, paired with a companion mobile banking app and an in-app AI assistant. The platform exposes a set of purpose-built MCP (Model Context Protocol) servers that give LLMs secure, controlled endpoints to perform real internet banking actions — balance checks, transfers, bill payments, and account queries — on the customer's behalf.",
+    image: "/projects/orion.png",
+    techStack: ["Oracle Database", "Oracle Fusion Middleware", "Java (Spring Boot)", "React Native", "Next.js", "MCP Servers", "LLM Orchestration", "PL/SQL", "Kafka", "OAuth 2.0"],
+    features: [
+      "Core banking engine built on Oracle Database & Fusion Middleware",
+      "Native mobile banking app for iOS and Android",
+      "In-app conversational AI banking assistant",
+      "Custom MCP servers exposing secure banking endpoints to LLMs",
+      "AI-driven internet banking: transfers, bill pay, and balance checks via natural language",
+      "Real-time transaction processing and ledger reconciliation",
+      "Multi-factor authentication and OAuth 2.0-based session security",
+      "Role-based access for retail, corporate, and back-office users",
+      "Audit trail and compliance logging for every AI-initiated transaction",
+      "Event-driven architecture with Kafka for real-time account updates"
+    ],
+    overview: [
+      "Orion modernizes traditional core banking operations by combining a resilient Oracle-based backend with a mobile-first customer experience and a conversational AI layer.",
+      "Core Banking on Oracle: Account management, ledgers, and transaction processing run on Oracle Database and Fusion Middleware, providing the reliability and consistency required for regulated financial operations.",
+      "Mobile Banking App: A dedicated mobile application gives customers native access to their accounts, transfers, bill payments, and statements.",
+      "AI Assistant & MCP Layer: Orion introduces an in-app AI assistant backed by custom-built MCP servers. These servers expose tightly scoped, permissioned endpoints that let an LLM safely perform real banking operations — such as checking balances or initiating transfers — on behalf of an authenticated customer, instead of just answering questions about banking.",
+      "Security & Compliance: Every AI-initiated action passes through the same authentication, authorization, and audit pipeline as manual actions, ensuring AI-driven banking remains fully compliant and traceable."
+    ],
+    challenges: [
+      "Integrating a modern mobile and AI experience on top of a traditional Oracle-based core banking system",
+      "Designing MCP server endpoints that let an LLM perform real financial transactions without introducing security or compliance risk",
+      "Ensuring AI-initiated banking actions are authenticated, authorized, and fully auditable like any manual transaction",
+      "Maintaining strict transactional consistency across mobile, web, and AI-driven channels",
+      "Preventing prompt injection or unintended actions from reaching real banking endpoints through the LLM layer"
+    ],
+    solutions: [
+      "Oracle-Backed Core Engine: Built the ledger, account, and transaction-processing layer on Oracle Database and Fusion Middleware for enterprise-grade reliability and consistency.",
+      "Purpose-Built MCP Servers: Developed dedicated MCP servers that expose a narrow, permissioned set of banking tools (balance inquiry, transfer, bill pay) to the LLM, rather than open-ended database access.",
+      "Scoped AI Authorization: Required every AI-initiated action to run under the authenticated customer's own session and permission scope, with explicit confirmation steps before money movement.",
+      "Unified Audit Pipeline: Routed AI-initiated transactions through the same compliance, logging, and audit systems used for mobile and web banking, so every action is traceable end-to-end.",
+      "Event-Driven Updates: Used Kafka to propagate account and transaction events in real time across the mobile app, web channels, and AI assistant.",
+      "Native Mobile Experience: Delivered a dedicated mobile banking app for day-to-day account access, transfers, and statements alongside the AI assistant."
+    ],
+    duration: "Ongoing",
+    category: "Fintech"
+  },
+  {
     "id": "rams-telarus-enterprise-platform",
     "slug": "rams-telarus-enterprise-platform",
-    "title": "RAMS (Telarus) Enterprise Platform",
+    "title": "RAMS  Enterprise Platform",
     "description": "RAMS (Remote Asset Monitoring & Survey System) is a full-stack enterprise platform designed to combine structured field assessments, real-time asset monitoring, automated safety alerts, and operational reporting within a centralized digital ecosystem. The platform enables administrators to configure dynamic surveys, manage users and permissions, monitor sensor-driven environmental conditions, capture field data, preserve historical submission snapshots, and automatically generate reports and notifications. It is designed for high-stakes operational environments where data accuracy, traceability, automation, and real-time visibility are critical.",
     "image": "/projects/rams1.png",
     "techStack": [
@@ -148,6 +192,44 @@ const projectsData = [
     duration: "4 months",
     category: "E-Commerce"
   },
+
+    {
+    id: "payvault-fintech-platform",
+    slug: "payvault-fintech-platform",
+    title: "PayVault — Digital Banking & Payments Platform",
+    description: "PayVault is a secure fintech platform offering digital banking, instant payments, and lending services. The platform provides customers with real-time account management, P2P transfers, bill payments, and credit scoring-driven micro-lending, all built on a bank-grade security foundation.",
+    image: "/projects/payvalt.png",
+    techStack: ["Next.js", "Node.js", "PostgreSQL", "Stripe", "Plaid", "TypeScript", "Redis"],
+    features: [
+      "Digital wallet and multi-account management",
+      "Real-time P2P transfers and bill payments",
+      "Credit scoring-driven micro-lending",
+      "Bank account linking via Plaid",
+      "Card issuance and transaction controls",
+      "Automated KYC/AML verification workflow",
+      "Real-time fraud detection and alerts",
+      "Transaction history and spending analytics"
+    ],
+    overview: [
+      "PayVault consolidates everyday banking, payments, and lending into a single secure digital platform for individuals and small businesses.",
+      "Real-time ledger and transaction processing ensure balances and transfers reflect instantly across web and mobile clients.",
+      "Built with a security-first architecture, PayVault meets PCI-DSS requirements while delivering a fast, intuitive financial experience."
+    ],
+    challenges: [
+      "Processing financial transactions with strict consistency and zero data loss",
+      "Meeting PCI-DSS and KYC/AML compliance requirements",
+      "Detecting fraudulent activity in real time without blocking legitimate users",
+      "Integrating with multiple banking and payment providers reliably"
+    ],
+    solutions: [
+      "Implemented an event-sourced ledger with idempotent transaction processing for financial accuracy",
+      "Automated KYC/AML checks and document verification during onboarding",
+      "Built a real-time rules-based fraud detection engine with configurable risk thresholds",
+      "Integrated Plaid for bank linking and Stripe for card issuance and payment processing"
+    ],
+    duration: "6 months",
+    category: "Fintech"
+  },
   // project 2
   {
     id: "task-management-app",
@@ -186,87 +268,8 @@ const projectsData = [
     duration: "3 months",
     category: "Mobile App"
   },
-  {
-    id: "payvault-fintech-platform",
-    slug: "payvault-fintech-platform",
-    title: "PayVault — Digital Banking & Payments Platform",
-    description: "PayVault is a secure fintech platform offering digital banking, instant payments, and lending services. The platform provides customers with real-time account management, P2P transfers, bill payments, and credit scoring-driven micro-lending, all built on a bank-grade security foundation.",
-    image: "/projects/payvalt.png",
-    techStack: ["Next.js", "Node.js", "PostgreSQL", "Stripe", "Plaid", "TypeScript", "Redis"],
-    features: [
-      "Digital wallet and multi-account management",
-      "Real-time P2P transfers and bill payments",
-      "Credit scoring-driven micro-lending",
-      "Bank account linking via Plaid",
-      "Card issuance and transaction controls",
-      "Automated KYC/AML verification workflow",
-      "Real-time fraud detection and alerts",
-      "Transaction history and spending analytics"
-    ],
-    overview: [
-      "PayVault consolidates everyday banking, payments, and lending into a single secure digital platform for individuals and small businesses.",
-      "Real-time ledger and transaction processing ensure balances and transfers reflect instantly across web and mobile clients.",
-      "Built with a security-first architecture, PayVault meets PCI-DSS requirements while delivering a fast, intuitive financial experience."
-    ],
-    challenges: [
-      "Processing financial transactions with strict consistency and zero data loss",
-      "Meeting PCI-DSS and KYC/AML compliance requirements",
-      "Detecting fraudulent activity in real time without blocking legitimate users",
-      "Integrating with multiple banking and payment providers reliably"
-    ],
-    solutions: [
-      "Implemented an event-sourced ledger with idempotent transaction processing for financial accuracy",
-      "Automated KYC/AML checks and document verification during onboarding",
-      "Built a real-time rules-based fraud detection engine with configurable risk thresholds",
-      "Integrated Plaid for bank linking and Stripe for card issuance and payment processing"
-    ],
-    duration: "6 months",
-    category: "Fintech"
-  },
-  {
-    id: "orion-core-banking-ai-platform",
-    slug: "orion-core-banking-ai-platform",
-    title: "Orion — AI-Powered Core Banking Platform",
-    description: "Orion is an enterprise core banking system built on Oracle infrastructure, paired with a companion mobile banking app and an in-app AI assistant. The platform exposes a set of purpose-built MCP (Model Context Protocol) servers that give LLMs secure, controlled endpoints to perform real internet banking actions — balance checks, transfers, bill payments, and account queries — on the customer's behalf.",
-    image: "/projects/orion.png",
-    techStack: ["Oracle Database", "Oracle Fusion Middleware", "Java (Spring Boot)", "React Native", "Next.js", "MCP Servers", "LLM Orchestration", "PL/SQL", "Kafka", "OAuth 2.0"],
-    features: [
-      "Core banking engine built on Oracle Database & Fusion Middleware",
-      "Native mobile banking app for iOS and Android",
-      "In-app conversational AI banking assistant",
-      "Custom MCP servers exposing secure banking endpoints to LLMs",
-      "AI-driven internet banking: transfers, bill pay, and balance checks via natural language",
-      "Real-time transaction processing and ledger reconciliation",
-      "Multi-factor authentication and OAuth 2.0-based session security",
-      "Role-based access for retail, corporate, and back-office users",
-      "Audit trail and compliance logging for every AI-initiated transaction",
-      "Event-driven architecture with Kafka for real-time account updates"
-    ],
-    overview: [
-      "Orion modernizes traditional core banking operations by combining a resilient Oracle-based backend with a mobile-first customer experience and a conversational AI layer.",
-      "Core Banking on Oracle: Account management, ledgers, and transaction processing run on Oracle Database and Fusion Middleware, providing the reliability and consistency required for regulated financial operations.",
-      "Mobile Banking App: A dedicated mobile application gives customers native access to their accounts, transfers, bill payments, and statements.",
-      "AI Assistant & MCP Layer: Orion introduces an in-app AI assistant backed by custom-built MCP servers. These servers expose tightly scoped, permissioned endpoints that let an LLM safely perform real banking operations — such as checking balances or initiating transfers — on behalf of an authenticated customer, instead of just answering questions about banking.",
-      "Security & Compliance: Every AI-initiated action passes through the same authentication, authorization, and audit pipeline as manual actions, ensuring AI-driven banking remains fully compliant and traceable."
-    ],
-    challenges: [
-      "Integrating a modern mobile and AI experience on top of a traditional Oracle-based core banking system",
-      "Designing MCP server endpoints that let an LLM perform real financial transactions without introducing security or compliance risk",
-      "Ensuring AI-initiated banking actions are authenticated, authorized, and fully auditable like any manual transaction",
-      "Maintaining strict transactional consistency across mobile, web, and AI-driven channels",
-      "Preventing prompt injection or unintended actions from reaching real banking endpoints through the LLM layer"
-    ],
-    solutions: [
-      "Oracle-Backed Core Engine: Built the ledger, account, and transaction-processing layer on Oracle Database and Fusion Middleware for enterprise-grade reliability and consistency.",
-      "Purpose-Built MCP Servers: Developed dedicated MCP servers that expose a narrow, permissioned set of banking tools (balance inquiry, transfer, bill pay) to the LLM, rather than open-ended database access.",
-      "Scoped AI Authorization: Required every AI-initiated action to run under the authenticated customer's own session and permission scope, with explicit confirmation steps before money movement.",
-      "Unified Audit Pipeline: Routed AI-initiated transactions through the same compliance, logging, and audit systems used for mobile and web banking, so every action is traceable end-to-end.",
-      "Event-Driven Updates: Used Kafka to propagate account and transaction events in real time across the mobile app, web channels, and AI assistant.",
-      "Native Mobile Experience: Delivered a dedicated mobile banking app for day-to-day account access, transfers, and statements alongside the AI assistant."
-    ],
-    duration: "Ongoing",
-    category: "Fintech"
-  },
+
+  
   // project 3
   {
     id: "home-accessories",

@@ -7,20 +7,36 @@ export const nav = [
 ];
 
 export const stats = [
-  { label: "Happy Clients", value: 120, suffix: "+" },
-  { label: "Companies Served", value: 60, suffix: "+" },
-  { label: "Projects Delivered", value: 180, suffix: "+" },
+  { label: "Happy Clients", value: 50, suffix: "+" },
+  { label: "Companies Served", value: 20, suffix: "+" },
+  { label: "Projects Delivered", value: 70, suffix: "+" },
   { label: "Years of Expertise", value: 10, suffix: "+" },
 ];
 
 export const skills = [
-  { label: "Software Development", value: 92 },
+  { label: "AI & Machine Learning", value: 95 },
+  { label: "LLM & MCP Integration", value: 93 },
+  { label: "FinTech Development", value: 92 },
   { label: "App Development", value: 90 },
   { label: "Web Development", value: 92 },
-  { label: "Artificial Intelligence", value: 95 },
 ];
 
 export const services = [
+  {
+    title: "Fintech",
+    description:
+      "Secure, compliant fintech platforms including digital banking, payments, and AI-driven financial systems built to scale.",
+  },
+  {
+    title: "AI & Machine Learning",
+    description:
+      "Custom AI and machine learning models that automate processes, enhance decision-making, and unlock insight from your data.",
+  },
+  {
+    title: "LLM & MCP Integration",
+    description:
+      "Custom LLM integrations and purpose-built MCP servers that let AI assistants safely take real actions inside your applications.",
+  },
   {
     title: "Software Development",
     description:
@@ -30,6 +46,11 @@ export const services = [
     title: "Web Development",
     description:
       "High-performance web platforms built on modern frameworks with a relentless focus on speed and conversion.",
+  },
+  {
+    title: "CRM Development",
+    description:
+      "Custom CRM and ERP development to centralize customer data, automate sales pipelines, and streamline business operations.",
   },
   {
     title: "Analytic Solutions",
@@ -51,11 +72,6 @@ export const services = [
     description:
       "24/7 dedicated infrastructure support to keep critical systems fast, secure, and always online.",
   },
-  {
-    title: "Fintech",
-    description:
-      "Secure, compliant fintech platforms including digital banking, payments, and AI-driven financial systems built to scale.",
-  },
 ];
 
 export const techStackRow1 = [
@@ -69,31 +85,67 @@ export const techStackRow2 = [
 export const process = [
   {
     step: "01",
-    title: "Requirement Analysis",
+    title: "Discovery & Requirements",
     description:
       "We thoroughly understand your business needs, gather detailed requirements, and define scope for a clear roadmap.",
   },
   {
     step: "02",
-    title: "Design & Planning",
+    title: "UI/UX Design & Architecture",
     description:
-      "Comprehensive designs, architectures, and project plans ensuring scalability, security, and alignment with your goals.",
+      "Comprehensive designs, system architecture, and technical planning ensuring scalability, security, and alignment with your goals.",
   },
   {
     step: "03",
-    title: "Development",
+    title: "Agile Development",
     description:
-      "Cutting-edge technologies and engineering best practices build robust software tailored to your specification.",
+      "Cutting-edge technologies and engineering best practices build robust software tailored to your specification, in iterative sprints.",
   },
   {
     step: "04",
-    title: "Testing & Deployment",
+    title: "Quality Assurance & Testing",
     description:
-      "Rigorous QA ensures reliability. We handle seamless deployment and provide ongoing support post-launch.",
+      "Rigorous manual and automated QA across functionality, performance, and security to ensure a reliable release.",
+  },
+  {
+    step: "05",
+    title: "Deployment & Launch",
+    description:
+      "Seamless CI/CD-driven deployment to production with zero-downtime rollout and post-launch monitoring.",
+  },
+  {
+    step: "06",
+    title: "Support & Maintenance",
+    description:
+      "Ongoing support, monitoring, and iterative improvements to keep your product secure, fast, and up to date.",
   },
 ];
 
 export const servicesFull = [
+  {
+    slug: "fintech",
+    href: "/fintech",
+    icon: "landmark",
+    title: "Fintech Solutions",
+    description:
+      "Secure, compliant fintech platforms including digital banking, payments, and lending systems built with bank-grade security and scalability.",
+  },
+  {
+    slug: "ai-ml",
+    href: "/ai-development",
+    icon: "bot",
+    title: "AI & Machine Learning",
+    description:
+      "Custom AI and machine learning models that automate processes, enhance decision-making, and unlock insight from your data.",
+  },
+  {
+    slug: "llm-mcp-integration",
+    href: "/ai-development",
+    icon: "network",
+    title: "LLM & MCP Integration",
+    description:
+      "Custom LLM integrations and purpose-built MCP servers that let AI assistants safely take real actions inside your applications.",
+  },
   {
     slug: "app-development",
     href: "/mobile-app-development",
@@ -111,20 +163,20 @@ export const servicesFull = [
       "Custom web application development using modern frameworks and technologies to create responsive, user-friendly websites and web platforms.",
   },
   {
+    slug: "crm-development",
+    href: "/software-development",
+    icon: "database",
+    title: "CRM Development",
+    description:
+      "Custom CRM and ERP development to centralize customer data, automate sales pipelines, and streamline business operations across your organization.",
+  },
+  {
     slug: "ecommerce-solutions",
     href: "/web-development/ecommerce-development",
     icon: "shopping-cart",
     title: "E-Commerce Solutions",
     description:
       "Complete e-commerce platform development with secure payment gateways, inventory management, and user-friendly shopping experiences to drive online sales.",
-  },
-  {
-    slug: "fintech",
-    href: "/fintech",
-    icon: "landmark",
-    title: "Fintech Solutions",
-    description:
-      "Secure, compliant fintech platforms including digital banking, payments, and lending systems built with bank-grade security and scalability.",
   },
   {
     slug: "cloud-devops",
@@ -159,14 +211,6 @@ export const servicesFull = [
       "Integrated healthcare solutions to improve patient care and streamline medical practice operations.",
   },
   {
-    slug: "ai-automation",
-    href: "/ai-development",
-    icon: "bot",
-    title: "AI-Powered Automation",
-    description:
-      "Leverage artificial intelligence to automate processes, enhance decision-making, and drive business growth.",
-  },
-  {
     slug: "iot-apps",
     href: "/software-development",
     icon: "cpu",
@@ -189,14 +233,6 @@ export const servicesFull = [
     title: "Data Center",
     description:
       "Enterprise-grade data center solutions providing secure hosting, colocation, disaster recovery, and 24/7 monitoring for critical business infrastructure.",
-  },
-  {
-    slug: "erp-crm",
-    href: "/software-development",
-    icon: "database",
-    title: "ERP & CRM Solutions",
-    description:
-      "Comprehensive ERP and CRM solutions to streamline business operations, enhance customer relationships, and improve decision-making through integrated systems.",
   },
   {
     slug: "valet-app-development",
@@ -237,14 +273,14 @@ export const servicesProcess = [
 
 export const projects = [
   {
-    slug: "shoe-store",
-    name: "Shoeto",
-    category: "E-Commerce",
-    description: "A stylish, comfortable footwear shopping destination for every occasion.",
-    image: "/projects/shoeto.png",
+    slug: "orion-core-banking-ai-platform",
+    name: "Orion — AI-Powered Core Banking Platform",
+    category: "Fintech",
+    description: "Oracle-backed core banking with a mobile app and an AI assistant that performs real banking actions via MCP.",
+    image: "/projects/orion.png",
     featured: true,
-    techStack: ["Next.js", "Prisma", "PostgreSQL"],
-    duration: "7 months",
+    techStack: ["Oracle Database", "React Native", "MCP Servers"],
+    duration: "Ongoing",
   },
   {
     slug: "ecommerce-platform",
@@ -310,13 +346,13 @@ export const projects = [
     duration: "5 months",
   },
   {
-    slug: "orion-core-banking-ai-platform",
-    name: "Orion — AI-Powered Core Banking Platform",
-    category: "Fintech",
-    description: "Oracle-backed core banking with a mobile app and an AI assistant that performs real banking actions via MCP.",
-    image: "/projects/orion.png",
-    techStack: ["Oracle Database", "React Native", "MCP Servers"],
-    duration: "Ongoing",
+    slug: "shoe-store",
+    name: "Shoeto",
+    category: "E-Commerce",
+    description: "A stylish, comfortable footwear shopping destination for every occasion.",
+    image: "/projects/shoeto.png",
+    techStack: ["Next.js", "Prisma", "PostgreSQL"],
+    duration: "7 months",
   },
 ];
 

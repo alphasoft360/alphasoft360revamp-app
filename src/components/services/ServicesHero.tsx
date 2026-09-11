@@ -2,13 +2,13 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ChevronRight, Smartphone, Globe, Cloud, Bot, Layers } from "lucide-react";
+import { ChevronRight, Landmark, Bot, Network, Globe, Layers } from "lucide-react";
 
 const icons = [
-  { Icon: Smartphone, label: "App Development" },
+  { Icon: Landmark, label: "Fintech Solutions" },
+  { Icon: Bot, label: "AI & Machine Learning" },
+  { Icon: Network, label: "LLM & MCP Integration" },
   { Icon: Globe, label: "Web Development" },
-  { Icon: Cloud, label: "Cloud & DevOps" },
-  { Icon: Bot, label: "AI Automation" },
 ];
 
 export default function ServicesHero() {
@@ -53,7 +53,7 @@ export default function ServicesHero() {
               transition={{ duration: 0.6, delay: 0.15 }}
               className="mt-6 max-w-2xl text-lg text-muted text-balance"
             >
-              From mobile apps to enterprise infrastructure twelve specialized
+              From mobile apps to enterprise infrastructure fifteen specialized
               service lines, one team accountable for the outcome.
             </motion.p>
           </div>
@@ -92,7 +92,7 @@ export default function ServicesHero() {
                 className="absolute -bottom-2 left-1/2 -translate-x-1/2 card-border card-hover rounded-full bg-background px-5 py-2.5 flex items-center gap-2 shadow-lg"
               >
                 <Layers className="h-4 w-4 text-accent-2" />
-                <span className="text-sm font-medium">12 Services</span>
+                <span className="text-sm font-medium">15 Services</span>
               </motion.div>
             </motion.div>
           </div>

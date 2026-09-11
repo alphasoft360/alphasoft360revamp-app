@@ -158,10 +158,12 @@ export default function SitemapPage() {
               {/* Services Index */}
               <div className="card-border rounded-2xl bg-surface p-6">
                 <h2 className="text-lg font-semibold text-foreground pb-3 border-b border-line">
-                  Services Index (12 Commercial Landing Pages)
+                  Services Index (13 Commercial Landing Pages)
                 </h2>
                 <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
                   {[
+                    { title: "Fintech Solutions", href: "/fintech" },
+                    { title: "AI Development", href: "/ai-development" },
                     { title: "Web Development Hub", href: "/web-development" },
                     { title: "Custom Web Development", href: "/web-development/custom-web-development" },
                     { title: "Web Application Dev", href: "/web-development/web-application-development" },
@@ -172,7 +174,6 @@ export default function SitemapPage() {
                     { title: "SaaS Development", href: "/web-development/saas-development" },
                     { title: "Software Development", href: "/software-development" },
                     { title: "Mobile App Development", href: "/mobile-app-development" },
-                    { title: "AI Development", href: "/ai-development" },
                     { title: "Cloud & DevOps", href: "/cloud-devops" },
                   ].map((srv) => (
                     <li key={srv.href}>

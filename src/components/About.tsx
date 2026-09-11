@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import { skills } from "@/data/content";
 
 export default function About() {
@@ -13,18 +15,27 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
-          className="max-w-2xl"
+          className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6"
         >
-          <p className="text-xs font-semibold tracking-widest text-accent-2 uppercase">About Us</p>
-          <h2 className="mt-4 text-3xl sm:text-4xl font-semibold tracking-tight text-balance">
-            We increase business success with technology
-          </h2>
-          <p className="mt-5 text-muted leading-relaxed">
-            With extensive experience in IT services, we specialize in
-            developing innovative software applications and mobile
-            solutions for clients worldwide delivering excellence and
-            driving digital transformation for over a decade.
-          </p>
+          <div className="max-w-2xl">
+            <p className="text-xs font-semibold tracking-widest text-accent-2 uppercase">About Us</p>
+            <h2 className="mt-4 text-3xl sm:text-4xl font-semibold tracking-tight text-balance">
+              We increase business success with technology
+            </h2>
+            <p className="mt-5 text-muted leading-relaxed">
+              With extensive experience in IT services, we specialize in
+              developing innovative software applications and mobile
+              solutions for clients worldwide delivering excellence and
+              driving digital transformation for over a decade.
+            </p>
+          </div>
+          <Link
+            href="/about"
+            className="group inline-flex items-center gap-1.5 text-sm font-medium text-foreground shrink-0"
+          >
+            More about us
+            <ArrowUpRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </Link>
         </motion.div>
 
         <div className="mt-12 grid lg:grid-cols-5 gap-5">

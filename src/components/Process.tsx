@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ClipboardList, PenTool, Code2, Rocket } from "lucide-react";
+import { ClipboardList, PenTool, Code2, ShieldCheck, Rocket, LifeBuoy } from "lucide-react";
 import { process } from "@/data/content";
 import SpotlightCard from "./SpotlightCard";
 
-const icons = [ClipboardList, PenTool, Code2, Rocket];
+const icons = [ClipboardList, PenTool, Code2, ShieldCheck, Rocket, LifeBuoy];
 
 export default function Process() {
   return (
@@ -19,8 +19,7 @@ export default function Process() {
         </div>
 
         <div className="mt-16 relative">
-          <div className="hidden lg:block absolute top-11 left-0 right-0 h-px bg-gradient-to-r from-transparent via-line to-transparent" />
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {process.map((item, i) => {
               const Icon = icons[i % icons.length];
               return (

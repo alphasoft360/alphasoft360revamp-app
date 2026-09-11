@@ -2,13 +2,13 @@
 
 import { motion } from "framer-motion";
 import {
-  Code2, Globe, BarChart3, Cloud, PenTool, Server, Landmark, ArrowUpRight,
+  Landmark, Bot, Network, Code2, Globe, Database, BarChart3, Cloud, PenTool, Server, ArrowUpRight,
 } from "lucide-react";
 import { services } from "@/data/content";
 import SpotlightCard from "./SpotlightCard";
 import Link from "next/link";
 
-const icons = [Code2, Globe, BarChart3, Cloud, PenTool, Server, Landmark];
+const icons = [Landmark, Bot, Network, Code2, Globe, Database, BarChart3, Cloud, PenTool, Server];
 
 export default function Services() {
   return (
@@ -60,6 +60,9 @@ export default function Services() {
                       service.title === "Web Development" ? "/web-development" :
                       service.title === "Cloud & DevOps" ? "/cloud-devops" :
                       service.title === "Fintech" ? "/fintech" :
+                      service.title === "CRM Development" ? "/software-development" :
+                      service.title === "AI & Machine Learning" ? "/ai-development" :
+                      service.title === "LLM & MCP Integration" ? "/ai-development" :
                       "/services"
                     }
                     className={`relative mt-5 inline-flex items-center gap-1.5 font-medium text-foreground ${isFeatured ? 'text-base' : 'text-sm'}`}

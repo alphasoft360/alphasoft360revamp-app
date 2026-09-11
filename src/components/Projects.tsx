@@ -16,11 +16,20 @@ export default function Projects() {
   return (
     <section id="work" className="relative py-28 border-t border-line">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="max-w-2xl">
-          <p className="text-xs font-semibold tracking-widest text-accent-2 uppercase">Our Latest Projects</p>
-          <h2 className="mt-4 text-3xl sm:text-4xl font-semibold tracking-tight text-balance">
-            Empowering businesses through technology innovation
-          </h2>
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+          <div className="max-w-2xl">
+            <p className="text-xs font-semibold tracking-widest text-accent-2 uppercase">Our Latest Projects</p>
+            <h2 className="mt-4 text-3xl sm:text-4xl font-semibold tracking-tight text-balance">
+              Empowering businesses through technology innovation
+            </h2>
+          </div>
+          <Link
+            href="/projects"
+            className="group inline-flex items-center gap-1.5 text-sm font-medium text-foreground shrink-0"
+          >
+            View all projects
+            <ArrowUpRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </Link>
         </div>
 
         <div className="mt-14 grid lg:grid-cols-3 gap-5">
