@@ -51,6 +51,11 @@ export const services = [
     description:
       "24/7 dedicated infrastructure support to keep critical systems fast, secure, and always online.",
   },
+  {
+    title: "Fintech",
+    description:
+      "Secure, compliant fintech platforms including digital banking, payments, and AI-driven financial systems built to scale.",
+  },
 ];
 
 export const techStackRow1 = [
@@ -303,6 +308,15 @@ export const projects = [
     image: "/projects/dhahween.png",
     techStack: ["React", "Node.js", "MongoDB"],
     duration: "5 months",
+  },
+  {
+    slug: "orion-core-banking-ai-platform",
+    name: "Orion — AI-Powered Core Banking Platform",
+    category: "Fintech",
+    description: "Oracle-backed core banking with a mobile app and an AI assistant that performs real banking actions via MCP.",
+    image: "/projects/orion.png",
+    techStack: ["Oracle Database", "React Native", "MCP Servers"],
+    duration: "Ongoing",
   },
 ];
 

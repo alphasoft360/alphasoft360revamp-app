@@ -2,13 +2,13 @@
 
 import { motion } from "framer-motion";
 import {
-  Code2, Globe, BarChart3, Cloud, PenTool, Server, ArrowUpRight,
+  Code2, Globe, BarChart3, Cloud, PenTool, Server, Landmark, ArrowUpRight,
 } from "lucide-react";
 import { services } from "@/data/content";
 import SpotlightCard from "./SpotlightCard";
 import Link from "next/link";
 
-const icons = [Code2, Globe, BarChart3, Cloud, PenTool, Server];
+const icons = [Code2, Globe, BarChart3, Cloud, PenTool, Server, Landmark];
 
 export default function Services() {
   return (
@@ -59,6 +59,7 @@ export default function Services() {
                       service.title === "Software Development" ? "/software-development" :
                       service.title === "Web Development" ? "/web-development" :
                       service.title === "Cloud & DevOps" ? "/cloud-devops" :
+                      service.title === "Fintech" ? "/fintech" :
                       "/services"
                     }
                     className={`relative mt-5 inline-flex items-center gap-1.5 font-medium text-foreground ${isFeatured ? 'text-base' : 'text-sm'}`}
