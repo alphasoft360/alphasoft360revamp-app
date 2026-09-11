@@ -223,6 +223,50 @@ const projectsData = [
     duration: "6 months",
     category: "Fintech"
   },
+  {
+    id: "orion-core-banking-ai-platform",
+    slug: "orion-core-banking-ai-platform",
+    title: "Orion — AI-Powered Core Banking Platform",
+    description: "Orion is an enterprise core banking system built on Oracle infrastructure, paired with a companion mobile banking app and an in-app AI assistant. The platform exposes a set of purpose-built MCP (Model Context Protocol) servers that give LLMs secure, controlled endpoints to perform real internet banking actions — balance checks, transfers, bill payments, and account queries — on the customer's behalf.",
+    image: "/projects/orion.png",
+    techStack: ["Oracle Database", "Oracle Fusion Middleware", "Java (Spring Boot)", "React Native", "Next.js", "MCP Servers", "LLM Orchestration", "PL/SQL", "Kafka", "OAuth 2.0"],
+    features: [
+      "Core banking engine built on Oracle Database & Fusion Middleware",
+      "Native mobile banking app for iOS and Android",
+      "In-app conversational AI banking assistant",
+      "Custom MCP servers exposing secure banking endpoints to LLMs",
+      "AI-driven internet banking: transfers, bill pay, and balance checks via natural language",
+      "Real-time transaction processing and ledger reconciliation",
+      "Multi-factor authentication and OAuth 2.0-based session security",
+      "Role-based access for retail, corporate, and back-office users",
+      "Audit trail and compliance logging for every AI-initiated transaction",
+      "Event-driven architecture with Kafka for real-time account updates"
+    ],
+    overview: [
+      "Orion modernizes traditional core banking operations by combining a resilient Oracle-based backend with a mobile-first customer experience and a conversational AI layer.",
+      "Core Banking on Oracle: Account management, ledgers, and transaction processing run on Oracle Database and Fusion Middleware, providing the reliability and consistency required for regulated financial operations.",
+      "Mobile Banking App: A dedicated mobile application gives customers native access to their accounts, transfers, bill payments, and statements.",
+      "AI Assistant & MCP Layer: Orion introduces an in-app AI assistant backed by custom-built MCP servers. These servers expose tightly scoped, permissioned endpoints that let an LLM safely perform real banking operations — such as checking balances or initiating transfers — on behalf of an authenticated customer, instead of just answering questions about banking.",
+      "Security & Compliance: Every AI-initiated action passes through the same authentication, authorization, and audit pipeline as manual actions, ensuring AI-driven banking remains fully compliant and traceable."
+    ],
+    challenges: [
+      "Integrating a modern mobile and AI experience on top of a traditional Oracle-based core banking system",
+      "Designing MCP server endpoints that let an LLM perform real financial transactions without introducing security or compliance risk",
+      "Ensuring AI-initiated banking actions are authenticated, authorized, and fully auditable like any manual transaction",
+      "Maintaining strict transactional consistency across mobile, web, and AI-driven channels",
+      "Preventing prompt injection or unintended actions from reaching real banking endpoints through the LLM layer"
+    ],
+    solutions: [
+      "Oracle-Backed Core Engine: Built the ledger, account, and transaction-processing layer on Oracle Database and Fusion Middleware for enterprise-grade reliability and consistency.",
+      "Purpose-Built MCP Servers: Developed dedicated MCP servers that expose a narrow, permissioned set of banking tools (balance inquiry, transfer, bill pay) to the LLM, rather than open-ended database access.",
+      "Scoped AI Authorization: Required every AI-initiated action to run under the authenticated customer's own session and permission scope, with explicit confirmation steps before money movement.",
+      "Unified Audit Pipeline: Routed AI-initiated transactions through the same compliance, logging, and audit systems used for mobile and web banking, so every action is traceable end-to-end.",
+      "Event-Driven Updates: Used Kafka to propagate account and transaction events in real time across the mobile app, web channels, and AI assistant.",
+      "Native Mobile Experience: Delivered a dedicated mobile banking app for day-to-day account access, transfers, and statements alongside the AI assistant."
+    ],
+    duration: "Ongoing",
+    category: "Fintech"
+  },
   // project 3
   {
     id: "home-accessories",
