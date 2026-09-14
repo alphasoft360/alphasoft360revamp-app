@@ -49,7 +49,7 @@ export default function Projects() {
                   alt={featured.name}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 66vw"
-                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  className="object-conntain object-top group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0b0f19] via-[#0b0f19]/40 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
