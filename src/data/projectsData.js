@@ -426,6 +426,49 @@ const projectsData = [
     duration: "6 months",
     category: "Healthcare Mobile App"
   },
+  {
+    id: "nearbly-local-business-discovery-app",
+    slug: "nearbly-local-business-discovery-app",
+    title: "Nearbly — Local Business Discovery & Reviews App",
+    description: "Nearbly is a native iOS and Android app for discovering local businesses, reading and writing reviews, browsing photos, and booking reservations, with a companion dashboard for business owners to manage their listing and respond to customers.",
+    image: "/projects/nearbly.png",
+    techStack: ["React Native", "Expo", "Node.js", "Express.js", "PostgreSQL", "PostGIS", "Elasticsearch", "Redis", "Google Maps & Places API", "AWS S3", "Firebase"],
+    features: [
+      "Native iOS and Android app for local business discovery",
+      "Location-based search with map view and geolocation",
+      "Category, price range, distance, and \"open now\" filtering",
+      "Star ratings and written reviews for businesses",
+      "Photo uploads on business listings and individual reviews",
+      "Detailed business profiles: hours, menu/services, contact, and website",
+      "Check-ins and personalized bookmarks/favorites",
+      "In-app reservation and booking requests",
+      "Direct messaging between customers and business owners",
+      "Business owner dashboard to claim listings, update details, and respond to reviews",
+      "Push notifications for review replies, nearby deals, and trending spots",
+      "Curated \"Best of\" and trending lists by category and city"
+    ],
+    overview: [
+      "Nearbly helps people discover trustworthy local businesses — restaurants, salons, services, and more — through reviews, photos, and real-time availability.",
+      "Customers can search by category or location, filter results by price, distance, and rating, and make reservations directly from a business profile.",
+      "Business owners get a companion dashboard to claim their listing, keep business details up to date, respond to reviews, and manage incoming reservation requests."
+    ],
+    challenges: [
+      "Delivering fast, relevant search results across large volumes of business listings and reviews",
+      "Combining geospatial search with category, price, and rating filters efficiently",
+      "Preventing fake reviews and maintaining trust in ratings",
+      "Handling high-resolution photo uploads at scale without slowing down the app",
+      "Giving business owners real-time visibility into reviews and reservation requests"
+    ],
+    solutions: [
+      "Implemented Elasticsearch for fast full-text business search combined with PostGIS for geospatial queries",
+      "Built a combined filtering engine supporting category, price range, distance, and \"open now\" status in a single query",
+      "Added review verification tied to check-ins and purchase/visit confirmation to reduce fake reviews",
+      "Used AWS S3 with on-the-fly image optimization for fast photo uploads and delivery",
+      "Built a real-time business owner dashboard with push notifications for new reviews and reservation requests"
+    ],
+    duration: "6 months",
+    category: "Mobile App"
+  },
   // project 4
   {
     id: "learning-management-system",
