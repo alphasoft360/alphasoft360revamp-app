@@ -101,17 +101,17 @@ const teamMembers = [
     tier: "team",
     image: maroof_sultan,
     name: "Maroof Sultan",
-    role: "Software Engineer",
-    bio: "Expert in agile methodologies with a track record of delivering enterprise projects on time and within scope.",
+    role: "Web & Mobile App Developer",
+    bio: "Expert in agile methodologies with a track record of delivering enterprise web projects and cross-platform mobile apps on time and within scope.",
     contact: {
       email: "maroofsultan.dev@gmail.com",
       phone: "+92 310 6510421",
     },
     biography: [
-      "Maroof Sultan is a full-stack developer skilled in Laravel, Next.js, Symfony, OpenCart, Python, and CI/CD pipelines. He specializes in designing responsive, high-performance web applications with clean, scalable architectures.",
-      "He combines his technical expertise with strong analytical and problem-solving skills, bringing efficient, data-driven solutions to complex projects.",
-      "Maroof has worked on multiple projects, including e-commerce platforms, enterprise software, and custom web solutions — focusing on optimization, modern technologies, and seamless user experiences.",
-      "He’s passionate about continuous learning, collaboration, and building innovative solutions that merge creativity with functionality.",
+      "Maroof Sultan is a full-stack Web & Mobile App Developer skilled in Laravel, Next.js, Symfony, OpenCart, Python, React Native, Flutter, and CI/CD pipelines. He specializes in designing responsive, high-performance web applications alongside cross-platform mobile apps with clean, scalable architectures.",
+      "He combines his technical expertise with strong analytical and problem-solving skills, bringing efficient, data-driven solutions to complex projects across web and mobile.",
+      "Maroof has worked on multiple projects, including e-commerce platforms, enterprise software, custom web solutions, and cross-platform mobile apps — focusing on optimization, modern technologies, and seamless user experiences.",
+      "He’s passionate about continuous learning, collaboration, and building innovative solutions that merge creativity with functionality across web and mobile.",
     ],
     skills: [
       { name: "Laravel Development", percentage: 95 },
@@ -126,6 +126,11 @@ const teamMembers = [
       { name: "HTML5 & CSS3", percentage: 96 },
       { name: "Bootstrap & Tailwind CSS", percentage: 94 },
       { name: "Responsive Web Design", percentage: 93 },
+      { name: "React Native", percentage: 80 },
+      { name: "Expo", percentage: 76 },
+      { name: "Flutter", percentage: 74 },
+      { name: "Dart", percentage: 70 },
+      { name: "Native iOS & Android Deployment", percentage: 68 },
       { name: "Git & GitHub", percentage: 95 },
     ],
     socials: {
@@ -140,17 +145,17 @@ const teamMembers = [
     tier: "team",
     image: muhammad_shahbaz,
     name: "Muhammad Shahbaz",
-    role: "Software Engineer",
-    bio: "Skilled in modern web technologies with a proven ability to deliver robust, scalable, and efficient software solutions.",
+    role: "Web & Mobile App Developer",
+    bio: "Skilled in modern web and mobile technologies with a proven ability to deliver robust, scalable, and efficient software solutions across platforms.",
     contact: {
       email: "shahbaz.dev012@gmail.com",
       phone: "+92 323 2155122",
     },
     biography: [
-      "Muhammad Shahbaz is a Full Stack Developer experienced in Laravel, Next.js, Symfony, and OpenCart. He focuses on building responsive, high-performance web applications with clean and scalable architectures.",
-      "He combines deep technical knowledge with strong analytical thinking and problem-solving skills, delivering efficient, data-driven solutions for complex challenges.",
-      "Shahbaz has contributed to a range of projects, including enterprise platforms, e-commerce systems, and custom web solutions — always prioritizing performance, maintainability, and seamless user experiences.",
-      "He’s passionate about continuous learning, teamwork, and crafting innovative digital products that blend creativity with functionality.",
+      "Muhammad Shahbaz is a Full Stack Web & Mobile App Developer experienced in Laravel, Next.js, Symfony, OpenCart, and React Native. He focuses on building responsive, high-performance web applications alongside cross-platform mobile apps with clean and scalable architectures.",
+      "He combines deep technical knowledge with strong analytical thinking and problem-solving skills, delivering efficient, data-driven solutions for complex challenges on both web and mobile.",
+      "Shahbaz has contributed to a range of projects, including enterprise platforms, e-commerce systems, custom web solutions, and cross-platform mobile apps — always prioritizing performance, maintainability, and seamless user experiences.",
+      "He’s passionate about continuous learning, teamwork, and crafting innovative digital products that blend creativity with functionality across web and mobile.",
     ],
     skills: [
       { name: "Laravel Development", percentage: 80 },
@@ -162,6 +167,9 @@ const teamMembers = [
       { name: "HTML5 & CSS3", percentage: 90 },
       { name: "Bootstrap & Tailwind CSS", percentage: 90 },
       { name: "Responsive Web Design", percentage: 90 },
+      { name: "React Native", percentage: 78 },
+      { name: "Expo", percentage: 75 },
+      { name: "Mobile App Deployment (iOS & Android)", percentage: 70 },
       { name: "Git & GitHub", percentage: 95 },
     ],
     socials: {
@@ -177,16 +185,16 @@ const teamMembers = [
     tier: "team",
     image: muazam_mughal,
     name: "Muazam Mughal",
-    role: "Software Engineer",
-    bio: "Dynamic Full-stack Software Engineer with expertise in modern web technologies, generative AI, and cloud solutions, dedicated to crafting scalable and innovative applications.",
+    role: "Web & Mobile App Developer",
+    bio: "Dynamic Full-stack Web & Mobile App Developer with expertise in modern web technologies, cross-platform mobile development (React Native & Flutter), generative AI, and cloud solutions, dedicated to crafting scalable and innovative applications.",
     contact: {
       email: "eng.muazam@gmail.com",
       phone: "+92 303 4510773",
     },
     biography: [
-      "Muazam Mughal is a versatile Full Stack Software Engineer proficient in Next.js, React.js, TypeScript, Laravel, Vue.js, Python, FastAPI, and cutting-edge generative AI technologies. He excels in architecting robust, scalable web applications that prioritize performance, security, and exceptional user experiences.",
-      "With a keen analytical mind and strong problem-solving abilities, Muazam delivers efficient, data-driven solutions to intricate software challenges, ensuring seamless integration and optimal functionality across diverse projects.",
-      "His professional journey includes key roles in enterprise-level applications, multinational business platforms, and freelance initiatives, where he has honed skills in performance optimization, RESTful API development, and CI/CD pipelines. Notable GitHub contributions feature AuraCart-app, a sophisticated e-commerce solution leveraging Next.js, Clerk, Sanity, Stripe, and PostgreSQL; isStartup-app, an innovative platform for startup pitches; and Cloud-Native-Generative-AI, exploring advanced AI engineering with tools like LangChain and Pinecone.",
+      "Muazam Mughal is a versatile Full Stack Web & Mobile App Developer proficient in Next.js, React.js, React Native, Flutter, TypeScript, Laravel, Vue.js, Python, FastAPI, and cutting-edge generative AI technologies. He excels in architecting robust, scalable web applications and native-feeling cross-platform mobile apps that prioritize performance, security, and exceptional user experiences.",
+      "With a keen analytical mind and strong problem-solving abilities, Muazam delivers efficient, data-driven solutions to intricate software challenges, ensuring seamless integration and optimal functionality across web and mobile projects.",
+      "His professional journey includes key roles in enterprise-level applications, multinational business platforms, and freelance initiatives, where he has honed skills in performance optimization, RESTful API development, React Native and Flutter app development, and CI/CD pipelines. Notable GitHub contributions feature AuraCart-app, a sophisticated e-commerce solution leveraging Next.js, Clerk, Sanity, Stripe, and PostgreSQL; isStartup-app, an innovative platform for startup pitches; and Cloud-Native-Generative-AI, exploring advanced AI engineering with tools like LangChain and Pinecone.",
     ],
     skills: [
       { name: "Next.js", percentage: 95 },
@@ -201,6 +209,11 @@ const teamMembers = [
       { name: "Google Cloud & APIs", percentage: 90 },
       { name: "Sanity CMS", percentage: 85 },
       { name: "Stripe Payments", percentage: 85 },
+      { name: "React Native", percentage: 82 },
+      { name: "Expo", percentage: 78 },
+      { name: "Flutter", percentage: 75 },
+      { name: "Dart", percentage: 72 },
+      { name: "Native iOS & Android Deployment", percentage: 70 },
     ],
     socials: {
       stackoverflow: "https://stackoverflow.com/",
@@ -214,8 +227,8 @@ const teamMembers = [
   tier: "team",
   image: ubaidullah,
   name: "Ubaidullah",
-  role: "Full Stack Web Developer",
-  bio: "Full Stack Web Developer focused on building responsive, scalable, and user-friendly web applications. Skilled in modern frontend technologies like HTML, CSS, JavaScript, React, and backend development using PHP to create complete and efficient web solutions.",
+  role: "Mobile App Developer",
+  bio: "Mobile App Developer focused on building high-performance, cross-platform iOS and Android applications. Skilled in React Native and Flutter, with strong fundamentals in JavaScript and backend integration to ship complete, production-ready mobile solutions.",
 
   contact: {
     email: "ubaidullah.web.dev@gmail.com",
@@ -223,21 +236,21 @@ const teamMembers = [
   },
 
   biography: [
-    "Ubaidullah is a passionate Full Stack Web Developer who enjoys building modern and responsive web applications using technologies such as HTML5, CSS3, JavaScript (ES6+), React, and PHP.",
-    "He specializes in transforming design concepts into functional and user-friendly interfaces while also developing reliable backend logic to support dynamic web applications.",
-    "Currently pursuing Intermediate at Aspire Group of Colleges (2025), he continues to improve his development skills by learning new frameworks, tools, and best practices in both frontend and backend development."
+    "Ubaidullah is a passionate Mobile App Developer who enjoys building modern, cross-platform mobile applications using React Native and Flutter.",
+    "He specializes in translating design concepts into smooth, native-feeling mobile interfaces while integrating REST APIs and backend services to power dynamic app features.",
+    "Currently pursuing Intermediate at Aspire Group of Colleges (2025), he continues to sharpen his mobile development skills by learning new frameworks, native modules, and app store deployment best practices."
   ],
 
   skills: [
-    { name: "HTML5", percentage: 90 },
-    { name: "CSS3", percentage: 92 },
-    { name: "JavaScript (ES6+)", percentage: 80 },
-    { name: "React.js", percentage: 72 },
-    { name: "PHP", percentage: 80 },
-    { name: "Symfony", percentage: 70 },
-    { name: "Tailwind CSS", percentage: 90 },
-    { name: "Bootstrap", percentage: 88 },
-    { name: "Responsive Web Design", percentage: 90 },
+    { name: "React Native", percentage: 88 },
+    { name: "Flutter", percentage: 80 },
+    { name: "JavaScript (ES6+)", percentage: 85 },
+    { name: "Dart", percentage: 75 },
+    { name: "Expo", percentage: 82 },
+    { name: "REST API Integration", percentage: 85 },
+    { name: "Firebase", percentage: 78 },
+    { name: "iOS & Android Deployment", percentage: 75 },
+    { name: "UI/UX for Mobile", percentage: 85 },
     { name: "Git & GitHub", percentage: 90 }
   ],
 
@@ -247,9 +260,10 @@ const teamMembers = [
   },
 
   education: {
-    degree: "Intermediate",
+    degree: "Graduation",
     institution: "Aspire Group of Colleges",
     year: "2025",
+    currentStudy: "Bachelor's in Computer Science",
   },
 },
 
