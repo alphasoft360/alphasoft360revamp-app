@@ -1,4 +1,5 @@
 const projectsData = [
+ 
   {
     id: "orion-core-banking-ai-platform",
     slug: "orion-core-banking-ai-platform",
@@ -229,6 +230,46 @@ const projectsData = [
     ],
     duration: "6 months",
     category: "Fintech"
+  },
+   {
+    id: "bellora-salon-booking-app",
+    slug: "bellora-salon-booking-app",
+    title: "Bellora — Salon & Personal Services Booking App",
+    description: "Bellora is a native iOS and Android app connecting customers with salons, spas, and independent personal-care providers for on-demand and scheduled bookings, with real-time availability, in-app payments, and a companion dashboard for salon owners.",
+    image: "/projects/bellora.png",
+    techStack: ["React Native", "Expo", "Node.js", "Express.js", "PostgreSQL", "Stripe", "Firebase", "Google Maps", "Twilio"],
+    features: [
+      "Native iOS and Android app built with React Native and Expo",
+      "Location-based salon and stylist discovery",
+      "Real-time appointment booking with live availability",
+      "Service catalog with per-stylist pricing and duration",
+      "In-app payments and booking deposits via Stripe",
+      "Stylist and salon profiles with portfolio galleries and reviews",
+      "Push notification and SMS appointment reminders",
+      "Ratings and reviews for salons and individual stylists",
+      "Loyalty points and promotional offers",
+      "Salon-side dashboard for staff scheduling and booking management"
+    ],
+    overview: [
+      "Bellora is a cross-platform mobile app connecting customers with salons, spas, and independent personal-care providers for on-demand and scheduled bookings.",
+      "Customers can browse nearby salons, compare services and pricing, and book appointments with a specific stylist in real time from their phone.",
+      "Salon owners and independent providers get a companion dashboard to manage staff schedules, services, and incoming bookings from a single system."
+    ],
+    challenges: [
+      "Syncing real-time availability across multiple staff calendars without double-booking",
+      "Supporting both solo freelance providers and multi-staff salons within one data model",
+      "Handling deposits and cancellation policies fairly for last-minute booking changes",
+      "Maintaining consistent performance and native feel across both iOS and Android"
+    ],
+    solutions: [
+      "Built a real-time slot-locking booking engine to prevent double-booking across staff calendars",
+      "Modeled a flexible provider hierarchy supporting solo stylists and multi-staff salon accounts",
+      "Implemented configurable deposit and cancellation-fee policies enforced at checkout",
+      "Used React Native and Expo with native modules where needed for consistent performance on both platforms",
+      "Integrated Twilio and Firebase Cloud Messaging for reliable SMS and push appointment reminders"
+    ],
+    duration: "5 months",
+    category: "Mobile App"
   },
   // project 2
   {
