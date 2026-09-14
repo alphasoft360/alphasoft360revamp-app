@@ -271,44 +271,9 @@ const projectsData = [
     duration: "5 months",
     category: "Mobile App"
   },
+ 
   // project 2
-  {
-    id: "task-management-app",
-    slug: "task-management-app",
-    title: "TaskFlow — Agile Task Management Platform",
-    description: "TaskFlow: An enterprise Kanban task management platform featuring drag-and-drop task boards, sprint planning, Gantt charts, team member assignments, and real-time project analytics.",
-    image: "/projects/pop.png",
-    techStack: ["Vue.js", "Express", "PostgreSQL", "Socket.io", "JWT", "Vuex"],
-    features: [
-      "Real-time collaboration",
-      "Drag-and-drop task boards",
-      "Team member assignments",
-      "File attachments",
-      "Time tracking",
-      "Progress analytics",
-      "Notifications and reminders",
-      "Calendar integration"
-    ],
-    overview: [
-      "A powerful task management tool designed for teams to collaborate seamlessly on projects with real-time updates and detailed tracking.",
-      "The app features an intuitive interface with Kanban boards, Gantt charts, and comprehensive analytics to monitor project progress.",
-      "Optimized for team productivity, the app includes automated workflows, custom fields, and integration with popular tools."
-    ],
-    challenges: [
-      "Implementing real-time synchronization across multiple users",
-      "Handling complex permission systems",
-      "Optimizing performance for large datasets",
-      "Creating an intuitive drag-and-drop interface"
-    ],
-    solutions: [
-      "Implemented WebSocket connections with Socket.io for real-time synchronization",
-      "Created a role-based access control (RBAC) system to manage user permissions",
-      "Used virtual scrolling and lazy loading to optimize performance for large datasets",
-      "Utilized HTML5 drag-and-drop API with custom enhancements for a smooth user interface"
-    ],
-    duration: "3 months",
-    category: "Mobile App"
-  },
+
 
   
   // project 3
@@ -422,6 +387,44 @@ const projectsData = [
     ],
     duration: "Ongoing",
     category: "Industrial CMMS"
+  },
+   {
+    id: "curalink-telehealth-app",
+    slug: "curalink-telehealth-app",
+    title: "CuraLink — Telehealth & Doctor Consultation App",
+    description: "CuraLink is a native iOS and Android app connecting patients with licensed doctors for on-demand and scheduled video consultations, featuring real-time appointment scheduling, digital health records, and e-prescriptions.",
+    image: "/projects/curalink.png",
+    techStack: ["React Native", "Expo", "WebRTC", "Node.js", "Express.js", "MongoDB", "Twilio", "Stripe", "Firebase"],
+    features: [
+      "Native iOS and Android app for patients and doctors",
+      "HD video and audio consultations powered by WebRTC",
+      "Real-time appointment scheduling with live doctor availability",
+      "Doctor discovery by specialty, ratings, and availability",
+      "Digital health records and consultation history",
+      "Digital e-prescriptions generated after consultations",
+      "In-app payments for consultation fees via Stripe",
+      "Push notification and SMS appointment reminders",
+      "Doctor-side dashboard for schedule and consultation management"
+    ],
+    overview: [
+      "CuraLink connects patients with licensed doctors for on-demand and scheduled telehealth consultations directly from their phone.",
+      "Patients can search doctors by specialty, book appointments, and join secure video consultations without leaving the app.",
+      "Doctors get a companion dashboard to manage their schedule, consultation notes, and e-prescriptions in one place."
+    ],
+    challenges: [
+      "Delivering low-latency, reliable video consultations across varying network conditions",
+      "Securing sensitive patient health data and consultation records",
+      "Synchronizing doctor availability in real time to prevent scheduling conflicts",
+      "Generating and delivering digital e-prescriptions in a clear, shareable format"
+    ],
+    solutions: [
+      "Implemented WebRTC-based video calling with adaptive bitrate for reliable consultations on low bandwidth",
+      "Enforced encrypted storage and access controls for health records and consultation data",
+      "Built a real-time slot-locking scheduling engine to prevent doctor double-booking",
+      "Integrated a digital e-prescription workflow with PDF generation and secure in-app sharing"
+    ],
+    duration: "6 months",
+    category: "Healthcare Mobile App"
   },
   // project 4
   {
