@@ -691,7 +691,7 @@ const projectsData = [
       "Secure Transactions: Enabled HTTPS across the platform and implemented session handling, server-level protection, and standard form validation for customer interactions.",
       "Monolithic Architecture: Maintained a centralized PHP-based application architecture that handles routing, catalog logic, cart processing, checkout workflows, and database interactions within a unified system."
     ],
-    duration: "Ongoing",
+    duration: "6 months",
     category: "Wholesale E-Commerce"
   },
   // project 8
@@ -809,7 +809,7 @@ const projectsData = [
       "Performance & Security: Applied Helmet, CORS, compression, JWT authentication, and structured API communication to improve application security and backend performance.",
       "Responsive Dashboard: Utilized the Fuse Material Design template together with TailwindCSS, SCSS, and Angular Material to provide a clean and responsive administrative experience."
     ],
-    "duration": "Ongoing",
+    "duration": "6 months",
     "category": "Healthcare Management"
   },
   {
@@ -977,7 +977,7 @@ const projectsData = [
       "Scalable Laravel Architecture: Utilized Laravel's routing, events, authorization, database abstraction, storage, and application services to establish a maintainable foundation for future modules.",
       "Centralized Configuration: Added global settings and branding management, allowing administrators to control application configuration and presentation without requiring direct code-level changes."
     ],
-    "duration": "Ongoing",
+    "duration": "5 months",
     "category": "Education & Student Management"
   }
 ];

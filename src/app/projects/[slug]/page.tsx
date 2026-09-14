@@ -133,13 +133,13 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 </div>
               </div>
 
-              <div className="lg:col-span-7 relative aspect-video rounded-3xl overflow-hidden card-border w-full">
+              <div className="lg:col-span-7 relative aspect-[6/4] rounded-3xl overflow-hidden card-border w-full bg-surface">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
                   sizes="(max-width: 1024px) 100vw, 60vw"
-                  className="object-cover"
+                  className="object-contain"
                   priority
                 />
               </div>
