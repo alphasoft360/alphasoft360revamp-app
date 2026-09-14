@@ -339,8 +339,8 @@ export const projects = [
   {
     slug: "Jewelry-store",
     name: "Dhahween",
-    category: "Food Delivery",
-    description: "An innovative platform connecting talents, creativity, and opportunity.",
+    category: "Jewelry & Gold E-Commerce",
+    description: "A bilingual, RTL-first gold and jewelry storefront with live per-gram pricing and secure checkout.",
     image: "/projects/dhahween.png",
     techStack: ["React", "Node.js", "MongoDB"],
     duration: "5 months",

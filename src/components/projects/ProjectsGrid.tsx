@@ -7,7 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 import projectsData from "@/data/projectsData";
 import SpotlightCard from "@/components/SpotlightCard";
 
-const MotionLink = motion(Link);
+const MotionLink = motion.create(Link);
 
 export default function ProjectsGrid() {
   return (

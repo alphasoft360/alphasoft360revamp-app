@@ -138,6 +138,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                   src={project.image}
                   alt={project.title}
                   fill
+                  sizes="(max-width: 1024px) 100vw, 60vw"
                   className="object-cover"
                   priority
                 />

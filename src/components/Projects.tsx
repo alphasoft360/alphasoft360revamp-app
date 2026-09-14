@@ -7,7 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 import { projects } from "@/data/content";
 import SpotlightCard from "./SpotlightCard";
 
-const MotionLink = motion(Link);
+const MotionLink = motion.create(Link);
 
 export default function Projects() {
   const featured = projects.find((p) => p.featured) ?? projects[0];

@@ -194,11 +194,11 @@ const projectsData = [
   },
 
     {
-    id: "payvault-fintech-platform",
-    slug: "payvault-fintech-platform",
-    title: "PayVault — Digital Banking & Payments Platform",
-    description: "PayVault is a secure fintech platform offering digital banking, instant payments, and lending services. The platform provides customers with real-time account management, P2P transfers, bill payments, and credit scoring-driven micro-lending, all built on a bank-grade security foundation.",
-    image: "/projects/payvalt.png",
+    id: "finoro-fintech-platform",
+    slug: "finoro-fintech-platform",
+    title: "Finoro — Digital Banking & Payments Platform",
+    description: "Finoro is a secure fintech platform offering digital banking, instant payments, and lending services. The platform provides customers with real-time account management, P2P transfers, bill payments, and credit scoring-driven micro-lending, all built on a bank-grade security foundation.",
+    image: "/projects/finora.png",
     techStack: ["Next.js", "Node.js", "PostgreSQL", "Stripe", "Plaid", "TypeScript", "Redis"],
     features: [
       "Digital wallet and multi-account management",
@@ -211,9 +211,9 @@ const projectsData = [
       "Transaction history and spending analytics"
     ],
     overview: [
-      "PayVault consolidates everyday banking, payments, and lending into a single secure digital platform for individuals and small businesses.",
+      "Finoro consolidates everyday banking, payments, and lending into a single secure digital platform for individuals and small businesses.",
       "Real-time ledger and transaction processing ensure balances and transfers reflect instantly across web and mobile clients.",
-      "Built with a security-first architecture, PayVault meets PCI-DSS requirements while delivering a fast, intuitive financial experience."
+      "Built with a security-first architecture, Finoro meets PCI-DSS requirements while delivering a fast, intuitive financial experience."
     ],
     challenges: [
       "Processing financial transactions with strict consistency and zero data loss",
@@ -500,39 +500,40 @@ const projectsData = [
   {
     id: "Jewelry-store",
     slug: "Jewelry-store",
-    title: "Dhahween — Food Delivery & Dispatch System",
-    description: "Dhahween: A comprehensive food ordering and delivery system featuring multi-restaurant catalog support, real-time driver tracking, smart route optimization, and automated dispatch.",
+    title: "Dhahween — Gold & Jewelry E-Commerce Platform",
+    description: "Dhahween is a bilingual, RTL-first e-commerce platform for trading gold, silver, and fine jewelry online, featuring live per-gram pricing, category-based shopping, and secure checkout for high-value transactions.",
     image: "/projects/dhahween.png",
-    techStack: ["React", "Node.js", "MongoDB", "Socket.io", "Google Maps", "Stripe"],
+    techStack: ["React", "Node.js", "MongoDB", "Stripe", "RTL Localization", "Responsive Design"],
     features: [
-      "Multi-restaurant support",
-      "Real-time order tracking",
-      "Driver management",
-      "Route optimization",
-      "Customer reviews",
-      "Loyalty programs",
-      "Push notifications",
-      "Analytics dashboard"
+      "Right-to-left (RTL) Arabic storefront design",
+      "Category-based browsing: gold coins, gold bars, gold jewelry, and silver coins",
+      "Live product pricing by weight and karat",
+      "Detailed product pages with weight, karat, and purity specifications",
+      "Secure checkout with multiple payment methods (Visa, Mastercard)",
+      "Wishlist and related product recommendations",
+      "Trust badges: secure payment, 100% authentic product, secure delivery",
+      "WhatsApp and social media integration",
+      "Fully responsive, mobile-friendly shopping experience"
     ],
     overview: [
-      "Dhahween is a comprehensive food delivery platform that seamlessly connects restaurants, drivers, and customers in an efficient system.",
-      "It features real-time order tracking, smart route optimization, and a streamlined ordering experience for customers.",
-      "Built for scalability, Dhahween can manage thousands of orders simultaneously and offers powerful analytics to drive business growth."
+      "Dhahween is a bilingual e-commerce platform built for trading gold, silver, and fine jewelry online.",
+      "The storefront organizes products into gold coins, gold bars, gold jewelry, and silver coins, with clear per-gram pricing on every listing.",
+      "Built RTL-first for an Arabic-speaking audience, the platform pairs a polished shopping experience with secure checkout and trusted delivery."
     ],
     challenges: [
-      "Implementing real-time order tracking",
-      "Optimizing delivery routes for efficiency",
-      "Managing high traffic during peak hours",
-      "Ensuring food quality is maintained during delivery"
+      "Displaying accurate, frequently fluctuating gold and silver pricing by weight and karat",
+      "Building a fully right-to-left (RTL) e-commerce experience without compromising usability",
+      "Presenting high-value jewelry and bullion products with the trust signals online buyers expect",
+      "Supporting multiple secure payment methods for high-value transactions"
     ],
     solutions: [
-      "Used WebSocket technology for real-time updates on order status",
-      "Integrated Google Maps API for dynamic route optimization",
-      "Built auto-scaling infrastructure to handle peak loads",
-      "Developed a temperature tracking system to monitor food quality during transit"
+      "Implemented a pricing engine reflecting live gold and silver rates by weight and karat",
+      "Built a fully RTL-first UI with proper Arabic typography and mirrored layouts",
+      "Added trust badges (secure payment, 100% authentic product, secure delivery) throughout the storefront",
+      "Integrated Visa, Mastercard, and other gateways for secure high-value checkout"
     ],
     duration: "5 months",
-    category: "Food Delivery & Logistics"
+    category: "Jewelry & Gold E-Commerce"
   },
   {
     id: "bulk-tshirts-ecommerce",
