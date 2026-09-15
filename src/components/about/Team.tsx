@@ -3,7 +3,9 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { team } from "@/data/content";
+import teamMembers from "@/data/teamData";
+
+const team = teamMembers.filter((member) => member.tier !== "intern");
 
 export default function Team() {
   return (
@@ -28,26 +30,30 @@ export default function Team() {
         <div className="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-5">
           {team.map((member, i) => (
             <motion.div
-              key={member.name}
+              key={member.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: (i % 4) * 0.08 }}
-              className="group card-border card-hover rounded-2xl bg-surface overflow-hidden"
             >
-              <div className="relative aspect-square overflow-hidden">
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  fill
-                  className="object-cover grayscale-[10%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
-              </div>
-              <div className="p-5">
-                <h3 className="font-medium">{member.name}</h3>
-                <p className="mt-1 text-sm text-muted">{member.role}</p>
-              </div>
+              <Link
+                href={`/team/${member.id}`}
+                className="group block card-border card-hover rounded-2xl bg-surface overflow-hidden"
+              >
+                <div className="relative aspect-square overflow-hidden">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover grayscale-[10%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-medium">{member.name}</h3>
+                  <p className="mt-1 text-sm text-muted">{member.role}</p>
+                </div>
+              </Link>
             </motion.div>
           ))}
         </div>

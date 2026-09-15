@@ -419,7 +419,7 @@ export const testimonials = [
 export const contact = {
   phone: "+92 370 4857471",
   whatsapp: "https://wa.me/923704857471",
-  email: "alphasoft360@gmail.com",
+  email: "info@alphasoft360.com",
   location: "Main Pakavenue Road, Sahiwal, 57000, Pakistan",
   hours: "Available 24/7",
 };

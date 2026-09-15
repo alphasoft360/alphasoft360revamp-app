@@ -1,24 +1,101 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useMemo, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
-import { projects } from "@/data/content";
+import { ArrowUpRight, Sparkles } from "lucide-react";
+import projectsData from "@/data/projectsData";
 import SpotlightCard from "./SpotlightCard";
 
 const MotionLink = motion.create(Link);
+const FEATURED_COUNT = 6;
+
+function slugify(value: string) {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
+type Project = (typeof projectsData)[number];
+
+function ProjectCard({ project, index }: { project: Project; index: number }) {
+  return (
+    <MotionLink
+      href={`/projects/${project.slug}`}
+      initial={{ opacity: 0, y: 24 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.45, delay: (index % 6) * 0.07 }}
+      className="group block"
+    >
+      <SpotlightCard className="h-full rounded-3xl bg-[#0b0f19] border border-white/10 hover:border-accent/60 transition-all duration-300 overflow-hidden shadow-xl block">
+        <div className="relative aspect-[16/11] overflow-hidden bg-[#0b0f19]">
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-contain group-hover:scale-105 transition-transform duration-500"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0b0f19] via-[#0b0f19]/50 to-transparent" />
+          <div className="absolute top-4 left-4">
+            <span className="px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-accent-2 bg-black/80 backdrop-blur-md rounded-full border border-white/20">
+              {project.category}
+            </span>
+          </div>
+          <div className="absolute bottom-0 left-0 right-0 p-5">
+            <h3 className="text-lg font-semibold text-white leading-snug">{project.title}</h3>
+            <p className="mt-2 text-sm text-gray-300/90 leading-relaxed line-clamp-2">
+              {project.description}
+            </p>
+            <div className="flex items-center justify-between mt-4">
+              <span className="text-xs text-white/70">{project.duration}</span>
+              <span className="shrink-0 h-8 w-8 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center group-hover:bg-accent group-hover:border-accent transition-colors">
+                <ArrowUpRight className="h-4 w-4 text-white" />
+              </span>
+            </div>
+          </div>
+        </div>
+      </SpotlightCard>
+    </MotionLink>
+  );
+}
 
 export default function Projects() {
-  const featured = projects.find((p) => p.featured) ?? projects[0];
-  const rest = projects.filter((p) => p !== featured);
+  const categories = useMemo(() => {
+    const order: string[] = [];
+    const counts = new Map<string, number>();
+    projectsData.forEach((p) => {
+      if (!counts.has(p.category)) {
+        counts.set(p.category, 0);
+        order.push(p.category);
+      }
+      counts.set(p.category, counts.get(p.category)! + 1);
+    });
+    return order.map((name) => ({ name, slug: slugify(name), count: counts.get(name)! }));
+  }, []);
+
+  const [active, setActive] = useState<string>("featured");
+
+  const visibleProjects = useMemo(() => {
+    if (active === "featured") return projectsData.slice(0, FEATURED_COUNT);
+    return projectsData.filter((p) => slugify(p.category) === active);
+  }, [active]);
 
   return (
-    <section id="work" className="relative py-28 border-t border-line">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section id="work" className="relative py-28 border-t border-line overflow-hidden">
+      {/* Decorative glow accents */}
+      <div className="pointer-events-none absolute -top-24 right-0 h-[380px] w-[380px] rounded-full bg-accent/15 glow-blob" />
+      <div className="pointer-events-none absolute bottom-0 -left-24 h-[320px] w-[320px] rounded-full bg-accent-2/15 glow-blob" />
+
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold tracking-widest text-accent-2 uppercase">Our Latest Projects</p>
+            <p className="inline-flex items-center gap-1.5 text-xs font-semibold tracking-widest text-accent-2 uppercase">
+              <Sparkles className="h-3.5 w-3.5" />
+              Our Latest Projects
+            </p>
             <h2 className="mt-4 text-3xl sm:text-4xl font-semibold tracking-tight text-balance">
               Empowering businesses through technology innovation
             </h2>
@@ -32,76 +109,68 @@ export default function Projects() {
           </Link>
         </div>
 
-        <div className="mt-14 grid lg:grid-cols-3 gap-5">
-          {/* Featured Large 1st Card (Dark Themed) */}
-          <MotionLink
-            href={`/projects/${featured.slug}`}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.5 }}
-            className="lg:col-span-2 lg:row-span-2"
+        {/* Category tabs with animated active pill */}
+        <div className="mt-10 flex flex-wrap items-center gap-2.5">
+          <button
+            onClick={() => setActive("featured")}
+            className={`relative whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium border transition-colors ${
+              active === "featured"
+                ? "border-transparent"
+                : "border-line bg-surface hover:border-accent/50 hover:text-foreground"
+            }`}
           >
-            <SpotlightCard className="group h-full rounded-3xl bg-[#0b0f19] border border-white/10 hover:border-accent/60 transition-all duration-300 overflow-hidden shadow-xl block">
-              <div className="relative h-64 lg:h-full overflow-hidden">
-                <Image
-                  src={featured.image}
-                  alt={featured.name}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 66vw"
-                  className="object-conntain object-top group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0b0f19] via-[#0b0f19]/40 to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
-                  <div className="text-white">
-                    <span className="text-xs uppercase tracking-wider font-semibold text-accent-2">{featured.category}</span>
-                    <h3 className="mt-1 text-2xl font-semibold text-white">{featured.name}</h3>
-                    <p className="mt-2 text-sm text-gray-300/90 leading-relaxed max-w-md">{featured.description}</p>
-                  </div>
-                  <span className="shrink-0 h-10 w-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center group-hover:bg-accent group-hover:border-accent transition-colors text-white">
-                    <ArrowUpRight className="h-4 w-4" />
-                  </span>
-                </div>
-              </div>
-            </SpotlightCard>
-          </MotionLink>
-
-          {/* Small Cards (Now Dark Themed to Match 1st Card) */}
-          {rest.map((project, i) => (
-            <MotionLink
-              href={`/projects/${project.slug}`}
-              key={project.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.5, delay: (i % 4) * 0.08 }}
+            {active === "featured" && (
+              <motion.span
+                layoutId="home-projects-active-pill"
+                className="absolute inset-0 rounded-full bg-accent shadow-sm"
+                transition={{ type: "spring", stiffness: 400, damping: 32 }}
+              />
+            )}
+            <span className={`relative z-10 ${active === "featured" ? "text-white" : "text-muted"}`}>
+              Featured
+            </span>
+          </button>
+          {categories.map((cat) => (
+            <button
+              key={cat.slug}
+              onClick={() => setActive(cat.slug)}
+              className={`relative whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium border transition-colors ${
+                active === cat.slug
+                  ? "border-transparent"
+                  : "border-line bg-surface hover:border-accent/50 hover:text-foreground"
+              }`}
             >
-              <SpotlightCard className="group h-full rounded-2xl bg-[#0b0f19] border border-white/10 hover:border-accent/60 transition-all duration-300 overflow-hidden shadow-xl block">
-                <div className="relative h-44 overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={project.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
-                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0b0f19] via-[#0b0f19]/30 to-transparent" />
-                </div>
-                <div className="p-6 pt-2">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs uppercase tracking-wider font-semibold text-accent-2">{project.category}</span>
-                    <ArrowUpRight className="h-4 w-4 text-gray-400 group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
-                  </div>
-                  <h3 className="mt-2.5 font-semibold text-base text-white group-hover:text-accent transition-colors">
-                    {project.name}
-                  </h3>
-                  <p className="mt-2 text-sm text-gray-300/80 leading-relaxed line-clamp-2">
-                    {project.description}
-                  </p>
-                </div>
-              </SpotlightCard>
-            </MotionLink>
+              {active === cat.slug && (
+                <motion.span
+                  layoutId="home-projects-active-pill"
+                  className="absolute inset-0 rounded-full bg-accent shadow-sm"
+                  transition={{ type: "spring", stiffness: 400, damping: 32 }}
+                />
+              )}
+              <span className={`relative z-10 ${active === cat.slug ? "text-white" : "text-muted"}`}>
+                {cat.name}
+                <span className="ml-1.5 text-xs opacity-70">{cat.count}</span>
+              </span>
+            </button>
           ))}
+        </div>
+
+        {/* Animated project grid */}
+        <div className="mt-10 min-h-[200px]">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={active}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+            >
+              {visibleProjects.map((project, i) => (
+                <ProjectCard key={project.slug} project={project} index={i} />
+              ))}
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
     </section>

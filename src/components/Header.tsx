@@ -3,12 +3,17 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { nav, contact } from "@/data/content";
 
 export default function Header({ photoHero = false }: { photoHero?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -40,15 +45,27 @@ export default function Header({ photoHero = false }: { photoHero?: boolean }) {
           className={`hidden lg:flex items-center gap-8 text-lg transition-colors duration-300 ${overPhotoHero ? "text-white/90" : "text-muted"
             }`}
         >
-          {nav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={`transition-colors ${overPhotoHero ? "hover:text-white" : "hover:text-foreground"}`}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {nav.map((item) => {
+            const active = isActive(item.href);
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`relative transition-colors ${
+                  active
+                    ? "text-accent-2 font-semibold"
+                    : overPhotoHero
+                    ? "hover:text-white"
+                    : "hover:text-foreground"
+                }`}
+              >
+                {item.label}
+                {active && (
+                  <span className="absolute -bottom-1.5 left-0 right-0 h-0.5 rounded-full bg-accent-2" />
+                )}
+              </Link>
+            );
+          })}
         </nav>
 
         <a
@@ -74,16 +91,22 @@ export default function Header({ photoHero = false }: { photoHero?: boolean }) {
 
       {open && (
         <div id="mobile-menu" className="lg:hidden border-t border-line bg-background/95 backdrop-blur-lg px-6 py-6 flex flex-col gap-5">
-          {nav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              onClick={() => setOpen(false)}
-              className="text-base text-muted hover:text-foreground transition-colors"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {nav.map((item) => {
+            const active = isActive(item.href);
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className={`flex items-center gap-2 text-base transition-colors ${
+                  active ? "text-accent-2 font-semibold" : "text-muted hover:text-foreground"
+                }`}
+              >
+                {active && <span className="h-1.5 w-1.5 rounded-full bg-accent-2" />}
+                {item.label}
+              </Link>
+            );
+          })}
           <a
             href={contact.whatsapp}
             target="_blank"
