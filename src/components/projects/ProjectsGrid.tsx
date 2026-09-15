@@ -22,26 +22,27 @@ type Project = (typeof projectsData)[number];
 interface ProjectCardProps {
   project: Project;
   index: number;
+  featured?: boolean;
 }
 
-function ProjectCard({ project, index }: ProjectCardProps) {
+function ProjectCard({ project, index, featured = false }: ProjectCardProps) {
   return (
     <MotionLink
       href={`/projects/${project.slug}`}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.5, delay: (index % 6) * 0.06 }}
-      className="group block"
+      transition={{ duration: 0.5, delay: (index % 8) * 0.08 }}
+      className={`group ${featured ? "md:col-span-2 lg:col-span-2" : ""}`}
     >
       <SpotlightCard className="h-full card-border card-hover rounded-3xl bg-surface overflow-hidden hover:border-accent/50 transition-colors block">
-        <div className="relative aspect-[14/9] overflow-hidden bg-background">
+        <div className="relative h-80 overflow-hidden bg-background">
           <Image
             src={project.image}
             alt={project.title}
             fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className=" group-hover:scale-105 transition-transform duration-500"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+            className="object-fit  group-hover:scale-105 transition-transform duration-500"
             priority={index < 2}
           />
           <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-accent-2/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -133,27 +134,38 @@ export default function ProjectsGrid() {
           ))}
         </div>
 
-        {/* Category sections */}
-        <div className="space-y-20">
-          {visibleCategories.map((cat) => (
-            <div key={cat.slug} id={`category-${cat.slug}`} className="scroll-mt-28">
-              <div className="flex items-end justify-between gap-6 mb-8 pb-6 border-b border-line">
-                <div>
-                  <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">{cat.name}</h2>
-                  <p className="mt-2 text-sm text-muted">
-                    {cat.projects.length} {cat.projects.length === 1 ? "project" : "projects"} in this category
-                  </p>
+        {/* All: irregular masonry-style grid across every project (yesterday's layout). A category: grouped section. */}
+        {activeCategory === null ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projectsData.map((project, i) => {
+              const isFeatured = i === 0 || i === 3 || i === 4 || i === 7 || i === 8 || i === 11 || i === 12;
+              return (
+                <ProjectCard key={project.slug} project={project} index={i} featured={isFeatured} />
+              );
+            })}
+          </div>
+        ) : (
+          <div className="space-y-20">
+            {visibleCategories.map((cat) => (
+              <div key={cat.slug} id={`category-${cat.slug}`} className="scroll-mt-28">
+                <div className="flex items-end justify-between gap-6 mb-8 pb-6 border-b border-line">
+                  <div>
+                    <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">{cat.name}</h2>
+                    <p className="mt-2 text-sm text-muted">
+                      {cat.projects.length} {cat.projects.length === 1 ? "project" : "projects"} in this category
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {cat.projects.map((project, i) => (
+                    <ProjectCard key={project.slug} project={project} index={i} />
+                  ))}
                 </div>
               </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {cat.projects.map((project, i) => (
-                  <ProjectCard key={project.slug} project={project} index={i} />
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
