@@ -66,13 +66,19 @@ export async function POST(request: Request) {
 
     if (error) {
       console.error("Resend error:", error);
-      return Response.json({ error: "Failed to send your message. Please try again." }, { status: 502 });
+      // TEMPORARY: surfacing Resend's actual error to debug the 502. Remove `debug` before shipping.
+      return Response.json(
+        { error: "Failed to send your message. Please try again.", debug: error },
+        { status: 502 }
+      );
     }
 
     return Response.json({ ok: true });
   } catch (err) {
     console.error("Contact form error:", err);
-    return Response.json({ error: "Something went wrong. Please try again." }, { status: 500 });
+    const message = err instanceof Error ? err.message : String(err);
+    // TEMPORARY: surfacing the raw error to debug the 502. Remove `debug` before shipping.
+    return Response.json({ error: "Something went wrong. Please try again.", debug: message }, { status: 500 });
   }
 }
 
