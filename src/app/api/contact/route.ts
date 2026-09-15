@@ -46,10 +46,13 @@ export async function POST(request: Request) {
 
   const resend = new Resend(apiKey);
 
+  const resolvedFrom = process.env.CONTACT_FROM_EMAIL ?? "AlphaSoft360 Website <onboarding@resend.dev>";
+  const resolvedTo = process.env.CONTACT_TO_EMAIL ?? contact.email;
+
   try {
     const { error } = await resend.emails.send({
-      from: process.env.CONTACT_FROM_EMAIL ?? "AlphaSoft360 Website <onboarding@resend.dev>",
-      to: process.env.CONTACT_TO_EMAIL ?? contact.email,
+      from: resolvedFrom,
+      to: resolvedTo,
       replyTo: email,
       subject: subject ? `[Contact] ${subject}` : `New message from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n${subject ? `Subject: ${subject}\n` : ""}\nMessage:\n${message}`,
@@ -65,10 +68,10 @@ export async function POST(request: Request) {
     });
 
     if (error) {
-      console.error("Resend error:", error);
+      console.error("Resend error:", error, { resolvedFrom, resolvedTo });
       // TEMPORARY: surfacing Resend's actual error to debug the 502. Remove `debug` before shipping.
       return Response.json(
-        { error: "Failed to send your message. Please try again.", debug: error },
+        { error: "Failed to send your message. Please try again.", debug: { error, resolvedFrom, resolvedTo } },
         { status: 502 }
       );
     }
