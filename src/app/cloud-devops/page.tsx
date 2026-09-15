@@ -6,6 +6,7 @@ import { Server, ArrowRight, CheckCircle2, ShieldCheck, Zap, Cloud, Container } 
 import { getWebPageSchema, getBreadcrumbSchema, getServiceSchema } from "@/lib/schema";
 import { contact } from "@/data/content";
 import ServiceHeroVisual from "@/components/services/ServiceHeroVisual";
+import RelatedProjects from "@/components/services/RelatedProjects";
 
 export const metadata: Metadata = {
   title: "Cloud Engineering & DevOps Services | AWS & Vercel | AlphaSoft360",
@@ -159,6 +160,8 @@ export default function CloudDevOpsPage() {
             </div>
           </div>
         </section>
+
+        <RelatedProjects keywords={["aws", "kafka", "kubernetes", "docker"]} />
       </main>
       <Footer />
     </>

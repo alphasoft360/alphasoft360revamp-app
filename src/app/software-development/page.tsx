@@ -6,6 +6,7 @@ import { Code2, Server, ShieldCheck, ArrowRight, Layers, Cpu } from "lucide-reac
 import { getWebPageSchema, getBreadcrumbSchema, getServiceSchema } from "@/lib/schema";
 import { contact } from "@/data/content";
 import ServiceHeroVisual from "@/components/services/ServiceHeroVisual";
+import RelatedProjects from "@/components/services/RelatedProjects";
 
 export const metadata: Metadata = {
   title: "Custom Software Development Services | Enterprise Software | AlphaSoft360",
@@ -159,6 +160,8 @@ export default function SoftwareDevPage() {
             </div>
           </div>
         </section>
+
+        <RelatedProjects keywords={["industrial", "cmms", "education", "startup", "healthcare management", "student management"]} />
       </main>
       <Footer />
     </>

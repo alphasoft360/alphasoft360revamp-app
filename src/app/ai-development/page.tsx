@@ -6,6 +6,7 @@ import { Cpu, ArrowRight, CheckCircle2, Zap, Server, Bot } from "lucide-react";
 import { getWebPageSchema, getBreadcrumbSchema, getServiceSchema } from "@/lib/schema";
 import { contact } from "@/data/content";
 import ServiceHeroVisual from "@/components/services/ServiceHeroVisual";
+import RelatedProjects from "@/components/services/RelatedProjects";
 
 export const metadata: Metadata = {
   title: "AI Development & Automation Services | AlphaSoft360",
@@ -159,6 +160,8 @@ export default function AiDevPage() {
             </div>
           </div>
         </section>
+
+        <RelatedProjects keywords={["mcp", "llm", "ai assistant", "generative ai"]} />
       </main>
       <Footer />
     </>

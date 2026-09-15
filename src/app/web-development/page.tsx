@@ -19,6 +19,7 @@ import {
 import { getWebPageSchema, getBreadcrumbSchema, getServiceSchema } from "@/lib/schema";
 import { contact } from "@/data/content";
 import ServiceHeroVisual from "@/components/services/ServiceHeroVisual";
+import RelatedProjects from "@/components/services/RelatedProjects";
 
 export const metadata: Metadata = {
   title: "Web Development Services | Custom Web Platforms | AlphaSoft360",
@@ -346,6 +347,8 @@ export default function WebDevelopmentPage() {
             </div>
           </div>
         </section>
+
+        <RelatedProjects keywords={["e-commerce", "web application", "wholesale"]} />
       </main>
       <Footer />
     </>

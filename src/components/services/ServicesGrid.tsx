@@ -10,6 +10,8 @@ import { servicesFull } from "@/data/content";
 import SpotlightCard from "@/components/SpotlightCard";
 import Link from "next/link";
 
+const MotionLink = motion.create(Link);
+
 const icons: Record<string, LucideIcon> = {
   smartphone: Smartphone,
   globe: Globe,
@@ -47,20 +49,19 @@ export default function ServicesGrid() {
                 transition={{ duration: 0.5, delay: (i % 6) * 0.06 }}
                 className={colSpan}
               >
-                <SpotlightCard className={`group h-full card-border card-hover rounded-2xl bg-surface ${isFeatured ? 'p-10' : 'p-8'} hover:border-accent/50 transition-colors flex flex-col`}>
-                  <div className={`rounded-xl bg-gradient-to-br from-accent/20 to-accent-2/20 flex items-center justify-center group-hover:from-accent group-hover:to-accent-2 transition-all ${isFeatured ? 'h-16 w-16' : 'h-12 w-12'}`}>
-                    <Icon className={`text-accent-2 group-hover:text-white transition-colors ${isFeatured ? 'h-7 w-7' : 'h-5 w-5'}`} />
-                  </div>
-                  <h3 className={`mt-6 font-medium ${isFeatured ? 'text-2xl' : 'text-lg'}`}>{service.title}</h3>
-                  <p className={`mt-3 text-muted leading-relaxed flex-1 ${isFeatured ? 'text-base' : 'text-sm'}`}>{service.description}</p>
-                  <Link
-                    href={service.href || "/contact"}
-                    className={`mt-6 inline-flex items-center gap-1.5 font-medium text-foreground ${isFeatured ? 'text-base' : 'text-sm'}`}
-                  >
-                    Learn more
-                    <ArrowUpRight className={`group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform ${isFeatured ? 'h-4 w-4' : 'h-3.5 w-3.5'}`} />
-                  </Link>
-                </SpotlightCard>
+                <MotionLink href={service.href || "/contact"} className="block h-full">
+                  <SpotlightCard className={`group h-full card-border card-hover rounded-2xl bg-surface ${isFeatured ? 'p-10' : 'p-8'} hover:border-accent/50 transition-colors flex flex-col`}>
+                    <div className={`rounded-xl bg-gradient-to-br from-accent/20 to-accent-2/20 flex items-center justify-center group-hover:from-accent group-hover:to-accent-2 transition-all ${isFeatured ? 'h-16 w-16' : 'h-12 w-12'}`}>
+                      <Icon className={`text-accent-2 group-hover:text-white transition-colors ${isFeatured ? 'h-7 w-7' : 'h-5 w-5'}`} />
+                    </div>
+                    <h3 className={`mt-6 font-medium ${isFeatured ? 'text-2xl' : 'text-lg'}`}>{service.title}</h3>
+                    <p className={`mt-3 text-muted leading-relaxed flex-1 ${isFeatured ? 'text-base' : 'text-sm'}`}>{service.description}</p>
+                    <span className={`mt-6 inline-flex items-center gap-1.5 font-medium text-foreground ${isFeatured ? 'text-base' : 'text-sm'}`}>
+                      Learn more
+                      <ArrowUpRight className={`group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform ${isFeatured ? 'h-4 w-4' : 'h-3.5 w-3.5'}`} />
+                    </span>
+                  </SpotlightCard>
+                </MotionLink>
               </motion.div>
             );
           })}

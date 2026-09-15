@@ -24,51 +24,61 @@ export const skills = [
 export const services = [
   {
     title: "Fintech",
+    href: "/fintech",
     description:
       "Secure, compliant fintech platforms including digital banking, payments, and AI-driven financial systems built to scale.",
   },
   {
     title: "AI & Machine Learning",
+    href: "/ai-development",
     description:
       "Custom AI and machine learning models that automate processes, enhance decision-making, and unlock insight from your data.",
   },
   {
     title: "LLM & MCP Integration",
+    href: "/ai-development",
     description:
       "Custom LLM integrations and purpose-built MCP servers that let AI assistants safely take real actions inside your applications.",
   },
   {
     title: "Software Development",
+    href: "/software-development",
     description:
       "Custom, scalable software engineered around how your business actually operates, from architecture to launch.",
   },
   {
     title: "Web Development",
+    href: "/web-development",
     description:
       "High-performance web platforms built on modern frameworks with a relentless focus on speed and conversion.",
   },
   {
     title: "CRM Development",
+    href: "/software-development",
     description:
       "Custom CRM and ERP development to centralize customer data, automate sales pipelines, and streamline business operations.",
   },
   {
     title: "Analytic Solutions",
+    href: "/services",
     description:
       "Turn raw data into decisions with dashboards and pipelines that surface the signal inside the noise.",
   },
   {
     title: "Cloud & DevOps",
+    href: "/cloud-devops",
     description:
       "Resilient cloud infrastructure, CI/CD automation, and observability that scales with zero drama.",
   },
   {
     title: "Product & Design",
+    href: "/services",
     description:
       "End-to-end product design that balances brand, usability, and business goals from wireframe to pixel.",
   },
   {
     title: "Data Center",
+    href: "/services",
     description:
       "24/7 dedicated infrastructure support to keep critical systems fast, secure, and always online.",
   },

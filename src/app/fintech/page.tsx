@@ -5,6 +5,7 @@ import { Landmark, ArrowRight, ShieldCheck, CreditCard, LineChart } from "lucide
 import { getWebPageSchema, getBreadcrumbSchema, getServiceSchema } from "@/lib/schema";
 import { contact } from "@/data/content";
 import ServiceHeroVisual from "@/components/services/ServiceHeroVisual";
+import RelatedProjects from "@/components/services/RelatedProjects";
 
 export const metadata: Metadata = {
   title: "Fintech Software Development Services | AlphaSoft360",
@@ -161,6 +162,8 @@ export default function FintechPage() {
             </div>
           </div>
         </section>
+
+        <RelatedProjects keywords={["fintech"]} />
       </main>
       <Footer />
     </>

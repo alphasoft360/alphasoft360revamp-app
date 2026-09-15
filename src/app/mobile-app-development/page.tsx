@@ -6,6 +6,7 @@ import { Smartphone, ArrowRight, CheckCircle2, Zap, Layers } from "lucide-react"
 import { getWebPageSchema, getBreadcrumbSchema, getServiceSchema } from "@/lib/schema";
 import { contact } from "@/data/content";
 import ServiceHeroVisual from "@/components/services/ServiceHeroVisual";
+import RelatedProjects from "@/components/services/RelatedProjects";
 
 export const metadata: Metadata = {
   title: "Mobile App Development Services | iOS & Android | AlphaSoft360",
@@ -159,6 +160,8 @@ export default function MobileAppDevPage() {
             </div>
           </div>
         </section>
+
+        <RelatedProjects keywords={["mobile", "react native"]} />
       </main>
       <Footer />
     </>
